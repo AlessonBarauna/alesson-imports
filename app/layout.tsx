@@ -3,9 +3,9 @@ import Script from "next/script";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Alesson Imports | Produtos Apple em Mogi das Cruzes",
+  title: "Alesson Imports | iPhones com preço justo",
   description:
-    "iPhones e produtos Apple com procedência, garantia, parcelamento em até 12x e avaliação do seu usado. Atendimento personalizado em Mogi das Cruzes.",
+    "iPhones lacrados e produtos Apple com preço competitivo, procedência informada e atendimento direto em Mogi das Cruzes.",
   referrer: "strict-origin-when-cross-origin",
   icons: {
     icon: "/favicon.svg",
