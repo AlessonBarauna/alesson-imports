@@ -18,24 +18,24 @@ type Product = {
 };
 
 const products: Product[] = [
-  { name: "iPhone 13 Pro", storage: "256 GB", price: 4090, category: "CPO", colors: "Consulte as cores disponíveis", accent: "#a9b7c4", image: "/products/iphone-13-pro.webp" },
-  { name: "iPhone 13 Pro Max", storage: "128 GB", price: 4190, category: "CPO", colors: "Consulte as cores disponíveis", accent: "#d7c8aa", image: "/products/iphone-13-pro-max.webp" },
-  { name: "iPhone 14 Pro Max", storage: "128 GB", price: 4490, category: "CPO", colors: "Consulte as cores disponíveis", accent: "#6c6477", image: "/products/iphone-14-pro-max.webp" },
-  { name: "iPhone 15", storage: "128 GB · chip físico + eSIM", price: 4190, category: "Lacrado", colors: "Consulte as cores disponíveis", accent: "#a8bdd0", image: "/products/iphone-15.webp" },
-  { name: "iPhone 16", storage: "128 GB · chip físico + eSIM", price: 4790, category: "Lacrado", colors: "Consulte as cores disponíveis", accent: "#8fa6bd", image: "/products/iphone-16.webp" },
-  { name: "iPhone 16 Pro Max", storage: "512 GB", price: 7290, category: "CPO", colors: "Consulte as cores disponíveis", accent: "#b7afa4", image: "/products/iphone-16-pro-max.webp" },
-  { name: "iPhone 16 Pro Max", storage: "512 GB", price: 7990, category: "Lacrado", colors: "Consulte as cores disponíveis", accent: "#d4d5d7", image: "/products/iphone-16-pro-max.webp", badge: "Anatel" },
-  { name: "iPhone 17e", storage: "256 GB", price: 4690, category: "Lacrado", colors: "Consulte as cores disponíveis", accent: "#ead7dc", image: "/products/iphone-17e.webp" },
-  { name: "iPhone 17", storage: "256 GB", price: 5790, category: "Lacrado", colors: "Consulte as cores disponíveis", accent: "#c8d8cc", image: "/products/iphone-17.webp", badge: "Mais procurado" },
-  { name: "iPhone 17 Air", storage: "256 GB", price: 5990, category: "Lacrado", colors: "Consulte as cores disponíveis", accent: "#d9cfb4", image: "/products/iphone-17-air.webp" },
-  { name: "iPhone 17 Pro", storage: "256 GB", price: 7490, category: "Lacrado", colors: "Consulte as cores disponíveis", accent: "#c78b65", image: "/products/iphone-17-pro.webp" },
-  { name: "iPhone 17 Pro Max", storage: "256 GB", price: 7990, category: "Lacrado", colors: "Consulte as cores disponíveis", accent: "#6d7f9a", image: "/products/iphone-17-pro-max.webp" },
-  { name: "iPhone 17 Pro Max", storage: "512 GB", price: 8990, category: "Lacrado", colors: "Consulte as cores disponíveis", accent: "#8999ad", image: "/products/iphone-17-pro-max.webp" },
-  { name: "iPhone 18 Pro", storage: "256 GB", price: 8590, category: "Lacrado", colors: "Consulte as cores disponíveis", accent: "#8e2636", image: "/products/iphone-18-pro.webp", badge: "Novo" },
-  { name: "iPhone 18 Pro Max", storage: "256 GB", price: 10990, category: "Lacrado", colors: "Consulte as cores disponíveis", accent: "#a9c8df", image: "/products/iphone-18-pro-max.webp", badge: "Novo" },
-  { name: "iPhone 18 Pro Max", storage: "512 GB", price: 12990, category: "Lacrado", colors: "Consulte as cores disponíveis", accent: "#9ebdd4", image: "/products/iphone-18-pro-max.webp", badge: "Novo" },
-  { name: "iPhone 18 Pro Max", storage: "1 TB", price: 14990, category: "Lacrado", colors: "Consulte as cores disponíveis", accent: "#c6c8ca", image: "/products/iphone-18-pro-max.webp", badge: "Novo" },
-  { name: "iPhone 18 Pro Max", storage: "2 TB", price: 19490, category: "Lacrado", colors: "Consulte as cores disponíveis", accent: "#25282d", image: "/products/iphone-18-pro-max.webp", badge: "Novo" },
+  { name: "iPhone 13 Pro", storage: "256 GB", price: 4090, category: "CPO", colors: "Consulte as cores disponíveis", accent: "#a9b7c4", image: "./products/iphone-13-pro.webp" },
+  { name: "iPhone 13 Pro Max", storage: "128 GB", price: 4190, category: "CPO", colors: "Consulte as cores disponíveis", accent: "#d7c8aa", image: "./products/iphone-13-pro-max.webp" },
+  { name: "iPhone 14 Pro Max", storage: "128 GB", price: 4490, category: "CPO", colors: "Consulte as cores disponíveis", accent: "#6c6477", image: "./products/iphone-14-pro-max.webp" },
+  { name: "iPhone 15", storage: "128 GB · chip físico + eSIM", price: 4190, category: "Lacrado", colors: "Consulte as cores disponíveis", accent: "#a8bdd0", image: "./products/iphone-15.webp" },
+  { name: "iPhone 16", storage: "128 GB · chip físico + eSIM", price: 4790, category: "Lacrado", colors: "Consulte as cores disponíveis", accent: "#8fa6bd", image: "./products/iphone-16.webp" },
+  { name: "iPhone 16 Pro Max", storage: "512 GB", price: 7290, category: "CPO", colors: "Consulte as cores disponíveis", accent: "#b7afa4", image: "./products/iphone-16-pro-max.webp" },
+  { name: "iPhone 16 Pro Max", storage: "512 GB", price: 7990, category: "Lacrado", colors: "Consulte as cores disponíveis", accent: "#d4d5d7", image: "./products/iphone-16-pro-max.webp", badge: "Anatel" },
+  { name: "iPhone 17e", storage: "256 GB", price: 4690, category: "Lacrado", colors: "Consulte as cores disponíveis", accent: "#ead7dc", image: "./products/iphone-17e.webp" },
+  { name: "iPhone 17", storage: "256 GB", price: 5790, category: "Lacrado", colors: "Consulte as cores disponíveis", accent: "#c8d8cc", image: "./products/iphone-17.webp", badge: "Mais procurado" },
+  { name: "iPhone 17 Air", storage: "256 GB", price: 5990, category: "Lacrado", colors: "Consulte as cores disponíveis", accent: "#d9cfb4", image: "./products/iphone-17-air.webp" },
+  { name: "iPhone 17 Pro", storage: "256 GB", price: 7490, category: "Lacrado", colors: "Consulte as cores disponíveis", accent: "#c78b65", image: "./products/iphone-17-pro.webp" },
+  { name: "iPhone 17 Pro Max", storage: "256 GB", price: 7990, category: "Lacrado", colors: "Consulte as cores disponíveis", accent: "#6d7f9a", image: "./products/iphone-17-pro-max.webp" },
+  { name: "iPhone 17 Pro Max", storage: "512 GB", price: 8990, category: "Lacrado", colors: "Consulte as cores disponíveis", accent: "#8999ad", image: "./products/iphone-17-pro-max.webp" },
+  { name: "iPhone 18 Pro", storage: "256 GB", price: 8590, category: "Lacrado", colors: "Consulte as cores disponíveis", accent: "#8e2636", image: "./products/iphone-18-pro.webp", badge: "Novo" },
+  { name: "iPhone 18 Pro Max", storage: "256 GB", price: 10990, category: "Lacrado", colors: "Consulte as cores disponíveis", accent: "#a9c8df", image: "./products/iphone-18-pro-max.webp", badge: "Novo" },
+  { name: "iPhone 18 Pro Max", storage: "512 GB", price: 12990, category: "Lacrado", colors: "Consulte as cores disponíveis", accent: "#9ebdd4", image: "./products/iphone-18-pro-max.webp", badge: "Novo" },
+  { name: "iPhone 18 Pro Max", storage: "1 TB", price: 14990, category: "Lacrado", colors: "Consulte as cores disponíveis", accent: "#c6c8ca", image: "./products/iphone-18-pro-max.webp", badge: "Novo" },
+  { name: "iPhone 18 Pro Max", storage: "2 TB", price: 19490, category: "Lacrado", colors: "Consulte as cores disponíveis", accent: "#25282d", image: "./products/iphone-18-pro-max.webp", badge: "Novo" },
 ];
 
 const money = (value: number) => value.toLocaleString("pt-BR", { style: "currency", currency: "BRL", maximumFractionDigits: 0 });
@@ -68,7 +68,7 @@ export default function Home() {
           <div className="hero-proof" aria-label="Condições de compra"><div><strong>Nota fiscal</strong><span>inclusa no pedido</span></div><div><strong>Frete incluso</strong><span>consulte sua região</span></div><div><strong>Até 12x</strong><span>consulte a condição</span></div></div>
         </div>
         <div className="hero-media">
-          <img src="/hero-devices.webp" alt="Três smartphones premium em acabamento grafite e titânio" />
+          <img src="./hero-devices.webp" alt="Três smartphones premium em acabamento grafite e titânio" />
           <div className="hero-price-card"><span>iPhone 17 · 256 GB</span><strong>{money(5790)}</strong><small>nota fiscal e frete inclusos</small></div>
         </div>
       </div></section>
@@ -79,7 +79,7 @@ export default function Home() {
         <div className="section-intro"><div><p className="kicker">Tabela completa</p><h2>Escolha o seu.</h2></div><p>Valores finais informados em 05/10/2026. Nota fiscal e frete inclusos. Confirme cor e estoque antes de fechar.</p></div>
         <div className="filter-row" role="group" aria-label="Filtrar ofertas">{["Todos", "Lacrado", "CPO"].map((item) => <button key={item} type="button" className={filter === item ? "active" : ""} onClick={() => setFilter(item)}>{item}</button>)}</div>
         <div className="product-grid">{filtered.map((product) => <article className="product-card" key={`${product.name}-${product.storage}-${product.category}`}>
-          <div className={`product-top ${product.image === "/products/iphone-16-pro-max.webp" || product.image === "/products/iphone-18-pro.webp" ? "dark-photo" : ""}`} style={{ "--accent": product.accent } as React.CSSProperties}><div className="product-labels"><span>{product.category}</span>{product.badge && <b>{product.badge}</b>}</div><img className="product-image" src={product.image} alt={`${product.name} ${product.storage}`} loading="lazy" /><div className="saving-badge">NF + frete inclusos</div></div>
+          <div className={`product-top ${product.image === "./products/iphone-16-pro-max.webp" || product.image === "./products/iphone-18-pro.webp" ? "dark-photo" : ""}`} style={{ "--accent": product.accent } as React.CSSProperties}><div className="product-labels"><span>{product.category}</span>{product.badge && <b>{product.badge}</b>}</div><img className="product-image" src={product.image} alt={`${product.name} ${product.storage}`} loading="lazy" /><div className="saving-badge">NF + frete inclusos</div></div>
           <div className="product-body"><p className="product-name">{product.name}</p><h3>{product.storage}</h3><p className="colors">{product.colors}</p><div className="price-block"><small>valor final</small><strong>{money(product.price)}</strong><span>Parcelamento em até 12x no cartão</span></div><a href={productLink(product)} target="_blank" rel="noreferrer">Consultar disponibilidade <ArrowIcon /></a></div>
         </article>)}</div>
         <div className="catalog-footer"><p><strong>Procurando outro modelo?</strong> A lista completa inclui iPads, MacBooks, Apple Watch, AirPods e acessórios.</p><a className="button button-dark" href={contactLink("Olá, Alesson! Pode me enviar a lista completa e atualizada de produtos Apple?")} target="_blank" rel="noreferrer">Pedir lista completa</a></div>
