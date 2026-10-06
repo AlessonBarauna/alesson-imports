@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Script from "next/script";
 import "./globals.css";
+import "./instagram.css";
 
 export const metadata: Metadata = {
   title: "Alesson Imports | iPhones com preço justo",

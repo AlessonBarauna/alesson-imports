@@ -5,6 +5,7 @@
 import { useMemo, useState } from "react";
 
 const whatsapp = "https://wa.me/5511964421841";
+const instagram = "https://www.instagram.com/alessonimports.oficial/";
 
 type Product = {
   name: string;
@@ -43,6 +44,7 @@ const products: Product[] = [
 const money = (value: number) => value.toLocaleString("pt-BR", { style: "currency", currency: "BRL", maximumFractionDigits: 0 });
 const savingPercent = (product: Product) => Math.round((1 - product.price / product.marketPrice) * 100);
 const ArrowIcon = () => <span aria-hidden="true">↗</span>;
+const InstagramIcon = () => <svg aria-hidden="true" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5" /><circle cx="12" cy="12" r="4.25" /><circle className="instagram-dot" cx="17.4" cy="6.7" r="1" /></svg>;
 
 export default function Home() {
   const [filter, setFilter] = useState("Todos");
@@ -107,9 +109,11 @@ export default function Home() {
         <details><summary>Como funciona o envio?<span>+</span></summary><p>O frete está incluso nas condições anunciadas. O meio de envio, prazo, cobertura para sua região e demais detalhes são confirmados antes do pagamento.</p></details>
       </div></div></section>
 
+      <section className="instagram-section section" id="instagram" aria-labelledby="instagram-title"><div className="shell instagram-card"><div className="instagram-profile" aria-hidden="true"><div className="instagram-avatar"><span>A</span><i /></div><div><strong>@alessonimports.oficial</strong><span>Alesson Imports · Linha Apple</span></div></div><div className="instagram-copy"><p className="kicker">Acompanhe de perto</p><h2 id="instagram-title">Aparelhos, entregas<br /> e novidades reais.</h2><p>Veja os bastidores da Alesson Imports, acompanhe clientes atendidos e confira as novidades que chegam primeiro pelo Instagram.</p><div className="instagram-highlights" aria-label="Conteúdos do Instagram"><span>Clientes</span><span>Encomendas</span><span>Valores</span></div><a className="button instagram-button" href={instagram} target="_blank" rel="noreferrer"><InstagramIcon />Ver no Instagram</a></div></div></section>
+
       <section className="closing"><div className="shell closing-inner"><p className="kicker kicker-light">Seu próximo começa aqui</p><h2>Qual iPhone combina<br />com você?</h2><p>Conte quanto pretende investir. A gente ajuda a comparar as melhores opções.</p><a className="button button-light" href={contactLink("Olá, Alesson! Quero encontrar o melhor iPhone para o meu orçamento.")} target="_blank" rel="noreferrer">Conversar no WhatsApp</a></div></section>
 
-      <footer><div className="shell footer-main"><div><a className="brand brand-footer" href="#inicio"><span className="brand-symbol">A</span><span>Alesson Imports</span></a><p>Produtos Apple, preço competitivo<br />e atendimento de verdade.</p></div><div><strong>Explore</strong><a href="#ofertas">Ofertas</a><a href="#criterio">Como precificamos</a><a href="#duvidas">Dúvidas</a></div><div><strong>Contato</strong><a href={whatsapp} target="_blank" rel="noreferrer">WhatsApp</a><a href="https://www.instagram.com/alessonimports.oficial/" target="_blank" rel="noreferrer">Instagram</a><span>Mogi das Cruzes · SP</span></div></div><div className="shell footer-bottom"><span>© 2026 Alesson Imports.</span><span>Preços e disponibilidade sujeitos a confirmação.</span></div></footer>
+      <footer><div className="shell footer-main"><div><a className="brand brand-footer" href="#inicio"><span className="brand-symbol">A</span><span>Alesson Imports</span></a><p>Produtos Apple, preço competitivo<br />e atendimento de verdade.</p></div><div><strong>Explore</strong><a href="#ofertas">Ofertas</a><a href="#criterio">Como precificamos</a><a href="#duvidas">Dúvidas</a></div><div><strong>Contato</strong><a href={whatsapp} target="_blank" rel="noreferrer">WhatsApp</a><a href={instagram} target="_blank" rel="noreferrer">Instagram</a><span>Mogi das Cruzes · SP</span></div></div><div className="shell footer-bottom"><span>© 2026 Alesson Imports.</span><span>Preços e disponibilidade sujeitos a confirmação.</span></div></footer>
       <a className="whatsapp-float" href={contactLink("Olá, Alesson! Vim pelo site.")} target="_blank" rel="noreferrer" aria-label="Falar no WhatsApp"><span>●</span><b>WhatsApp</b></a>
     </main>
   );

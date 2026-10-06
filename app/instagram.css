@@ -1,0 +1,204 @@
+.instagram-section {
+  padding-top: 0;
+  background: #fff;
+}
+
+.instagram-card {
+  position: relative;
+  display: grid;
+  grid-template-columns: 0.78fr 1.22fr;
+  align-items: center;
+  gap: 86px;
+  overflow: hidden;
+  padding: 74px 80px;
+  border-radius: 34px;
+  background: radial-gradient(circle at 5% 5%, #363c4b 0, #15171d 35%, #08090c 78%);
+  color: #fff;
+}
+
+.instagram-card::after {
+  content: "";
+  position: absolute;
+  right: -120px;
+  bottom: -180px;
+  width: 420px;
+  height: 420px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #ffd36f, #f15b72 43%, #8d55c7 70%, #3e73e8);
+  filter: blur(95px);
+  opacity: 0.2;
+  pointer-events: none;
+}
+
+.instagram-profile {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  min-height: 310px;
+  padding: 34px;
+  border: 1px solid rgb(255 255 255 / 13%);
+  border-radius: 27px;
+  background: rgb(255 255 255 / 7%);
+  box-shadow: 0 30px 70px rgb(0 0 0 / 28%);
+  backdrop-filter: blur(18px);
+}
+
+.instagram-avatar {
+  position: relative;
+  flex: 0 0 auto;
+  padding: 3px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #f5d471, #ef546d 45%, #9855bb 72%, #3973da);
+}
+
+.instagram-avatar > span {
+  display: grid;
+  place-items: center;
+  width: 74px;
+  height: 74px;
+  border: 4px solid #17191f;
+  border-radius: 50%;
+  background: #fff;
+  color: #111;
+  font-size: 2rem;
+  font-weight: 800;
+}
+
+.instagram-avatar i {
+  position: absolute;
+  right: 2px;
+  bottom: 4px;
+  width: 16px;
+  height: 16px;
+  border: 3px solid #17191f;
+  border-radius: 50%;
+  background: #2d95f5;
+}
+
+.instagram-profile strong,
+.instagram-profile span {
+  display: block;
+}
+
+.instagram-profile strong {
+  font-size: 0.88rem;
+  letter-spacing: -0.02em;
+}
+
+.instagram-profile span {
+  margin-top: 7px;
+  color: #959ba6;
+  font-size: 0.67rem;
+  line-height: 1.45;
+}
+
+.instagram-copy {
+  position: relative;
+  z-index: 1;
+}
+
+.instagram-copy .kicker {
+  color: #b5a2d9;
+}
+
+.instagram-copy h2 {
+  margin: 0;
+  font-size: clamp(3rem, 4.5vw, 5.1rem);
+  line-height: 0.96;
+  letter-spacing: -0.065em;
+}
+
+.instagram-copy > p:not(.kicker) {
+  max-width: 610px;
+  margin: 27px 0;
+  color: #aeb2bb;
+  font-size: 0.9rem;
+  line-height: 1.7;
+}
+
+.instagram-highlights {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 30px;
+}
+
+.instagram-highlights span {
+  padding: 8px 12px;
+  border: 1px solid rgb(255 255 255 / 15%);
+  border-radius: 999px;
+  color: #c7cad0;
+  font-size: 0.65rem;
+}
+
+.instagram-button {
+  gap: 10px;
+  background: #fff;
+  color: #111;
+}
+
+.instagram-button svg {
+  width: 18px;
+  height: 18px;
+  fill: none;
+  stroke: currentcolor;
+  stroke-width: 1.8;
+}
+
+.instagram-button .instagram-dot {
+  fill: currentcolor;
+  stroke: none;
+}
+
+@media (max-width: 980px) {
+  .instagram-card {
+    grid-template-columns: 1fr;
+    gap: 42px;
+    padding: 58px 44px;
+  }
+
+  .instagram-profile {
+    min-height: 210px;
+  }
+}
+
+@media (max-width: 620px) {
+  .instagram-card {
+    gap: 36px;
+    padding: 42px 24px;
+    border-radius: 24px;
+  }
+
+  .instagram-profile {
+    min-height: 0;
+    padding: 24px 18px;
+    border-radius: 20px;
+  }
+
+  .instagram-avatar > span {
+    width: 58px;
+    height: 58px;
+    font-size: 1.55rem;
+  }
+
+  .instagram-profile strong {
+    overflow-wrap: anywhere;
+  }
+
+  .instagram-copy h2 {
+    font-size: 3.1rem;
+  }
+
+  .instagram-copy h2 br {
+    display: none;
+  }
+
+  .instagram-highlights {
+    flex-wrap: wrap;
+  }
+
+  .instagram-button {
+    width: 100%;
+  }
+}
