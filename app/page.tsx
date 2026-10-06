@@ -114,7 +114,7 @@ export default function Home() {
       <section className="closing"><div className="shell closing-inner"><p className="kicker kicker-light">Seu próximo começa aqui</p><h2>Qual iPhone combina<br />com você?</h2><p>Conte quanto pretende investir. A gente ajuda a comparar as melhores opções.</p><a className="button button-light" href={contactLink("Oi! Quero ajuda pra escolher um iPhone.")} target="_blank" rel="noreferrer">Conversar no WhatsApp</a></div></section>
 
       <footer><div className="shell footer-main"><div><a className="brand brand-footer" href="#inicio"><span className="brand-symbol">A</span><span>Alesson Imports</span></a><p>Produtos Apple, preço competitivo<br />e atendimento de verdade.</p></div><div><strong>Explore</strong><a href="#ofertas">Ofertas</a><a href="#criterio">Como precificamos</a><a href="#duvidas">Dúvidas</a></div><div><strong>Contato</strong><a href={whatsapp} target="_blank" rel="noreferrer">WhatsApp</a><a href={instagram} target="_blank" rel="noreferrer">Instagram</a><span>Mogi das Cruzes · SP</span></div></div><div className="shell footer-bottom"><span>© 2026 Alesson Imports.</span><span>Preços e disponibilidade sujeitos a confirmação.</span></div></footer>
-      <a className="whatsapp-float" href={contactLink("Oi! Vim pelo site 👋")} target="_blank" rel="noreferrer" aria-label="Falar no WhatsApp"><span>●</span><b>WhatsApp</b></a>
+      <a className="whatsapp-float" href={contactLink("Oi! Vim pelo site.")} target="_blank" rel="noreferrer" aria-label="Falar no WhatsApp"><span>●</span><b>WhatsApp</b></a>
     </main>
   );
 }
