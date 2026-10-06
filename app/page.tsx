@@ -14,34 +14,34 @@ type Product = {
   colors: string;
   accent: string;
   image: string;
-  applePrice: number;
-  appleReference: "atual" | "lançamento";
+  marketPrice: number;
+  marketSource: "Amazon" | "Mercado Livre";
   badge?: string;
 };
 
 const products: Product[] = [
-  { name: "iPhone 13 Pro", storage: "256 GB", price: 4090, applePrice: 10499, appleReference: "lançamento", category: "CPO", colors: "Consulte as cores disponíveis", accent: "#a9b7c4", image: "./products/iphone-13-pro.webp" },
-  { name: "iPhone 13 Pro Max", storage: "128 GB", price: 4190, applePrice: 10499, appleReference: "lançamento", category: "CPO", colors: "Consulte as cores disponíveis", accent: "#d7c8aa", image: "./products/iphone-13-pro-max.webp" },
-  { name: "iPhone 14 Pro Max", storage: "128 GB", price: 4490, applePrice: 10499, appleReference: "lançamento", category: "CPO", colors: "Consulte as cores disponíveis", accent: "#6c6477", image: "./products/iphone-14-pro-max.webp" },
-  { name: "iPhone 15", storage: "128 GB · chip físico + eSIM", price: 4190, applePrice: 7299, appleReference: "lançamento", category: "Lacrado", colors: "Consulte as cores disponíveis", accent: "#a8bdd0", image: "./products/iphone-15.webp" },
-  { name: "iPhone 16", storage: "128 GB · chip físico + eSIM", price: 4790, applePrice: 6999, appleReference: "atual", category: "Lacrado", colors: "Consulte as cores disponíveis", accent: "#8fa6bd", image: "./products/iphone-16.webp" },
-  { name: "iPhone 16 Pro Max", storage: "512 GB", price: 7290, applePrice: 13999, appleReference: "lançamento", category: "CPO", colors: "Consulte as cores disponíveis", accent: "#b7afa4", image: "./products/iphone-16-pro-max.webp" },
-  { name: "iPhone 16 Pro Max", storage: "512 GB", price: 7990, applePrice: 13999, appleReference: "lançamento", category: "Lacrado", colors: "Consulte as cores disponíveis", accent: "#d4d5d7", image: "./products/iphone-16-pro-max.webp", badge: "Anatel" },
-  { name: "iPhone 17e", storage: "256 GB", price: 4690, applePrice: 5999, appleReference: "atual", category: "Lacrado", colors: "Consulte as cores disponíveis", accent: "#ead7dc", image: "./products/iphone-17e.webp" },
-  { name: "iPhone 17", storage: "256 GB", price: 5790, applePrice: 8299, appleReference: "atual", category: "Lacrado", colors: "Consulte as cores disponíveis", accent: "#c8d8cc", image: "./products/iphone-17.webp", badge: "Mais procurado" },
-  { name: "iPhone 17 Air", storage: "256 GB", price: 5990, applePrice: 10999, appleReference: "atual", category: "Lacrado", colors: "Consulte as cores disponíveis", accent: "#d9cfb4", image: "./products/iphone-17-air.webp" },
-  { name: "iPhone 17 Pro", storage: "256 GB", price: 7490, applePrice: 11499, appleReference: "lançamento", category: "Lacrado", colors: "Consulte as cores disponíveis", accent: "#c78b65", image: "./products/iphone-17-pro.webp" },
-  { name: "iPhone 17 Pro Max", storage: "256 GB", price: 7990, applePrice: 12499, appleReference: "lançamento", category: "Lacrado", colors: "Consulte as cores disponíveis", accent: "#6d7f9a", image: "./products/iphone-17-pro-max.webp" },
-  { name: "iPhone 17 Pro Max", storage: "512 GB", price: 8990, applePrice: 13999, appleReference: "lançamento", category: "Lacrado", colors: "Consulte as cores disponíveis", accent: "#8999ad", image: "./products/iphone-17-pro-max.webp" },
-  { name: "iPhone 18 Pro", storage: "256 GB", price: 8590, applePrice: 11999, appleReference: "atual", category: "Lacrado", colors: "Consulte as cores disponíveis", accent: "#8e2636", image: "./products/iphone-18-pro.webp", badge: "Novo" },
-  { name: "iPhone 18 Pro Max", storage: "256 GB", price: 10990, applePrice: 12999, appleReference: "atual", category: "Lacrado", colors: "Consulte as cores disponíveis", accent: "#a9c8df", image: "./products/iphone-18-pro-max.webp", badge: "Novo" },
-  { name: "iPhone 18 Pro Max", storage: "512 GB", price: 12990, applePrice: 14499, appleReference: "atual", category: "Lacrado", colors: "Consulte as cores disponíveis", accent: "#9ebdd4", image: "./products/iphone-18-pro-max.webp", badge: "Novo" },
-  { name: "iPhone 18 Pro Max", storage: "1 TB", price: 14990, applePrice: 17499, appleReference: "atual", category: "Lacrado", colors: "Consulte as cores disponíveis", accent: "#c6c8ca", image: "./products/iphone-18-pro-max.webp", badge: "Novo" },
-  { name: "iPhone 18 Pro Max", storage: "2 TB", price: 19490, applePrice: 21999, appleReference: "atual", category: "Lacrado", colors: "Consulte as cores disponíveis", accent: "#25282d", image: "./products/iphone-18-pro-max.webp", badge: "Novo" },
+  { name: "iPhone 13 Pro", storage: "256 GB", price: 4090, marketPrice: 4689, marketSource: "Mercado Livre", category: "CPO", colors: "Consulte as cores disponíveis", accent: "#a9b7c4", image: "./products/iphone-13-pro.webp" },
+  { name: "iPhone 13 Pro Max", storage: "128 GB", price: 4190, marketPrice: 4416, marketSource: "Mercado Livre", category: "CPO", colors: "Consulte as cores disponíveis", accent: "#d7c8aa", image: "./products/iphone-13-pro-max.webp" },
+  { name: "iPhone 14 Pro Max", storage: "128 GB", price: 4490, marketPrice: 5968, marketSource: "Mercado Livre", category: "CPO", colors: "Consulte as cores disponíveis", accent: "#6c6477", image: "./products/iphone-14-pro-max.webp" },
+  { name: "iPhone 15", storage: "128 GB · chip físico + eSIM", price: 4190, marketPrice: 4777, marketSource: "Amazon", category: "Lacrado", colors: "Consulte as cores disponíveis", accent: "#a8bdd0", image: "./products/iphone-15.webp" },
+  { name: "iPhone 16", storage: "128 GB · chip físico + eSIM", price: 4790, marketPrice: 4999, marketSource: "Mercado Livre", category: "Lacrado", colors: "Consulte as cores disponíveis", accent: "#8fa6bd", image: "./products/iphone-16.webp" },
+  { name: "iPhone 16 Pro Max", storage: "512 GB", price: 7290, marketPrice: 12999, marketSource: "Mercado Livre", category: "CPO", colors: "Consulte as cores disponíveis", accent: "#b7afa4", image: "./products/iphone-16-pro-max.webp" },
+  { name: "iPhone 16 Pro Max", storage: "512 GB", price: 7990, marketPrice: 12999, marketSource: "Mercado Livre", category: "Lacrado", colors: "Consulte as cores disponíveis", accent: "#d4d5d7", image: "./products/iphone-16-pro-max.webp", badge: "Anatel" },
+  { name: "iPhone 17e", storage: "256 GB", price: 4690, marketPrice: 4772, marketSource: "Mercado Livre", category: "Lacrado", colors: "Consulte as cores disponíveis", accent: "#ead7dc", image: "./products/iphone-17e.webp" },
+  { name: "iPhone 17", storage: "256 GB", price: 5790, marketPrice: 6220, marketSource: "Mercado Livre", category: "Lacrado", colors: "Consulte as cores disponíveis", accent: "#c8d8cc", image: "./products/iphone-17.webp", badge: "Mais procurado" },
+  { name: "iPhone 17 Air", storage: "256 GB", price: 5990, marketPrice: 6399, marketSource: "Mercado Livre", category: "Lacrado", colors: "Consulte as cores disponíveis", accent: "#d9cfb4", image: "./products/iphone-17-air.webp" },
+  { name: "iPhone 17 Pro", storage: "256 GB", price: 7490, marketPrice: 9359, marketSource: "Mercado Livre", category: "Lacrado", colors: "Consulte as cores disponíveis", accent: "#c78b65", image: "./products/iphone-17-pro.webp" },
+  { name: "iPhone 17 Pro Max", storage: "256 GB", price: 7990, marketPrice: 9948, marketSource: "Mercado Livre", category: "Lacrado", colors: "Consulte as cores disponíveis", accent: "#6d7f9a", image: "./products/iphone-17-pro-max.webp" },
+  { name: "iPhone 17 Pro Max", storage: "512 GB", price: 8990, marketPrice: 11999, marketSource: "Mercado Livre", category: "Lacrado", colors: "Consulte as cores disponíveis", accent: "#8999ad", image: "./products/iphone-17-pro-max.webp" },
+  { name: "iPhone 18 Pro", storage: "256 GB", price: 8590, marketPrice: 11999, marketSource: "Mercado Livre", category: "Lacrado", colors: "Consulte as cores disponíveis", accent: "#8e2636", image: "./products/iphone-18-pro.webp", badge: "Novo" },
+  { name: "iPhone 18 Pro Max", storage: "256 GB", price: 10990, marketPrice: 12999, marketSource: "Mercado Livre", category: "Lacrado", colors: "Consulte as cores disponíveis", accent: "#a9c8df", image: "./products/iphone-18-pro-max.webp", badge: "Novo" },
+  { name: "iPhone 18 Pro Max", storage: "512 GB", price: 12990, marketPrice: 14499, marketSource: "Mercado Livre", category: "Lacrado", colors: "Consulte as cores disponíveis", accent: "#9ebdd4", image: "./products/iphone-18-pro-max.webp", badge: "Novo" },
+  { name: "iPhone 18 Pro Max", storage: "1 TB", price: 14990, marketPrice: 17499, marketSource: "Mercado Livre", category: "Lacrado", colors: "Consulte as cores disponíveis", accent: "#c6c8ca", image: "./products/iphone-18-pro-max.webp", badge: "Novo" },
+  { name: "iPhone 18 Pro Max", storage: "2 TB", price: 19490, marketPrice: 21999, marketSource: "Mercado Livre", category: "Lacrado", colors: "Consulte as cores disponíveis", accent: "#25282d", image: "./products/iphone-18-pro-max.webp", badge: "Novo" },
 ];
 
 const money = (value: number) => value.toLocaleString("pt-BR", { style: "currency", currency: "BRL", maximumFractionDigits: 0 });
-const savingPercent = (product: Product) => Math.round((1 - product.price / product.applePrice) * 100);
+const savingPercent = (product: Product) => Math.round((1 - product.price / product.marketPrice) * 100);
 const ArrowIcon = () => <span aria-hidden="true">↗</span>;
 
 export default function Home() {
@@ -50,6 +50,10 @@ export default function Home() {
   const filtered = useMemo(() => products.filter((product) => filter === "Todos" || product.category === filter), [filter]);
   const contactLink = (message: string) => `${whatsapp}?text=${encodeURIComponent(message)}`;
   const productLink = (product: Product) => contactLink(`Olá, Alesson! Vi o ${product.name} ${product.storage} por ${money(product.price)} no site. Pode confirmar disponibilidade, cor e condição de pagamento?`);
+  const marketLink = (product: Product) => {
+    const query = encodeURIComponent(`${product.name} ${product.storage.split(" · ")[0]}`);
+    return product.marketSource === "Amazon" ? `https://www.amazon.com.br/s?k=${query}` : `https://lista.mercadolivre.com.br/${query}`;
+  };
 
   return (
     <main>
@@ -79,13 +83,13 @@ export default function Home() {
       <section className="quick-benefits" aria-label="Diferenciais"><div className="shell quick-grid"><div><span>01</span><p><strong>Lacrados e CPO</strong>Condição identificada em cada oferta.</p></div><div><span>02</span><p><strong>Seu usado vale</strong>Aceitamos seu iPhone como parte do pagamento.</p></div><div><span>03</span><p><strong>Atendimento pessoal</strong>Do primeiro contato ao pós-venda.</p></div></div></section>
 
       <section className="offers section" id="ofertas"><div className="shell">
-        <div className="section-intro"><div><p className="kicker">Tabela completa</p><h2>Escolha o seu.</h2></div><p>Compare nosso valor final com a referência oficial Apple e veja quanto você economiza. Confirme cor e estoque antes de fechar.</p></div>
+        <div className="section-intro"><div><p className="kicker">Tabela completa</p><h2>Escolha o seu.</h2></div><p>Compare nosso valor final com referências atuais da Amazon e do Mercado Livre. Confirme cor e estoque antes de fechar.</p></div>
         <div className="filter-row" role="group" aria-label="Filtrar ofertas">{["Todos", "Lacrado", "CPO"].map((item) => <button key={item} type="button" className={filter === item ? "active" : ""} onClick={() => setFilter(item)}>{item}</button>)}</div>
         <div className="product-grid">{filtered.map((product) => <article className="product-card" key={`${product.name}-${product.storage}-${product.category}`}>
           <div className={`product-top ${product.image === "./products/iphone-16-pro-max.webp" || product.image === "./products/iphone-18-pro.webp" ? "dark-photo" : ""}`} style={{ "--accent": product.accent } as React.CSSProperties}><div className="product-labels"><span>{product.category}</span>{product.badge && <b>{product.badge}</b>}</div><img className="product-image" src={product.image} alt={`${product.name} ${product.storage}`} loading="lazy" /></div>
-          <div className="product-body"><p className="product-name">{product.name}</p><h3>{product.storage}</h3><p className="colors">{product.colors}</p><div className="price-block"><small>nosso preço final</small><strong>{money(product.price)}</strong><div className="apple-comparison"><span>Apple {product.appleReference === "atual" ? "hoje" : "no lançamento"} <s>{money(product.applePrice)}</s></span><b>Economize {money(product.applePrice - product.price)} · {savingPercent(product)}%</b></div><span>Parcelamento em até 12x no cartão</span></div><a href={productLink(product)} target="_blank" rel="noreferrer">Consultar disponibilidade <ArrowIcon /></a></div>
+          <div className="product-body"><p className="product-name">{product.name}</p><h3>{product.storage}</h3><p className="colors">{product.colors}</p><div className="price-block"><small>nosso preço final</small><strong>{money(product.price)}</strong><div className="market-comparison"><a href={marketLink(product)} target="_blank" rel="noreferrer">{product.marketSource} hoje <s>{money(product.marketPrice)}</s></a><b>Economize {money(product.marketPrice - product.price)} · {savingPercent(product)}%</b></div><span>Parcelamento em até 12x no cartão</span></div><a href={productLink(product)} target="_blank" rel="noreferrer">Consultar disponibilidade <ArrowIcon /></a></div>
         </article>)}</div>
-        <p className="comparison-note">* Referência consultada na <a href="https://www.apple.com/br/shop/buy-iphone" target="_blank" rel="noreferrer">Apple Brasil</a> em 06/10/2026. Para modelos fora da linha atual, usamos o preço oficial de lançamento da mesma capacidade. A comparação não considera promoções, troca ou desconto à vista da Apple.</p>
+        <p className="comparison-note">* Referências consultadas na <a href="https://www.amazon.com.br/" target="_blank" rel="noreferrer">Amazon</a> e no <a href="https://www.mercadolivre.com.br/" target="_blank" rel="noreferrer">Mercado Livre</a> em 06/10/2026, considerando anúncios comparáveis e valores parcelados quando disponíveis. Preços variam por cor, condição, vendedor, estoque e forma de pagamento.</p>
         <div className="catalog-footer"><p><strong>Procurando outro modelo?</strong> A lista completa inclui iPads, MacBooks, Apple Watch, AirPods e acessórios.</p><a className="button button-dark" href={contactLink("Olá, Alesson! Pode me enviar a lista completa e atualizada de produtos Apple?")} target="_blank" rel="noreferrer">Pedir lista completa</a></div>
       </div></section>
 
