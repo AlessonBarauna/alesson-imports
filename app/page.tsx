@@ -45,6 +45,60 @@ const products: Product[] = [
 const money = (value: number) => value.toLocaleString("pt-BR", { style: "currency", currency: "BRL", maximumFractionDigits: 0 });
 const normalizeText = (value: string) => value.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLocaleLowerCase("pt-BR");
 const savingPercent = (product: Product) => Math.round((1 - product.price / product.marketPrice) * 100);
+const catalogKey = (name: string, specs: string) => `${name}|${specs}`;
+type CatalogComparison = { price: number; source: string; url: string };
+const catalogComparisons: Record<string, CatalogComparison> = {
+  [catalogKey("Garmin Forerunner 165", "GPS running smartwatch")]: { price: 2499, source: "Amazon", url: "https://www.amazon.com.br/Garmin-Forerunner-165/dp/B0DG6QFJV1" },
+  [catalogKey("Garmin fēnix 8", "51 mm · AMOLED · 010-02905-00")]: { price: 7899, source: "Mercado Livre", url: "https://lista.mercadolivre.com.br/garmin-fenix-8-51mm-amoled" },
+  [catalogKey("AirPods 4", "Estojo USB-C")]: { price: 1499, source: "Apple", url: "https://www.apple.com/br/newsroom/2024/09/apple-introduces-airpods-4-and-a-hearing-health-experience-with-airpods-pro-2/" },
+  [catalogKey("AirPods 4 ANC", "Cancelamento ativo de ruído")]: { price: 1999, source: "Apple", url: "https://www.apple.com/br/newsroom/2024/09/apple-introduces-airpods-4-and-a-hearing-health-experience-with-airpods-pro-2/" },
+  [catalogKey("AirPods Pro 3", "USB-C")]: { price: 2699, source: "Apple", url: "https://www.apple.com/br/shop/buy-airpods/airpods-pro-3" },
+  [catalogKey("AirPods 5", "Estojo padrão")]: { price: 1499, source: "Apple", url: "https://www.apple.com/br/shop/buy-airpods/airpods-pro-3" },
+  [catalogKey("AirPods 5 Wireless", "Estojo com recarga sem fio")]: { price: 1699, source: "Apple", url: "https://www.apple.com/br/shop/buy-airpods/airpods-pro-3" },
+  [catalogKey("AirPods Max USB-C 2", "Edição 2026")]: { price: 6590, source: "Apple", url: "https://www.apple.com/br/shop/buy-airpods/airpods-max-2" },
+  [catalogKey("Apple Pencil USB-C", "Caneta para iPad")]: { price: 899, source: "Apple", url: "https://www.apple.com/br/shop/product/muwa3am/a/apple-pencil-usb-c" },
+  [catalogKey("Apple Pencil Pro", "Caneta profissional para iPad")]: { price: 1499, source: "Apple", url: "https://www.apple.com/br/shop/product/mx2d3am/a/apple-pencil-pro" },
+  [catalogKey("AirTag", "1 unidade · 2ª geração")]: { price: 369, source: "Apple", url: "https://www.apple.com/br/shop/buy-airtag/airtag/pacote-com-1" },
+  [catalogKey("AirTag", "4 unidades · 2ª geração")]: { price: 1249, source: "Apple", url: "https://www.apple.com/br/shop/buy-airtag/airtag/pacote-com-1" },
+  [catalogKey("Magic Keyboard para iPad Air", "M3 e M4 · 13 polegadas")]: { price: 3299, source: "Apple", url: "https://www.apple.com/br/newsroom/2026/03/apple-introduces-the-new-ipad-air-powered-by-m4/" },
+  [catalogKey("Apple Watch SE 3", "40 mm · GPS")]: { price: 3299, source: "Apple", url: "https://www.apple.com/br/shop/buy-watch/apple-watch-se" },
+  [catalogKey("Apple Watch SE 3", "44 mm · GPS")]: { price: 3699, source: "Apple", url: "https://www.apple.com/br/shop/buy-watch/apple-watch-se" },
+  [catalogKey("Apple Watch Series 12", "42 mm · GPS")]: { price: 5499, source: "Apple", url: "https://www.apple.com/br/shop/buy-watch" },
+  [catalogKey("Apple Watch Series 12", "46 mm · GPS")]: { price: 5499, source: "Apple", url: "https://www.apple.com/br/shop/buy-watch" },
+  [catalogKey("Apple Watch Ultra 4", "GPS + Cellular")]: { price: 10499, source: "Apple", url: "https://www.apple.com/br/shop/buy-watch" },
+  [catalogKey("iPad A16", "128 GB · Wi‑Fi")]: { price: 5999, source: "Apple", url: "https://www.apple.com/br/shop/buy-ipad/ipad" },
+  [catalogKey("iPad A16", "256 GB · Wi‑Fi")]: { price: 7199, source: "Apple", url: "https://www.apple.com/br/shop/buy-ipad/ipad" },
+  [catalogKey("iPad Air M4", "128 GB · 11 polegadas · Wi‑Fi")]: { price: 7499, source: "Apple", url: "https://www.apple.com/br/newsroom/2026/03/apple-introduces-the-new-ipad-air-powered-by-m4/" },
+  [catalogKey("iPad Air M4", "128 GB · 13 polegadas · Wi‑Fi")]: { price: 9999, source: "Apple", url: "https://www.apple.com/br/shop/buy-ipad/ipad-air" },
+  [catalogKey("iPad Air M4", "128 GB · 13 polegadas · Wi‑Fi + Cellular")]: { price: 11999, source: "Apple", url: "https://www.apple.com/br/shop/buy-ipad/ipad-air" },
+  [catalogKey("iPad Pro M5", "256 GB · 11 polegadas · Wi‑Fi")]: { price: 16999, source: "Apple", url: "https://www.apple.com/br/shop/buy-ipad/ipad-pro" },
+  [catalogKey("iPad Pro M5", "256 GB · 13 polegadas · Wi‑Fi")]: { price: 19999, source: "Apple", url: "https://www.apple.com/br/shop/buy-ipad/ipad-pro" },
+  [catalogKey("MacBook Air M5", "16 GB / 512 GB · 13 polegadas")]: { price: 15999, source: "Apple", url: "https://www.apple.com/br/shop/buy-mac/macbook-air" },
+  [catalogKey("MacBook Air M5", "16 GB / 512 GB · 15 polegadas")]: { price: 17999, source: "Apple", url: "https://www.apple.com/br/shop/buy-mac/macbook-air" },
+  [catalogKey("Redmi Pad 2", "8 GB / 256 GB")]: { price: 1798, source: "Mercado Livre", url: "https://www.mercadolivre.com.br/tablet-xiaomi-redmi-pad-2-11-8-gb-256-gb-wifi-roxo-lava/up/MLBU3832046991" },
+  [catalogKey("Redmi Note 15 Pro", "8 GB / 256 GB · 5G")]: { price: 2213, source: "Mercado Livre", url: "https://www.mercadolivre.com.br/celular-xiaomi-redmi-note-15-pro-5g-8gb-256gb-versao-global/up/MLBU4112568728" },
+  [catalogKey("POCO X8 Pro", "12 GB / 512 GB · 5G")]: { price: 3229, source: "Mercado Livre", url: "https://www.mercadolivre.com.br/xiaomi-poco-x8-pro-dual-sim-512-gb-amarillo-12-gb-ram-659-amoled-dimensity-8500-ultra-50mp-con-ois-6500mah-100w-hypercharge/p/MLB73842644" },
+};
+const catalogImage = (product: CatalogProduct) => {
+  if (product.name === "AntiGravity A1 Explorer Bundle") return "./catalog/products/antigravity-a1.webp";
+  if (product.name === "AirPods 5" || product.name === "AirPods 5 Wireless") return "./catalog/products/airpods-5.webp";
+  if (product.name === "AirPods Pro 3") return "./catalog/products/airpods-pro-3.webp";
+  if (product.name.includes("AirPods Max")) return "./catalog/products/airpods-max-2.webp";
+  if (product.name.includes("Apple Pencil")) return "./catalog/products/apple-pencil.webp";
+  if (product.name === "AirTag") return "./catalog/products/airtag-2.webp";
+  if (product.name === "Apple Watch SE 3") return "./catalog/products/watch-se-3.webp";
+  if (product.name === "Apple Watch Series 12") return "./catalog/products/watch-series-12.webp";
+  if (product.name === "Apple Watch Ultra 4") return "./catalog/products/watch-ultra-4.webp";
+  if (product.name === "iPad A16") return "./catalog/products/ipad-a16.webp";
+  if (product.name === "iPad Air M4") return "./catalog/products/ipad-air-m4.webp";
+  if (product.name.includes("iPad Pro M5")) return "./catalog/products/ipad-pro-m5.webp";
+  if (product.name === "MacBook Air M5") return "./catalog/products/macbook-air-m5.webp";
+  if (product.name.includes("MacBook Pro M5")) return "./catalog/products/macbook-pro-m5.webp";
+  if (product.name.includes("Mac mini M4")) return "./catalog/products/mac-mini-m4.webp";
+  if (product.name === "Redmi Pad 2" || product.name === "Redmi Pad 2 4G") return "./catalog/products/redmi-pad2.webp";
+  if (product.name === "POCO X8 Pro") return "./catalog/products/poco-x8-pro.webp";
+  return product.image;
+};
 const ArrowIcon = () => <span aria-hidden="true">↗</span>;
 const InstagramIcon = () => <svg aria-hidden="true" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5" /><circle cx="12" cy="12" r="4.25" /><circle className="instagram-dot" cx="17.4" cy="6.7" r="1" /></svg>;
 
@@ -103,11 +157,11 @@ export default function Home() {
       <section className="quick-benefits" aria-label="Diferenciais"><div className="shell quick-grid"><div><span>01</span><p><strong>Lacrados e CPO</strong>Condição identificada em cada oferta.</p></div><div><span>02</span><p><strong>Seu usado vale</strong>Aceitamos seu iPhone como parte do pagamento.</p></div><div><span>03</span><p><strong>Atendimento pessoal</strong>Do primeiro contato ao pós-venda.</p></div></div></section>
 
       <section className="offers section" id="ofertas"><div className="shell">
-        <div className="section-intro"><div><p className="kicker">Tabela completa</p><h2>Escolha o seu.</h2></div><p>Compare nosso valor final com referências atuais da Amazon e do Mercado Livre. Confirme cor e estoque antes de fechar.</p></div>
+        <div className="section-intro"><div><p className="kicker">Tabela completa</p><h2>Escolha o seu.</h2></div><p>Compare nosso valor com referências atuais da Amazon e do Mercado Livre. Confirme cor e estoque antes de fechar.</p></div>
         <div className="filter-row" role="group" aria-label="Filtrar ofertas">{["Todos", "Lacrado", "CPO"].map((item) => <button key={item} type="button" className={filter === item ? "active" : ""} onClick={() => setFilter(item)}>{item}</button>)}</div>
         <div className="product-grid">{filtered.map((product) => <article className="product-card" key={`${product.name}-${product.storage}-${product.category}`}>
           <div className={`product-top ${product.image === "./products/iphone-16-pro-max.webp" || product.image === "./products/iphone-18-pro.webp" ? "dark-photo" : ""}`} style={{ "--accent": product.accent } as React.CSSProperties}><div className="product-labels"><span>{product.category}</span>{product.badge && <b>{product.badge}</b>}</div><img className="product-image" src={product.image} alt={`${product.name} ${product.storage}`} loading="lazy" /></div>
-          <div className="product-body"><p className="product-name">{product.name}</p><h3>{product.storage}</h3><p className="colors">{product.colors}</p><div className="price-block"><small>nosso preço final</small><strong>{money(product.price)}</strong><div className="market-comparison"><a href={marketLink(product)} target="_blank" rel="noreferrer">{product.marketSource} hoje <s>{money(product.marketPrice)}</s></a><b>Economize {money(product.marketPrice - product.price)} · {savingPercent(product)}%</b></div><span>Parcelamento em até 12x no cartão</span></div><a href={productLink(product)} target="_blank" rel="noreferrer">Consultar disponibilidade <ArrowIcon /></a></div>
+          <div className="product-body"><p className="product-name">{product.name}</p><h3>{product.storage}</h3><p className="colors">{product.colors}</p><div className="price-block"><small>nosso preço</small><strong>{money(product.price)}</strong><div className="market-comparison"><a href={marketLink(product)} target="_blank" rel="noreferrer">{product.marketSource} hoje <s>{money(product.marketPrice)}</s></a><b>Economize {money(product.marketPrice - product.price)} · {savingPercent(product)}%</b></div><span>Parcelamento em até 12x no cartão</span></div><a href={productLink(product)} target="_blank" rel="noreferrer">Consultar disponibilidade <ArrowIcon /></a></div>
         </article>)}</div>
         <p className="comparison-note">* Referências consultadas na <a href="https://www.amazon.com.br/" target="_blank" rel="noreferrer">Amazon</a> e no <a href="https://www.mercadolivre.com.br/" target="_blank" rel="noreferrer">Mercado Livre</a> em 06/10/2026, considerando anúncios comparáveis e valores parcelados quando disponíveis. Preços variam por cor, condição, vendedor, estoque e forma de pagamento.</p>
         <div className="catalog-footer"><p><strong>Procurando outro modelo?</strong> A loja completa inclui drones, Garmin, iPads, MacBooks, Apple Watch, AirPods, Xiaomi e seminovos.</p><a className="button button-dark" href="#loja">Abrir loja completa</a></div>
@@ -121,28 +175,32 @@ export default function Home() {
         </div>
         <div className="catalog-filters" role="group" aria-label="Filtrar catálogo por categoria">{catalogCategories.map((category) => <button key={category} type="button" className={catalogFilter === category ? "active" : ""} onClick={() => setCatalogCategory(category)}>{category}</button>)}</div>
         {catalogFiltered.length > 0 ? <>
-          <div className="market-grid" id="catalog-results">{catalogFiltered.slice(0, catalogLimit).map((product) => <article className="market-card" key={product.id}>
-            <div className="market-image"><img src={product.image} alt={`${product.name} ${product.specs}`} loading="lazy" /><span className="market-category">{product.category}</span>{product.badge && <span className="market-badge">{product.badge}</span>}</div>
-            <div className="market-body"><div className="market-title"><p>{product.name}</p><h3>{product.specs}</h3></div><p className="market-options">{product.options}</p>{product.details && <p className="market-details">{product.details}</p>}
-              <div className="market-price"><small>{product.from ? "a partir de" : "preço final"}</small><strong>{money(product.price)}</strong><span>Consulte parcelamento e disponibilidade</span></div>
-              <a href={catalogProductLink(product)} target="_blank" rel="noreferrer">Tenho interesse <ArrowIcon /></a>
-            </div>
-          </article>)}</div>
+          <div className="market-grid" id="catalog-results">{catalogFiltered.slice(0, catalogLimit).map((product) => {
+            const comparison = catalogComparisons[catalogKey(product.name, product.specs)];
+            const showComparison = comparison && comparison.price > product.price;
+            return <article className="market-card" key={product.id}>
+              <div className="market-image"><img src={catalogImage(product)} alt={`${product.name} ${product.specs}`} loading="lazy" /><span className="market-category">{product.category}</span>{product.badge && <span className="market-badge">{product.badge}</span>}</div>
+              <div className="market-body"><div className="market-title"><p>{product.name}</p><h3>{product.specs}</h3></div><p className="market-options">{product.options}</p>{product.details && <p className="market-details">{product.details}</p>}
+                <div className="market-price"><small>{product.from ? "a partir de" : "por"}</small><strong>{money(product.price)}</strong>{showComparison && <div className="catalog-comparison"><a href={comparison.url} target="_blank" rel="noreferrer">{comparison.source} <s>{money(comparison.price)}</s></a><b>Economize {money(comparison.price - product.price)} · {Math.round((1 - product.price / comparison.price) * 100)}%</b></div>}<span>Consulte parcelamento e disponibilidade</span></div>
+                <a href={catalogProductLink(product)} target="_blank" rel="noreferrer">Tenho interesse <ArrowIcon /></a>
+              </div>
+            </article>;
+          })}</div>
           {catalogLimit < catalogFiltered.length && <div className="catalog-more"><button className="button button-dark" type="button" onClick={() => setCatalogLimit((limit) => limit + 12)}>Mostrar mais produtos</button><span>Exibindo {Math.min(catalogLimit, catalogFiltered.length)} de {catalogFiltered.length}</span></div>}
         </> : <div className="catalog-empty"><strong>Nenhum produto encontrado.</strong><p>Tente outro nome ou escolha uma categoria diferente.</p><button type="button" onClick={() => { setCatalogSearch(""); setCatalogCategory("Todos"); }}>Limpar filtros</button></div>}
-        <div className="marketplace-note"><span>Preço final</span><p>Os valores desta loja já foram calculados com 1% de nota fiscal e R$ 50 de frete sobre a tabela recebida. Estoque, cor e condição de pagamento devem ser confirmados antes da compra.</p></div>
+        <div className="marketplace-note"><span>Valores da loja</span><p>Os valores anunciados já foram calculados com 1% de nota fiscal e R$ 50 de frete sobre a tabela recebida. Comparações aparecem apenas quando nossa oferta está abaixo da referência consultada. Referências consultadas em 08/10/2026. Estoque, cor e condição de pagamento devem ser confirmados antes da compra.</p></div>
       </div></section>
 
       <section className="experience section" id="experiencia"><div className="shell experience-card"><div className="experience-copy"><p className="kicker kicker-light">Compra acompanhada</p><h2>Tecnologia é simples.<br />A compra também deve ser.</h2><p>Você fala diretamente com a Alesson Imports para comparar modelos, avaliar seu iPhone usado e confirmar todas as condições antes de decidir.</p><a className="button button-light" href={contactLink("Oi! Pode me ajudar a escolher um iPhone dentro do meu orçamento?")} target="_blank" rel="noreferrer">Receber uma recomendação</a></div><ol className="experience-steps"><li><span>1</span><div><strong>Conte o que você busca</strong><p>Modelo, orçamento, memória e cor preferida.</p></div></li><li><span>2</span><div><strong>Avalie seu usado</strong><p>Seu iPhone pode entrar como parte do pagamento.</p></div></li><li><span>3</span><div><strong>Confirme com segurança</strong><p>Preço, garantia, estoque e prazo explicados antes do pagamento.</p></div></li></ol></div></section>
 
-      <section className="pricing section" id="criterio"><div className="shell pricing-layout"><div className="pricing-title"><p className="kicker">Preço claro, de verdade</p><h2>O valor anunciado.<br />Sem surpresa.</h2></div><div className="pricing-content"><p className="pricing-lead">A tabela apresenta os valores finais dos aparelhos, com nota fiscal e frete inclusos nas condições informadas.</p><div className="formula" aria-label="Condições do preço"><div><span>Produto</span><strong>lacrado ou CPO</strong></div><i>+</i><div><span>Compra</span><strong>nota fiscal e frete</strong></div><i>=</i><div className="formula-result"><span>Valor anunciado</span><strong>preço final</strong></div></div><p className="pricing-note">Valores e disponibilidade podem sofrer alterações sem aviso prévio. Consulte as cores, versões e condições de parcelamento antes de fechar o pedido.</p></div></div></section>
+      <section className="pricing section" id="criterio"><div className="shell pricing-layout"><div className="pricing-title"><p className="kicker">Preço claro, de verdade</p><h2>O valor anunciado.<br />Sem surpresa.</h2></div><div className="pricing-content"><p className="pricing-lead">A tabela apresenta os valores anunciados dos aparelhos, com nota fiscal e frete inclusos nas condições informadas.</p><div className="formula" aria-label="Condições do preço"><div><span>Produto</span><strong>lacrado ou CPO</strong></div><i>+</i><div><span>Compra</span><strong>nota fiscal e frete</strong></div><i>=</i><div className="formula-result"><span>Preço exibido</span><strong>valor anunciado</strong></div></div><p className="pricing-note">Valores e disponibilidade podem sofrer alterações sem aviso prévio. Consulte as cores, versões e condições de parcelamento antes de fechar o pedido.</p></div></div></section>
 
       <section className="about section"><div className="shell about-layout"><div className="about-mark">A</div><div><p className="kicker">Alesson Imports</p><h2>Atendimento humano.<br />Escolha bem informada.</h2><p>A proposta é simples: facilitar o acesso a produtos Apple com preço competitivo, comunicação clara e alguém de verdade acompanhando sua compra.</p><div className="founder"><span>AB</span><p><strong>Alesson Baraúna</strong>Fundador · Mogi das Cruzes, SP</p></div></div></div></section>
 
       <section className="faq section" id="duvidas"><div className="shell faq-layout"><div><p className="kicker">Antes de comprar</p><h2>Tudo claro.</h2><p>Condições importantes, sem esconder o que você precisa saber.</p></div><div className="accordion">
         <details><summary>Os produtos são originais e lacrados?<span>+</span></summary><p>Os itens anunciados como lacrados são novos e selados de fábrica. Produtos CPO são identificados separadamente e podem ter condições diferentes de garantia.</p></details>
         <details><summary>Como funciona a garantia?<span>+</span></summary><p>A situação da garantia é conferida antes da compra. O prazo pode variar por aparelho e, em alguns casos, a Apple pode solicitar documentação de origem/importação. Questões de cobertura são tratadas diretamente com a Apple.</p></details>
-        <details><summary>O preço do site é final?<span>+</span></summary><p>Sim. Os valores anunciados incluem nota fiscal e frete nas condições informadas. Como estoque e mercado mudam, confirme preço, cor e disponibilidade no WhatsApp antes do pagamento.</p></details>
+        <details><summary>O valor anunciado já inclui as condições informadas?<span>+</span></summary><p>Sim. Os valores anunciados incluem nota fiscal e frete nas condições informadas. Como estoque e mercado mudam, confirme preço, cor e disponibilidade no WhatsApp antes do pagamento.</p></details>
         <details><summary>Posso parcelar?<span>+</span></summary><p>Sim. Há parcelamento em até 12 vezes no cartão, sujeito às condições e taxas apresentadas na cotação.</p></details>
         <details><summary>Como funciona o envio?<span>+</span></summary><p>O frete está incluso nas condições anunciadas. O meio de envio, prazo, cobertura para sua região e demais detalhes são confirmados antes do pagamento.</p></details>
       </div></div></section>
