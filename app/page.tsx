@@ -3,6 +3,7 @@
 /* eslint-disable @next/next/no-img-element */
 
 import { useMemo, useState } from "react";
+import { catalogCategories, catalogProducts, type CatalogProduct } from "./catalog";
 
 const whatsapp = "https://wa.me/5511964421841";
 const instagram = "https://www.instagram.com/alessonimports.oficial/";
@@ -42,19 +43,36 @@ const products: Product[] = [
 ];
 
 const money = (value: number) => value.toLocaleString("pt-BR", { style: "currency", currency: "BRL", maximumFractionDigits: 0 });
+const normalizeText = (value: string) => value.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLocaleLowerCase("pt-BR");
 const savingPercent = (product: Product) => Math.round((1 - product.price / product.marketPrice) * 100);
 const ArrowIcon = () => <span aria-hidden="true">↗</span>;
 const InstagramIcon = () => <svg aria-hidden="true" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5" /><circle cx="12" cy="12" r="4.25" /><circle className="instagram-dot" cx="17.4" cy="6.7" r="1" /></svg>;
 
 export default function Home() {
   const [filter, setFilter] = useState("Todos");
+  const [catalogFilter, setCatalogFilter] = useState("Todos");
+  const [catalogSearch, setCatalogSearch] = useState("");
+  const [catalogLimit, setCatalogLimit] = useState(12);
   const [menuOpen, setMenuOpen] = useState(false);
   const filtered = useMemo(() => products.filter((product) => filter === "Todos" || product.category === filter), [filter]);
+  const catalogFiltered = useMemo(() => {
+    const query = normalizeText(catalogSearch.trim());
+    return catalogProducts.filter((product) => {
+      const categoryMatch = catalogFilter === "Todos" || product.category === catalogFilter;
+      const searchMatch = !query || normalizeText(`${product.name} ${product.specs} ${product.options} ${product.category}`).includes(query);
+      return categoryMatch && searchMatch;
+    });
+  }, [catalogFilter, catalogSearch]);
   const contactLink = (message: string) => `${whatsapp}?text=${encodeURIComponent(message)}`;
   const productLink = (product: Product) => contactLink(`Oi! Tenho interesse no ${product.name} ${product.storage} de ${money(product.price)}. Ainda tem disponível?`);
   const marketLink = (product: Product) => {
     const query = encodeURIComponent(`${product.name} ${product.storage.split(" · ")[0]}`);
     return product.marketSource === "Amazon" ? `https://www.amazon.com.br/s?k=${query}` : `https://lista.mercadolivre.com.br/${query}`;
+  };
+  const catalogProductLink = (product: CatalogProduct) => contactLink(`Oi! Vi o ${product.name} ${product.specs} por ${money(product.price)}. Ainda tem disponível?`);
+  const setCatalogCategory = (category: string) => {
+    setCatalogFilter(category);
+    setCatalogLimit(12);
   };
 
   return (
@@ -65,7 +83,7 @@ export default function Home() {
           <a className="brand" href="#inicio" aria-label="Alesson Imports — início"><span className="brand-symbol">A</span><span>Alesson Imports</span></a>
           <button className="menu-button" type="button" aria-label="Abrir menu" aria-expanded={menuOpen} onClick={() => setMenuOpen((open) => !open)}><span /><span /></button>
           <div className={`nav-links ${menuOpen ? "open" : ""}`}>
-            <a href="#ofertas" onClick={() => setMenuOpen(false)}>Ofertas</a><a href="#experiencia" onClick={() => setMenuOpen(false)}>Experiência</a><a href="#criterio" onClick={() => setMenuOpen(false)}>Preço justo</a><a href="#duvidas" onClick={() => setMenuOpen(false)}>Dúvidas</a>
+            <a href="#ofertas" onClick={() => setMenuOpen(false)}>Ofertas</a><a href="#loja" onClick={() => setMenuOpen(false)}>Loja</a><a href="#experiencia" onClick={() => setMenuOpen(false)}>Experiência</a><a href="#criterio" onClick={() => setMenuOpen(false)}>Preço justo</a><a href="#duvidas" onClick={() => setMenuOpen(false)}>Dúvidas</a>
             <a className="nav-contact" href={contactLink("Oi! Vim pelo site e queria tirar uma dúvida.")} target="_blank" rel="noreferrer">Falar no WhatsApp</a>
           </div>
         </nav>
@@ -92,7 +110,27 @@ export default function Home() {
           <div className="product-body"><p className="product-name">{product.name}</p><h3>{product.storage}</h3><p className="colors">{product.colors}</p><div className="price-block"><small>nosso preço final</small><strong>{money(product.price)}</strong><div className="market-comparison"><a href={marketLink(product)} target="_blank" rel="noreferrer">{product.marketSource} hoje <s>{money(product.marketPrice)}</s></a><b>Economize {money(product.marketPrice - product.price)} · {savingPercent(product)}%</b></div><span>Parcelamento em até 12x no cartão</span></div><a href={productLink(product)} target="_blank" rel="noreferrer">Consultar disponibilidade <ArrowIcon /></a></div>
         </article>)}</div>
         <p className="comparison-note">* Referências consultadas na <a href="https://www.amazon.com.br/" target="_blank" rel="noreferrer">Amazon</a> e no <a href="https://www.mercadolivre.com.br/" target="_blank" rel="noreferrer">Mercado Livre</a> em 06/10/2026, considerando anúncios comparáveis e valores parcelados quando disponíveis. Preços variam por cor, condição, vendedor, estoque e forma de pagamento.</p>
-        <div className="catalog-footer"><p><strong>Procurando outro modelo?</strong> A lista completa inclui iPads, MacBooks, Apple Watch, AirPods e acessórios.</p><a className="button button-dark" href={contactLink("Oi! Pode me mandar a lista completa?")} target="_blank" rel="noreferrer">Pedir lista completa</a></div>
+        <div className="catalog-footer"><p><strong>Procurando outro modelo?</strong> A loja completa inclui drones, Garmin, iPads, MacBooks, Apple Watch, AirPods, Xiaomi e seminovos.</p><a className="button button-dark" href="#loja">Abrir loja completa</a></div>
+      </div></section>
+
+      <section className="marketplace section" id="loja"><div className="shell">
+        <div className="marketplace-head"><div><p className="kicker">Alesson Marketplace</p><h2>Tecnologia para<br />cada momento.</h2></div><div className="marketplace-summary"><strong>{catalogProducts.length} opções</strong><p>Drones, Apple, Garmin e Xiaomi em uma loja só. Pesquise, compare e consulte o estoque pelo WhatsApp.</p></div></div>
+        <div className="marketplace-toolbar">
+          <label className="catalog-search"><span aria-hidden="true">⌕</span><input value={catalogSearch} onChange={(event) => { setCatalogSearch(event.target.value); setCatalogLimit(12); }} placeholder="Buscar por produto, memória ou cor" aria-label="Buscar no catálogo" />{catalogSearch && <button type="button" onClick={() => setCatalogSearch("")} aria-label="Limpar busca">×</button>}</label>
+          <div className="catalog-result"><strong>{catalogFiltered.length}</strong><span>{catalogFiltered.length === 1 ? "produto encontrado" : "produtos encontrados"}</span></div>
+        </div>
+        <div className="catalog-filters" role="group" aria-label="Filtrar catálogo por categoria">{catalogCategories.map((category) => <button key={category} type="button" className={catalogFilter === category ? "active" : ""} onClick={() => setCatalogCategory(category)}>{category}</button>)}</div>
+        {catalogFiltered.length > 0 ? <>
+          <div className="market-grid" id="catalog-results">{catalogFiltered.slice(0, catalogLimit).map((product) => <article className="market-card" key={product.id}>
+            <div className="market-image"><img src={product.image} alt={`${product.name} ${product.specs}`} loading="lazy" /><span className="market-category">{product.category}</span>{product.badge && <span className="market-badge">{product.badge}</span>}</div>
+            <div className="market-body"><div className="market-title"><p>{product.name}</p><h3>{product.specs}</h3></div><p className="market-options">{product.options}</p>{product.details && <p className="market-details">{product.details}</p>}
+              <div className="market-price"><small>{product.from ? "a partir de" : "preço final"}</small><strong>{money(product.price)}</strong><span>Consulte parcelamento e disponibilidade</span></div>
+              <a href={catalogProductLink(product)} target="_blank" rel="noreferrer">Tenho interesse <ArrowIcon /></a>
+            </div>
+          </article>)}</div>
+          {catalogLimit < catalogFiltered.length && <div className="catalog-more"><button className="button button-dark" type="button" onClick={() => setCatalogLimit((limit) => limit + 12)}>Mostrar mais produtos</button><span>Exibindo {Math.min(catalogLimit, catalogFiltered.length)} de {catalogFiltered.length}</span></div>}
+        </> : <div className="catalog-empty"><strong>Nenhum produto encontrado.</strong><p>Tente outro nome ou escolha uma categoria diferente.</p><button type="button" onClick={() => { setCatalogSearch(""); setCatalogCategory("Todos"); }}>Limpar filtros</button></div>}
+        <div className="marketplace-note"><span>Preço final</span><p>Os valores desta loja já foram calculados com 1% de nota fiscal e R$ 50 de frete sobre a tabela recebida. Estoque, cor e condição de pagamento devem ser confirmados antes da compra.</p></div>
       </div></section>
 
       <section className="experience section" id="experiencia"><div className="shell experience-card"><div className="experience-copy"><p className="kicker kicker-light">Compra acompanhada</p><h2>Tecnologia é simples.<br />A compra também deve ser.</h2><p>Você fala diretamente com a Alesson Imports para comparar modelos, avaliar seu iPhone usado e confirmar todas as condições antes de decidir.</p><a className="button button-light" href={contactLink("Oi! Pode me ajudar a escolher um iPhone dentro do meu orçamento?")} target="_blank" rel="noreferrer">Receber uma recomendação</a></div><ol className="experience-steps"><li><span>1</span><div><strong>Conte o que você busca</strong><p>Modelo, orçamento, memória e cor preferida.</p></div></li><li><span>2</span><div><strong>Avalie seu usado</strong><p>Seu iPhone pode entrar como parte do pagamento.</p></div></li><li><span>3</span><div><strong>Confirme com segurança</strong><p>Preço, garantia, estoque e prazo explicados antes do pagamento.</p></div></li></ol></div></section>
@@ -113,7 +151,7 @@ export default function Home() {
 
       <section className="closing"><div className="shell closing-inner"><p className="kicker kicker-light">Seu próximo começa aqui</p><h2>Qual iPhone combina<br />com você?</h2><p>Conte quanto pretende investir. A gente ajuda a comparar as melhores opções.</p><a className="button button-light" href={contactLink("Oi! Quero ajuda pra escolher um iPhone.")} target="_blank" rel="noreferrer">Conversar no WhatsApp</a></div></section>
 
-      <footer><div className="shell footer-main"><div><a className="brand brand-footer" href="#inicio"><span className="brand-symbol">A</span><span>Alesson Imports</span></a><p>Produtos Apple, preço competitivo<br />e atendimento de verdade.</p></div><div><strong>Explore</strong><a href="#ofertas">Ofertas</a><a href="#criterio">Como precificamos</a><a href="#duvidas">Dúvidas</a></div><div><strong>Contato</strong><a href={whatsapp} target="_blank" rel="noreferrer">WhatsApp</a><a href={instagram} target="_blank" rel="noreferrer">Instagram</a><span>Mogi das Cruzes · SP</span></div></div><div className="shell footer-bottom"><span>© 2026 Alesson Imports.</span><span>Preços e disponibilidade sujeitos a confirmação.</span></div></footer>
+      <footer><div className="shell footer-main"><div><a className="brand brand-footer" href="#inicio"><span className="brand-symbol">A</span><span>Alesson Imports</span></a><p>Produtos Apple, preço competitivo<br />e atendimento de verdade.</p></div><div><strong>Explore</strong><a href="#ofertas">Ofertas</a><a href="#loja">Loja completa</a><a href="#criterio">Como precificamos</a><a href="#duvidas">Dúvidas</a></div><div><strong>Contato</strong><a href={whatsapp} target="_blank" rel="noreferrer">WhatsApp</a><a href={instagram} target="_blank" rel="noreferrer">Instagram</a><span>Mogi das Cruzes · SP</span></div></div><div className="shell footer-bottom"><span>© 2026 Alesson Imports.</span><span>Preços e disponibilidade sujeitos a confirmação.</span></div></footer>
       <a className="whatsapp-float" href={contactLink("Oi! Vim pelo site.")} target="_blank" rel="noreferrer" aria-label="Falar no WhatsApp"><span>●</span><b>WhatsApp</b></a>
     </main>
   );
