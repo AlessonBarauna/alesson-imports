@@ -55,6 +55,11 @@ const catalogKey = (name: string, specs: string) => `${name}|${specs}`;
 const targetMargin = 0.15;
 type CatalogComparison = { price: number; source: string; url: string };
 const catalogComparisons: Record<string, CatalogComparison> = {
+  [catalogKey("iPhone 15", "128 GB · chip físico + eSIM")]: { price: 4777, source: "Amazon", url: "https://www.amazon.com.br/s?k=iphone+15+128gb" },
+  [catalogKey("iPhone 16", "128 GB · chip físico + eSIM")]: { price: 4999, source: "Mercado Livre", url: "https://lista.mercadolivre.com.br/iphone-16-128gb" },
+  [catalogKey("iPhone 17e", "256 GB · chip físico + eSIM")]: { price: 4772, source: "Mercado Livre", url: "https://lista.mercadolivre.com.br/iphone-17e-256gb" },
+  [catalogKey("iPhone 17", "256 GB · eSIM")]: { price: 6220, source: "Mercado Livre", url: "https://lista.mercadolivre.com.br/iphone-17-256gb" },
+  [catalogKey("iPhone 17 Air", "256 GB · eSIM")]: { price: 6399, source: "Mercado Livre", url: "https://lista.mercadolivre.com.br/iphone-17-air-256gb" },
   [catalogKey("Garmin Forerunner 165", "GPS running smartwatch")]: { price: 2499, source: "Amazon", url: "https://www.amazon.com.br/Garmin-Forerunner-165/dp/B0DG6QFJV1" },
   [catalogKey("Garmin fēnix 8", "51 mm · AMOLED · 010-02905-00")]: { price: 7899, source: "Mercado Livre", url: "https://lista.mercadolivre.com.br/garmin-fenix-8-51mm-amoled" },
   [catalogKey("AirPods 4", "Estojo USB-C")]: { price: 1499, source: "Apple", url: "https://www.apple.com/br/newsroom/2024/09/apple-introduces-airpods-4-and-a-hearing-health-experience-with-airpods-pro-2/" },
