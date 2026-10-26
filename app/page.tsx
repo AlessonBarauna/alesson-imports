@@ -22,24 +22,24 @@ type Product = {
 };
 
 const products: Product[] = [
-  { name: "iPhone 13 Pro", storage: "256 GB", price: 4123, marketPrice: 4689, marketSource: "Mercado Livre", category: "CPO", colors: "Consulte as cores disponíveis", accent: "#a9b7c4", image: "./products/iphone-13-pro.webp" },
-  { name: "iPhone 13 Pro Max", storage: "128 GB", price: 4406, marketPrice: 4416, marketSource: "Mercado Livre", category: "CPO", colors: "Consulte as cores disponíveis", accent: "#d7c8aa", image: "./products/iphone-13-pro-max.webp" },
-  { name: "iPhone 14 Pro Max", storage: "128 GB", price: 4811, marketPrice: 5968, marketSource: "Mercado Livre", category: "CPO", colors: "Consulte as cores disponíveis", accent: "#6c6477", image: "./products/iphone-14-pro-max.webp" },
-  { name: "iPhone 15", storage: "128 GB · chip físico + eSIM", price: 4456, marketPrice: 4777, marketSource: "Amazon", category: "Lacrado", colors: "Preto", accent: "#a8bdd0", image: "./products/iphone-15.webp" },
-  { name: "iPhone 16", storage: "128 GB · chip físico + eSIM", price: 4989, marketPrice: 4999, marketSource: "Mercado Livre", category: "Lacrado", colors: "Branco · Preto · Verde · Azul", accent: "#8fa6bd", image: "./products/iphone-16.webp" },
-  { name: "iPhone 16 Pro Max", storage: "512 GB", price: 7729, marketPrice: 12999, marketSource: "Mercado Livre", category: "CPO", colors: "Consulte as cores disponíveis", accent: "#b7afa4", image: "./products/iphone-16-pro-max.webp" },
-  { name: "iPhone 16 Pro Max", storage: "512 GB", price: 8234, marketPrice: 12999, marketSource: "Mercado Livre", category: "Lacrado", colors: "Consulte as cores disponíveis", accent: "#d4d5d7", image: "./products/iphone-16-pro-max.webp", badge: "Anatel" },
-  { name: "iPhone 17e", storage: "256 GB", price: 4456, marketPrice: 4772, marketSource: "Mercado Livre", category: "Lacrado", colors: "Preto · Branco · Rosa", accent: "#ead7dc", image: "./products/iphone-17e.webp" },
-  { name: "iPhone 17", storage: "256 GB", price: 6210, marketPrice: 6220, marketSource: "Mercado Livre", category: "Lacrado", colors: "Verde · Lavanda", accent: "#c8d8cc", image: "./products/iphone-17.webp", badge: "Mais procurado" },
+  { name: "iPhone 13 Pro", storage: "256 GB", price: 3990, marketPrice: 4689, marketSource: "Mercado Livre", category: "CPO", colors: "Consulte as cores disponíveis", accent: "#a9b7c4", image: "./products/iphone-13-pro.webp" },
+  { name: "iPhone 13 Pro Max", storage: "128 GB", price: 4390, marketPrice: 4416, marketSource: "Mercado Livre", category: "CPO", colors: "Consulte as cores disponíveis", accent: "#d7c8aa", image: "./products/iphone-13-pro-max.webp" },
+  { name: "iPhone 14 Pro Max", storage: "128 GB", price: 4690, marketPrice: 5968, marketSource: "Mercado Livre", category: "CPO", colors: "Consulte as cores disponíveis", accent: "#6c6477", image: "./products/iphone-14-pro-max.webp" },
+  { name: "iPhone 15", storage: "128 GB · chip físico + eSIM", price: 4490, marketPrice: 4777, marketSource: "Amazon", category: "Lacrado", colors: "Preto", accent: "#a8bdd0", image: "./products/iphone-15.webp" },
+  { name: "iPhone 16", storage: "128 GB · chip físico + eSIM", price: 4890, marketPrice: 4999, marketSource: "Mercado Livre", category: "Lacrado", colors: "Branco · Preto · Verde · Azul", accent: "#8fa6bd", image: "./products/iphone-16.webp" },
+  { name: "iPhone 16 Pro Max", storage: "512 GB", price: 7390, marketPrice: 12999, marketSource: "Mercado Livre", category: "CPO", colors: "Consulte as cores disponíveis", accent: "#b7afa4", image: "./products/iphone-16-pro-max.webp" },
+  { name: "iPhone 16 Pro Max", storage: "512 GB", price: 7890, marketPrice: 12999, marketSource: "Mercado Livre", category: "Lacrado", colors: "Consulte as cores disponíveis", accent: "#d4d5d7", image: "./products/iphone-16-pro-max.webp", badge: "Anatel" },
+  { name: "iPhone 17e", storage: "256 GB", price: 4290, marketPrice: 4772, marketSource: "Mercado Livre", category: "Lacrado", colors: "Preto · Branco · Rosa", accent: "#ead7dc", image: "./products/iphone-17e.webp" },
+  { name: "iPhone 17", storage: "256 GB", price: 6090, marketPrice: 6220, marketSource: "Mercado Livre", category: "Lacrado", colors: "Verde · Lavanda", accent: "#c8d8cc", image: "./products/iphone-17.webp", badge: "Mais procurado" },
   { name: "iPhone 17 Air", storage: "256 GB", price: 6389, marketPrice: 6399, marketSource: "Mercado Livre", category: "Lacrado", colors: "Preto · Dourado", accent: "#d9cfb4", image: "./products/iphone-17-air.webp" },
-  { name: "iPhone 17 Pro", storage: "256 GB", price: 8139, marketPrice: 9359, marketSource: "Mercado Livre", category: "Lacrado", colors: "Azul · Prateado · Laranja", accent: "#c78b65", image: "./products/iphone-17-pro.webp" },
-  { name: "iPhone 17 Pro Max", storage: "256 GB", price: 8615, marketPrice: 9948, marketSource: "Mercado Livre", category: "Lacrado", colors: "Branco · Azul · Laranja", accent: "#6d7f9a", image: "./products/iphone-17-pro-max.webp" },
-  { name: "iPhone 17 Pro Max", storage: "512 GB", price: 10516, marketPrice: 11999, marketSource: "Mercado Livre", category: "Lacrado", colors: "Laranja · Azul · Branco", accent: "#8999ad", image: "./products/iphone-17-pro-max.webp" },
-  { name: "iPhone 18 Pro", storage: "256 GB", price: 9209, marketPrice: 11999, marketSource: "Mercado Livre", category: "Lacrado", colors: "Glacial · Bordô · Preto", accent: "#8e2636", image: "./products/iphone-18-pro.webp", badge: "Novo" },
-  { name: "iPhone 18 Pro Max", storage: "256 GB", price: 10753, marketPrice: 12999, marketSource: "Mercado Livre", category: "Lacrado", colors: "Prateado · Preto · Glacial · Bordô", accent: "#a9c8df", image: "./products/iphone-18-pro-max.webp", badge: "Novo" },
-  { name: "iPhone 18 Pro Max", storage: "512 GB", price: 11942, marketPrice: 14499, marketSource: "Mercado Livre", category: "Lacrado", colors: "Preto · Glacial · Bordô", accent: "#9ebdd4", image: "./products/iphone-18-pro-max.webp", badge: "Novo" },
-  { name: "iPhone 18 Pro Max", storage: "1 TB", price: 15495, marketPrice: 17499, marketSource: "Mercado Livre", category: "Lacrado", colors: "Glacial", accent: "#c6c8ca", image: "./products/iphone-18-pro-max.webp", badge: "Novo" },
-  { name: "iPhone 18 Pro Max", storage: "2 TB", price: 21377, marketPrice: 21999, marketSource: "Mercado Livre", category: "Lacrado", colors: "Preto", accent: "#25282d", image: "./products/iphone-18-pro-max.webp", badge: "Novo" },
+  { name: "iPhone 17 Pro", storage: "256 GB", price: 7790, marketPrice: 9359, marketSource: "Mercado Livre", category: "Lacrado", colors: "Azul · Prateado · Laranja", accent: "#c78b65", image: "./products/iphone-17-pro.webp" },
+  { name: "iPhone 17 Pro Max", storage: "256 GB", price: 8290, marketPrice: 9948, marketSource: "Mercado Livre", category: "Lacrado", colors: "Branco · Azul · Laranja", accent: "#6d7f9a", image: "./products/iphone-17-pro-max.webp" },
+  { name: "iPhone 17 Pro Max", storage: "512 GB", price: 9890, marketPrice: 11999, marketSource: "Mercado Livre", category: "Lacrado", colors: "Laranja · Azul · Branco", accent: "#8999ad", image: "./products/iphone-17-pro-max.webp" },
+  { name: "iPhone 18 Pro", storage: "256 GB", price: 8790, marketPrice: 11999, marketSource: "Mercado Livre", category: "Lacrado", colors: "Glacial · Bordô · Preto", accent: "#8e2636", image: "./products/iphone-18-pro.webp", badge: "Novo" },
+  { name: "iPhone 18 Pro Max", storage: "256 GB", price: 10090, marketPrice: 12999, marketSource: "Mercado Livre", category: "Lacrado", colors: "Prateado · Preto · Glacial · Bordô", accent: "#a9c8df", image: "./products/iphone-18-pro-max.webp", badge: "Novo" },
+  { name: "iPhone 18 Pro Max", storage: "512 GB", price: 11090, marketPrice: 14499, marketSource: "Mercado Livre", category: "Lacrado", colors: "Preto · Glacial · Bordô", accent: "#9ebdd4", image: "./products/iphone-18-pro-max.webp", badge: "Novo" },
+  { name: "iPhone 18 Pro Max", storage: "1 TB", price: 14090, marketPrice: 17499, marketSource: "Mercado Livre", category: "Lacrado", colors: "Glacial", accent: "#c6c8ca", image: "./products/iphone-18-pro-max.webp", badge: "Novo" },
+  { name: "iPhone 18 Pro Max", storage: "2 TB", price: 19590, marketPrice: 21999, marketSource: "Mercado Livre", category: "Lacrado", colors: "Preto", accent: "#25282d", image: "./products/iphone-18-pro-max.webp", badge: "Novo" },
 ];
 
 const money = (value: number) => value.toLocaleString("pt-BR", { style: "currency", currency: "BRL", maximumFractionDigits: 0 });
@@ -49,10 +49,19 @@ const roundUpTo90 = (value: number) => {
   const remainder = whole % 100;
   return remainder <= 90 ? whole - remainder + 90 : whole - remainder + 190;
 };
+const roundDownTo90 = (value: number) => {
+  const whole = Math.floor(value);
+  const candidate = Math.floor(whole / 100) * 100 + 90;
+  return candidate > whole ? candidate - 100 : candidate;
+};
 const productSalePrice = (product: Product) => roundUpTo90(product.price);
 const savingPercent = (product: Product) => Math.round((1 - productSalePrice(product) / product.marketPrice) * 100);
 const catalogKey = (name: string, specs: string) => `${name}|${specs}`;
 const targetMargin = 0.15;
+const sealedIphoneOverrides: Record<string, number> = {
+  [catalogKey("iPhone 15", "128 GB · chip físico + eSIM")]: 4490,
+  [catalogKey("iPhone 15 Plus", "256 GB")]: 5090,
+};
 type CatalogComparison = { price: number; source: string; url: string };
 const catalogComparisons: Record<string, CatalogComparison> = {
   [catalogKey("iPhone 15", "128 GB · chip físico + eSIM")]: { price: 4777, source: "Amazon", url: "https://www.amazon.com.br/s?k=iphone+15+128gb" },
@@ -92,6 +101,17 @@ const catalogComparisons: Record<string, CatalogComparison> = {
   [catalogKey("POCO X8 Pro", "12 GB / 512 GB · 5G")]: { price: 3229, source: "Mercado Livre", url: "https://www.mercadolivre.com.br/xiaomi-poco-x8-pro-dual-sim-512-gb-amarillo-12-gb-ram-659-amoled-dimensity-8500-ultra-50mp-con-ois-6500mah-100w-hypercharge/p/MLB73842644" },
 };
 const catalogSalePrice = (product: CatalogProduct) => {
+  if (product.category === "iPhones lacrados") {
+    const key = catalogKey(product.name, product.specs);
+    if (sealedIphoneOverrides[key]) return sealedIphoneOverrides[key];
+
+    const maximumProfit = product.name === "iPhone 18 Pro Max" && product.specs.startsWith("2 TB") ? 1500 : 1000;
+    const targetPrice = roundUpTo90(product.price / 0.89);
+    const minimumPrice = roundUpTo90(product.price + 300);
+    const maximumPrice = roundDownTo90(product.price + maximumProfit);
+    return Math.min(Math.max(targetPrice, minimumPrice), maximumPrice);
+  }
+
   const targetPrice = Math.ceil(product.price / (1 - targetMargin));
   const comparison = catalogComparisons[catalogKey(product.name, product.specs)];
   const competitivePrice = !comparison || comparison.price <= product.price ? targetPrice : Math.min(targetPrice, comparison.price - 10);
