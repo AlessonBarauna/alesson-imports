@@ -61,6 +61,7 @@ const targetMargin = 0.15;
 const sealedIphoneOverrides: Record<string, number> = {
   [catalogKey("iPhone 15", "128 GB · chip físico + eSIM")]: 4490,
   [catalogKey("iPhone 15 Plus", "256 GB")]: 5090,
+  [catalogKey("iPhone 16 Pro Max", "256 GB · eSIM")]: 7690,
 };
 type CatalogComparison = { price: number; source: string; url: string };
 const catalogComparisons: Record<string, CatalogComparison> = {
