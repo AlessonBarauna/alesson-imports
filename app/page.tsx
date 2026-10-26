@@ -22,30 +22,31 @@ type Product = {
 };
 
 const products: Product[] = [
-  { name: "iPhone 13 Pro", storage: "256 GB", price: 4090, marketPrice: 4689, marketSource: "Mercado Livre", category: "CPO", colors: "Consulte as cores disponíveis", accent: "#a9b7c4", image: "./products/iphone-13-pro.webp" },
-  { name: "iPhone 13 Pro Max", storage: "128 GB", price: 4190, marketPrice: 4416, marketSource: "Mercado Livre", category: "CPO", colors: "Consulte as cores disponíveis", accent: "#d7c8aa", image: "./products/iphone-13-pro-max.webp" },
-  { name: "iPhone 14 Pro Max", storage: "128 GB", price: 4490, marketPrice: 5968, marketSource: "Mercado Livre", category: "CPO", colors: "Consulte as cores disponíveis", accent: "#6c6477", image: "./products/iphone-14-pro-max.webp" },
-  { name: "iPhone 15", storage: "128 GB · chip físico + eSIM", price: 4141, marketPrice: 4777, marketSource: "Amazon", category: "Lacrado", colors: "Preto", accent: "#a8bdd0", image: "./products/iphone-15.webp" },
-  { name: "iPhone 16", storage: "128 GB · chip físico + eSIM", price: 4696, marketPrice: 4999, marketSource: "Mercado Livre", category: "Lacrado", colors: "Branco · Preto · Verde · Azul", accent: "#8fa6bd", image: "./products/iphone-16.webp" },
-  { name: "iPhone 16 Pro Max", storage: "512 GB", price: 7290, marketPrice: 12999, marketSource: "Mercado Livre", category: "CPO", colors: "Consulte as cores disponíveis", accent: "#b7afa4", image: "./products/iphone-16-pro-max.webp" },
-  { name: "iPhone 16 Pro Max", storage: "512 GB", price: 7990, marketPrice: 12999, marketSource: "Mercado Livre", category: "Lacrado", colors: "Consulte as cores disponíveis", accent: "#d4d5d7", image: "./products/iphone-16-pro-max.webp", badge: "Anatel" },
-  { name: "iPhone 17e", storage: "256 GB", price: 4090, marketPrice: 4772, marketSource: "Mercado Livre", category: "Lacrado", colors: "Preto · Branco · Rosa", accent: "#ead7dc", image: "./products/iphone-17e.webp" },
-  { name: "iPhone 17", storage: "256 GB", price: 5858, marketPrice: 6220, marketSource: "Mercado Livre", category: "Lacrado", colors: "Verde · Lavanda", accent: "#c8d8cc", image: "./products/iphone-17.webp", badge: "Mais procurado" },
-  { name: "iPhone 17 Air", storage: "256 GB", price: 5656, marketPrice: 6399, marketSource: "Mercado Livre", category: "Lacrado", colors: "Preto · Dourado", accent: "#d9cfb4", image: "./products/iphone-17-air.webp" },
-  { name: "iPhone 17 Pro", storage: "256 GB", price: 7490, marketPrice: 9359, marketSource: "Mercado Livre", category: "Lacrado", colors: "Consulte as cores disponíveis", accent: "#c78b65", image: "./products/iphone-17-pro.webp" },
-  { name: "iPhone 17 Pro Max", storage: "256 GB", price: 7575, marketPrice: 9948, marketSource: "Mercado Livre", category: "Lacrado", colors: "Branco · Azul · Laranja", accent: "#6d7f9a", image: "./products/iphone-17-pro-max.webp" },
-  { name: "iPhone 17 Pro Max", storage: "512 GB", price: 8837, marketPrice: 11999, marketSource: "Mercado Livre", category: "Lacrado", colors: "Laranja · Anatel", accent: "#8999ad", image: "./products/iphone-17-pro-max.webp" },
-  { name: "iPhone 18 Pro", storage: "256 GB", price: 8332, marketPrice: 11999, marketSource: "Mercado Livre", category: "Lacrado", colors: "Bordô · Branco · Azul", accent: "#8e2636", image: "./products/iphone-18-pro.webp", badge: "Novo" },
-  { name: "iPhone 18 Pro Max", storage: "256 GB", price: 9999, marketPrice: 12999, marketSource: "Mercado Livre", category: "Lacrado", colors: "Azul · Bordô", accent: "#a9c8df", image: "./products/iphone-18-pro-max.webp", badge: "Novo" },
-  { name: "iPhone 18 Pro Max", storage: "512 GB", price: 11413, marketPrice: 14499, marketSource: "Mercado Livre", category: "Lacrado", colors: "Bordô · Preto · Azul", accent: "#9ebdd4", image: "./products/iphone-18-pro-max.webp", badge: "Novo" },
-  { name: "iPhone 18 Pro Max", storage: "1 TB", price: 14847, marketPrice: 17499, marketSource: "Mercado Livre", category: "Lacrado", colors: "Azul", accent: "#c6c8ca", image: "./products/iphone-18-pro-max.webp", badge: "Novo" },
-  { name: "iPhone 18 Pro Max", storage: "2 TB", price: 19846, marketPrice: 21999, marketSource: "Mercado Livre", category: "Lacrado", colors: "Bordô", accent: "#25282d", image: "./products/iphone-18-pro-max.webp", badge: "Novo" },
+  { name: "iPhone 13 Pro", storage: "256 GB", price: 4123, marketPrice: 4689, marketSource: "Mercado Livre", category: "CPO", colors: "Consulte as cores disponíveis", accent: "#a9b7c4", image: "./products/iphone-13-pro.webp" },
+  { name: "iPhone 13 Pro Max", storage: "128 GB", price: 4406, marketPrice: 4416, marketSource: "Mercado Livre", category: "CPO", colors: "Consulte as cores disponíveis", accent: "#d7c8aa", image: "./products/iphone-13-pro-max.webp" },
+  { name: "iPhone 14 Pro Max", storage: "128 GB", price: 4811, marketPrice: 5968, marketSource: "Mercado Livre", category: "CPO", colors: "Consulte as cores disponíveis", accent: "#6c6477", image: "./products/iphone-14-pro-max.webp" },
+  { name: "iPhone 15", storage: "128 GB · chip físico + eSIM", price: 4456, marketPrice: 4777, marketSource: "Amazon", category: "Lacrado", colors: "Preto", accent: "#a8bdd0", image: "./products/iphone-15.webp" },
+  { name: "iPhone 16", storage: "128 GB · chip físico + eSIM", price: 4989, marketPrice: 4999, marketSource: "Mercado Livre", category: "Lacrado", colors: "Branco · Preto · Verde · Azul", accent: "#8fa6bd", image: "./products/iphone-16.webp" },
+  { name: "iPhone 16 Pro Max", storage: "512 GB", price: 7729, marketPrice: 12999, marketSource: "Mercado Livre", category: "CPO", colors: "Consulte as cores disponíveis", accent: "#b7afa4", image: "./products/iphone-16-pro-max.webp" },
+  { name: "iPhone 16 Pro Max", storage: "512 GB", price: 8234, marketPrice: 12999, marketSource: "Mercado Livre", category: "Lacrado", colors: "Consulte as cores disponíveis", accent: "#d4d5d7", image: "./products/iphone-16-pro-max.webp", badge: "Anatel" },
+  { name: "iPhone 17e", storage: "256 GB", price: 4456, marketPrice: 4772, marketSource: "Mercado Livre", category: "Lacrado", colors: "Preto · Branco · Rosa", accent: "#ead7dc", image: "./products/iphone-17e.webp" },
+  { name: "iPhone 17", storage: "256 GB", price: 6210, marketPrice: 6220, marketSource: "Mercado Livre", category: "Lacrado", colors: "Verde · Lavanda", accent: "#c8d8cc", image: "./products/iphone-17.webp", badge: "Mais procurado" },
+  { name: "iPhone 17 Air", storage: "256 GB", price: 6389, marketPrice: 6399, marketSource: "Mercado Livre", category: "Lacrado", colors: "Preto · Dourado", accent: "#d9cfb4", image: "./products/iphone-17-air.webp" },
+  { name: "iPhone 17 Pro", storage: "256 GB", price: 8139, marketPrice: 9359, marketSource: "Mercado Livre", category: "Lacrado", colors: "Azul · Prateado · Laranja", accent: "#c78b65", image: "./products/iphone-17-pro.webp" },
+  { name: "iPhone 17 Pro Max", storage: "256 GB", price: 8615, marketPrice: 9948, marketSource: "Mercado Livre", category: "Lacrado", colors: "Branco · Azul · Laranja", accent: "#6d7f9a", image: "./products/iphone-17-pro-max.webp" },
+  { name: "iPhone 17 Pro Max", storage: "512 GB", price: 10516, marketPrice: 11999, marketSource: "Mercado Livre", category: "Lacrado", colors: "Laranja · Azul · Branco", accent: "#8999ad", image: "./products/iphone-17-pro-max.webp" },
+  { name: "iPhone 18 Pro", storage: "256 GB", price: 9209, marketPrice: 11999, marketSource: "Mercado Livre", category: "Lacrado", colors: "Glacial · Bordô · Preto", accent: "#8e2636", image: "./products/iphone-18-pro.webp", badge: "Novo" },
+  { name: "iPhone 18 Pro Max", storage: "256 GB", price: 10753, marketPrice: 12999, marketSource: "Mercado Livre", category: "Lacrado", colors: "Prateado · Preto · Glacial · Bordô", accent: "#a9c8df", image: "./products/iphone-18-pro-max.webp", badge: "Novo" },
+  { name: "iPhone 18 Pro Max", storage: "512 GB", price: 11942, marketPrice: 14499, marketSource: "Mercado Livre", category: "Lacrado", colors: "Preto · Glacial · Bordô", accent: "#9ebdd4", image: "./products/iphone-18-pro-max.webp", badge: "Novo" },
+  { name: "iPhone 18 Pro Max", storage: "1 TB", price: 15495, marketPrice: 17499, marketSource: "Mercado Livre", category: "Lacrado", colors: "Glacial", accent: "#c6c8ca", image: "./products/iphone-18-pro-max.webp", badge: "Novo" },
+  { name: "iPhone 18 Pro Max", storage: "2 TB", price: 21377, marketPrice: 21999, marketSource: "Mercado Livre", category: "Lacrado", colors: "Preto", accent: "#25282d", image: "./products/iphone-18-pro-max.webp", badge: "Novo" },
 ];
 
 const money = (value: number) => value.toLocaleString("pt-BR", { style: "currency", currency: "BRL", maximumFractionDigits: 0 });
 const normalizeText = (value: string) => value.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLocaleLowerCase("pt-BR");
 const savingPercent = (product: Product) => Math.round((1 - product.price / product.marketPrice) * 100);
 const catalogKey = (name: string, specs: string) => `${name}|${specs}`;
+const targetMargin = 0.15;
 type CatalogComparison = { price: number; source: string; url: string };
 const catalogComparisons: Record<string, CatalogComparison> = {
   [catalogKey("Garmin Forerunner 165", "GPS running smartwatch")]: { price: 2499, source: "Amazon", url: "https://www.amazon.com.br/Garmin-Forerunner-165/dp/B0DG6QFJV1" },
@@ -78,6 +79,12 @@ const catalogComparisons: Record<string, CatalogComparison> = {
   [catalogKey("Redmi Pad 2", "8 GB / 256 GB")]: { price: 1798, source: "Mercado Livre", url: "https://www.mercadolivre.com.br/tablet-xiaomi-redmi-pad-2-11-8-gb-256-gb-wifi-roxo-lava/up/MLBU3832046991" },
   [catalogKey("Redmi Note 15 Pro", "8 GB / 256 GB · 5G")]: { price: 2213, source: "Mercado Livre", url: "https://www.mercadolivre.com.br/celular-xiaomi-redmi-note-15-pro-5g-8gb-256gb-versao-global/up/MLBU4112568728" },
   [catalogKey("POCO X8 Pro", "12 GB / 512 GB · 5G")]: { price: 3229, source: "Mercado Livre", url: "https://www.mercadolivre.com.br/xiaomi-poco-x8-pro-dual-sim-512-gb-amarillo-12-gb-ram-659-amoled-dimensity-8500-ultra-50mp-con-ois-6500mah-100w-hypercharge/p/MLB73842644" },
+};
+const catalogSalePrice = (product: CatalogProduct) => {
+  const targetPrice = Math.ceil(product.price / (1 - targetMargin));
+  const comparison = catalogComparisons[catalogKey(product.name, product.specs)];
+  if (!comparison || comparison.price <= product.price) return targetPrice;
+  return Math.min(targetPrice, comparison.price - 10);
 };
 const catalogImage = (product: CatalogProduct) => {
   if (product.name === "AntiGravity A1 Explorer Bundle") return "./catalog/products/antigravity-a1.webp";
@@ -123,7 +130,7 @@ export default function Home() {
     const query = encodeURIComponent(`${product.name} ${product.storage.split(" · ")[0]}`);
     return product.marketSource === "Amazon" ? `https://www.amazon.com.br/s?k=${query}` : `https://lista.mercadolivre.com.br/${query}`;
   };
-  const catalogProductLink = (product: CatalogProduct) => contactLink(`Oi! Vi o ${product.name} ${product.specs} por ${money(product.price)}. Ainda tem disponível?`);
+  const catalogProductLink = (product: CatalogProduct) => contactLink(`Oi! Vi o ${product.name} ${product.specs} por ${money(catalogSalePrice(product))}. Ainda tem disponível?`);
   const setCatalogCategory = (category: string) => {
     setCatalogFilter(category);
     setCatalogLimit(12);
@@ -150,7 +157,7 @@ export default function Home() {
         </div>
         <div className="hero-media">
           <img src="./hero-devices.webp" alt="Três smartphones premium em acabamento grafite e titânio" />
-          <div className="hero-price-card"><span>iPhone 17 · 256 GB</span><strong>{money(5790)}</strong><small>nota fiscal e frete inclusos</small></div>
+          <div className="hero-price-card"><span>iPhone 17 · 256 GB</span><strong>{money(6210)}</strong><small>valor de venda atualizado</small></div>
         </div>
       </div></section>
 
@@ -177,30 +184,31 @@ export default function Home() {
         {catalogFiltered.length > 0 ? <>
           <div className="market-grid" id="catalog-results">{catalogFiltered.slice(0, catalogLimit).map((product) => {
             const comparison = catalogComparisons[catalogKey(product.name, product.specs)];
-            const showComparison = comparison && comparison.price > product.price;
+            const salePrice = catalogSalePrice(product);
+            const showComparison = comparison && comparison.price > salePrice;
             return <article className="market-card" key={product.id}>
               <div className="market-image"><img src={catalogImage(product)} alt={`${product.name} ${product.specs}`} loading="lazy" /><span className="market-category">{product.category}</span>{product.badge && <span className="market-badge">{product.badge}</span>}</div>
               <div className="market-body"><div className="market-title"><p>{product.name}</p><h3>{product.specs}</h3></div><p className="market-options">{product.options}</p>{product.details && <p className="market-details">{product.details}</p>}
-                <div className="market-price"><small>{product.from ? "a partir de" : "por"}</small><strong>{money(product.price)}</strong>{showComparison && <div className="catalog-comparison"><a href={comparison.url} target="_blank" rel="noreferrer">{comparison.source} <s>{money(comparison.price)}</s></a><b>Economize {money(comparison.price - product.price)} · {Math.round((1 - product.price / comparison.price) * 100)}%</b></div>}<span>Consulte parcelamento e disponibilidade</span></div>
+                <div className="market-price"><small>{product.from ? "a partir de" : "por"}</small><strong>{money(salePrice)}</strong>{showComparison && <div className="catalog-comparison"><a href={comparison.url} target="_blank" rel="noreferrer">{comparison.source} <s>{money(comparison.price)}</s></a><b>Economize {money(comparison.price - salePrice)} · {Math.round((1 - salePrice / comparison.price) * 100)}%</b></div>}<span>Consulte parcelamento e disponibilidade</span></div>
                 <a href={catalogProductLink(product)} target="_blank" rel="noreferrer">Tenho interesse <ArrowIcon /></a>
               </div>
             </article>;
           })}</div>
           {catalogLimit < catalogFiltered.length && <div className="catalog-more"><button className="button button-dark" type="button" onClick={() => setCatalogLimit((limit) => limit + 12)}>Mostrar mais produtos</button><span>Exibindo {Math.min(catalogLimit, catalogFiltered.length)} de {catalogFiltered.length}</span></div>}
         </> : <div className="catalog-empty"><strong>Nenhum produto encontrado.</strong><p>Tente outro nome ou escolha uma categoria diferente.</p><button type="button" onClick={() => { setCatalogSearch(""); setCatalogCategory("Todos"); }}>Limpar filtros</button></div>}
-        <div className="marketplace-note"><span>Valores da loja</span><p>Os valores anunciados já foram calculados com 1% de nota fiscal e R$ 50 de frete sobre a tabela recebida. Tabela de fornecedores atualizada em 26/10/2026. Comparações aparecem apenas quando nossa oferta está abaixo da referência consultada. Referências de mercado consultadas em 08/10/2026. Estoque, cor e condição de pagamento devem ser confirmados antes da compra.</p></div>
+        <div className="marketplace-note"><span>Valores da loja</span><p>Os valores anunciados incluem 1% de nota fiscal, R$ 50 de frete e margem bruta-alvo de 15% sobre a venda. Quando necessário, a margem é reduzida para manter nossa oferta abaixo da referência consultada. Tabela de fornecedores atualizada em 26/10/2026. Referências de mercado consultadas em 08/10/2026. Estoque, cor e condição de pagamento devem ser confirmados antes da compra.</p></div>
       </div></section>
 
       <section className="experience section" id="experiencia"><div className="shell experience-card"><div className="experience-copy"><p className="kicker kicker-light">Compra acompanhada</p><h2>Tecnologia é simples.<br />A compra também deve ser.</h2><p>Você fala diretamente com a Alesson Imports para comparar modelos, avaliar seu iPhone usado e confirmar todas as condições antes de decidir.</p><a className="button button-light" href={contactLink("Oi! Pode me ajudar a escolher um iPhone dentro do meu orçamento?")} target="_blank" rel="noreferrer">Receber uma recomendação</a></div><ol className="experience-steps"><li><span>1</span><div><strong>Conte o que você busca</strong><p>Modelo, orçamento, memória e cor preferida.</p></div></li><li><span>2</span><div><strong>Avalie seu usado</strong><p>Seu iPhone pode entrar como parte do pagamento.</p></div></li><li><span>3</span><div><strong>Confirme com segurança</strong><p>Preço, garantia, estoque e prazo explicados antes do pagamento.</p></div></li></ol></div></section>
 
-      <section className="pricing section" id="criterio"><div className="shell pricing-layout"><div className="pricing-title"><p className="kicker">Preço claro, de verdade</p><h2>O valor anunciado.<br />Sem surpresa.</h2></div><div className="pricing-content"><p className="pricing-lead">A tabela apresenta os valores anunciados dos aparelhos, com nota fiscal e frete inclusos nas condições informadas.</p><div className="formula" aria-label="Condições do preço"><div><span>Produto</span><strong>lacrado ou CPO</strong></div><i>+</i><div><span>Compra</span><strong>nota fiscal e frete</strong></div><i>=</i><div className="formula-result"><span>Preço exibido</span><strong>valor anunciado</strong></div></div><p className="pricing-note">Valores e disponibilidade podem sofrer alterações sem aviso prévio. Consulte as cores, versões e condições de parcelamento antes de fechar o pedido.</p></div></div></section>
+      <section className="pricing section" id="criterio"><div className="shell pricing-layout"><div className="pricing-title"><p className="kicker">Preço claro, de verdade</p><h2>O valor anunciado.<br />Sem surpresa.</h2></div><div className="pricing-content"><p className="pricing-lead">A tabela apresenta os valores de venda, já com nota fiscal, frete e margem comercial incluídos nas condições informadas.</p><div className="formula" aria-label="Condições do preço"><div><span>Produto</span><strong>lacrado ou CPO</strong></div><i>+</i><div><span>Compra</span><strong>custos e margem</strong></div><i>=</i><div className="formula-result"><span>Preço exibido</span><strong>valor de venda</strong></div></div><p className="pricing-note">Valores e disponibilidade podem sofrer alterações sem aviso prévio. Consulte as cores, versões e condições de parcelamento antes de fechar o pedido.</p></div></div></section>
 
       <section className="about section"><div className="shell about-layout"><div className="about-mark">A</div><div><p className="kicker">Alesson Imports</p><h2>Atendimento humano.<br />Escolha bem informada.</h2><p>A proposta é simples: facilitar o acesso a produtos Apple com preço competitivo, comunicação clara e alguém de verdade acompanhando sua compra.</p><div className="founder"><span>AB</span><p><strong>Alesson Baraúna</strong>Fundador · Mogi das Cruzes, SP</p></div></div></div></section>
 
       <section className="faq section" id="duvidas"><div className="shell faq-layout"><div><p className="kicker">Antes de comprar</p><h2>Tudo claro.</h2><p>Condições importantes, sem esconder o que você precisa saber.</p></div><div className="accordion">
         <details><summary>Os produtos são originais e lacrados?<span>+</span></summary><p>Os itens anunciados como lacrados são novos e selados de fábrica. Produtos CPO são identificados separadamente e podem ter condições diferentes de garantia.</p></details>
         <details><summary>Como funciona a garantia?<span>+</span></summary><p>A situação da garantia é conferida antes da compra. O prazo pode variar por aparelho e, em alguns casos, a Apple pode solicitar documentação de origem/importação. Questões de cobertura são tratadas diretamente com a Apple.</p></details>
-        <details><summary>O valor anunciado já inclui as condições informadas?<span>+</span></summary><p>Sim. Os valores anunciados incluem nota fiscal e frete nas condições informadas. Como estoque e mercado mudam, confirme preço, cor e disponibilidade no WhatsApp antes do pagamento.</p></details>
+        <details><summary>O valor anunciado já inclui as condições informadas?<span>+</span></summary><p>Sim. Os valores anunciados incluem nota fiscal, frete e margem comercial nas condições informadas. Como estoque e mercado mudam, confirme preço, cor e disponibilidade no WhatsApp antes do pagamento.</p></details>
         <details><summary>Posso parcelar?<span>+</span></summary><p>Sim. Há parcelamento em até 12 vezes no cartão, sujeito às condições e taxas apresentadas na cotação.</p></details>
         <details><summary>Como funciona o envio?<span>+</span></summary><p>O frete está incluso nas condições anunciadas. O meio de envio, prazo, cobertura para sua região e demais detalhes são confirmados antes do pagamento.</p></details>
       </div></div></section>
