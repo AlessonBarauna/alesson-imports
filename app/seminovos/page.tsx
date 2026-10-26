@@ -9,6 +9,12 @@ const whatsapp = "5511964421841";
 const money = (value: number) => value.toLocaleString("pt-BR", { style: "currency", currency: "BRL", maximumFractionDigits: 0 });
 const normalize = (value: string) => value.normalize("NFD").replace(/[̀-ͯ]/g, "").toLowerCase();
 
+const key = (product: CatalogProduct) => `${product.name}|${product.specs}`;
+const overrides: Record<string, number> = {
+  "iPhone 13|128 GB · versão EUA": 1990,
+  "iPhone 14|128 GB · versão EUA": 2290,
+};
+
 const roundUpTo90 = (value: number) => {
   const whole = Math.ceil(value);
   const remainder = whole % 100;
@@ -20,6 +26,7 @@ const roundDownTo90 = (value: number) => {
   return candidate > whole ? candidate - 100 : candidate;
 };
 const salePrice = (product: CatalogProduct) => {
+  if (overrides[key(product)]) return overrides[key(product)];
   const maximumProfit = 1000;
   const targetPrice = roundUpTo90(product.price / 0.89);
   return Math.min(Math.max(targetPrice, roundUpTo90(product.price + 300)), roundDownTo90(product.price + maximumProfit));
@@ -35,7 +42,7 @@ export default function SeminovosPage() {
 
   return (
     <main className="sealed-page">
-      <div className="sealed-alert">Lista atualizada em 26/10/2026 · Valores sujeitos à disponibilidade</div>
+      <div className="sealed-alert">Lista atualizada em 26/10/2026 · Preços oscilando por conta do dólar</div>
       <header className="sealed-header">
         <div className="sealed-shell sealed-nav">
           <a className="brand" href="../"><span className="brand-symbol">AI</span>Alesson Imports</a>
@@ -69,7 +76,7 @@ export default function SeminovosPage() {
           </div>
           {!visibleProducts.length && <div className="sealed-empty">Nenhum modelo encontrado. Tente buscar por “Pro Max”, “256 GB” ou uma cor.</div>}
           <div className="sealed-notes"><div><strong>30 dias de garantia</strong><span>Em todos os seminovos</span></div><div><strong>Atendimento direto</strong><span>Confirmação de estoque e cores</span></div><div><strong>Compra facilitada</strong><span>Pix ou cartão em até 12x</span></div></div>
-          <p className="sealed-disclaimer">Valores e disponibilidade podem sofrer alterações sem aviso prévio. Aparelhos seminovos podem apresentar marcas de uso; a bateria e os detalhes de cada unidade são informados no atendimento. Consulte as condições antes de concluir o pedido.</p>
+          <p className="sealed-disclaimer">Os preços estão oscilando por conta do dólar e podem mudar a qualquer momento. Valores e disponibilidade podem sofrer alterações sem aviso prévio. Aparelhos seminovos podem apresentar marcas de uso; a bateria e os detalhes de cada unidade são informados no atendimento. Consulte as condições antes de concluir o pedido.</p>
         </div>
       </section>
 
