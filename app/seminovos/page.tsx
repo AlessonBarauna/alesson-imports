@@ -31,13 +31,19 @@ const salePrice = (product: CatalogProduct) => {
   const targetPrice = roundUpTo90(product.price / 0.89);
   return Math.min(Math.max(targetPrice, roundUpTo90(product.price + 300)), roundDownTo90(product.price + maximumProfit));
 };
+const displaySpecs = (product: CatalogProduct) => product.specs.replace("bateria 100%", "bateria premium");
+const displayBadge = (product: CatalogProduct) => {
+  if (product.badge === "100% bateria") return "Bateria premium";
+  if (product.badge === "85–100% bateria") return "Bateria original + 85%";
+  return product.badge || "Seminovo";
+};
 const products = catalogProducts.filter((product) => product.category === "iPhones seminovos");
 
 export default function SeminovosPage() {
   const [search, setSearch] = useState("");
   const visibleProducts = useMemo(() => {
     const term = normalize(search.trim());
-    return term ? products.filter((product) => normalize(`${product.name} ${product.specs} ${product.options} ${product.badge}`).includes(term)) : products;
+    return term ? products.filter((product) => normalize(`${product.name} ${displaySpecs(product)} ${product.options} ${displayBadge(product)}`).includes(term)) : products;
   }, [search]);
 
   return (
@@ -67,10 +73,10 @@ export default function SeminovosPage() {
           <div className="sealed-grid">
             {visibleProducts.map((product) => {
               const price = salePrice(product);
-              const message = encodeURIComponent(`Oi! Tenho interesse no ${product.name} ${product.specs} por ${money(price)}. Tem disponível?`);
+              const message = encodeURIComponent(`Oi! Tenho interesse no ${product.name} ${displaySpecs(product)} por ${money(price)}. Tem disponível?`);
               return <article className="sealed-card" key={product.id}>
-                <div className="sealed-image"><span>{product.badge || "Seminovo"}</span><img src={`../${product.image.replace("./", "")}`} alt={`${product.name} ${product.specs}`} /></div>
-                <div className="sealed-body"><div className="sealed-title"><h3>{product.name}</h3><p>{product.specs}</p></div><p className="sealed-colors">Cores: {product.options}</p><div className="sealed-price"><small>À vista</small><strong>{money(price)}</strong><span>Parcelamento sob consulta</span></div><a href={`https://wa.me/${whatsapp}?text=${message}`} target="_blank" rel="noreferrer">Consultar disponibilidade <span>→</span></a></div>
+                <div className="sealed-image"><span>{displayBadge(product)}</span><img src={`../${product.image.replace("./", "")}`} alt={`${product.name} ${displaySpecs(product)}`} /></div>
+                <div className="sealed-body"><div className="sealed-title"><h3>{product.name}</h3><p>{displaySpecs(product)}</p></div><p className="sealed-colors">Cores: {product.options}</p><div className="sealed-price"><small>À vista</small><strong>{money(price)}</strong><span>Parcelamento sob consulta</span></div><a href={`https://wa.me/${whatsapp}?text=${message}`} target="_blank" rel="noreferrer">Consultar disponibilidade <span>→</span></a></div>
               </article>;
             })}
           </div>
