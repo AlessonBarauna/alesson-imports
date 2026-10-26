@@ -44,7 +44,13 @@ const products: Product[] = [
 
 const money = (value: number) => value.toLocaleString("pt-BR", { style: "currency", currency: "BRL", maximumFractionDigits: 0 });
 const normalizeText = (value: string) => value.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLocaleLowerCase("pt-BR");
-const savingPercent = (product: Product) => Math.round((1 - product.price / product.marketPrice) * 100);
+const roundUpTo90 = (value: number) => {
+  const whole = Math.ceil(value);
+  const remainder = whole % 100;
+  return remainder <= 90 ? whole - remainder + 90 : whole - remainder + 190;
+};
+const productSalePrice = (product: Product) => roundUpTo90(product.price);
+const savingPercent = (product: Product) => Math.round((1 - productSalePrice(product) / product.marketPrice) * 100);
 const catalogKey = (name: string, specs: string) => `${name}|${specs}`;
 const targetMargin = 0.15;
 type CatalogComparison = { price: number; source: string; url: string };
@@ -83,8 +89,8 @@ const catalogComparisons: Record<string, CatalogComparison> = {
 const catalogSalePrice = (product: CatalogProduct) => {
   const targetPrice = Math.ceil(product.price / (1 - targetMargin));
   const comparison = catalogComparisons[catalogKey(product.name, product.specs)];
-  if (!comparison || comparison.price <= product.price) return targetPrice;
-  return Math.min(targetPrice, comparison.price - 10);
+  const competitivePrice = !comparison || comparison.price <= product.price ? targetPrice : Math.min(targetPrice, comparison.price - 10);
+  return roundUpTo90(competitivePrice);
 };
 const catalogImage = (product: CatalogProduct) => {
   if (product.name === "AntiGravity A1 Explorer Bundle") return "./catalog/products/antigravity-a1.webp";
@@ -125,7 +131,7 @@ export default function Home() {
     });
   }, [catalogFilter, catalogSearch]);
   const contactLink = (message: string) => `${whatsapp}?text=${encodeURIComponent(message)}`;
-  const productLink = (product: Product) => contactLink(`Oi! Tenho interesse no ${product.name} ${product.storage} de ${money(product.price)}. Ainda tem disponível?`);
+  const productLink = (product: Product) => contactLink(`Oi! Tenho interesse no ${product.name} ${product.storage} de ${money(productSalePrice(product))}. Ainda tem disponível?`);
   const marketLink = (product: Product) => {
     const query = encodeURIComponent(`${product.name} ${product.storage.split(" · ")[0]}`);
     return product.marketSource === "Amazon" ? `https://www.amazon.com.br/s?k=${query}` : `https://lista.mercadolivre.com.br/${query}`;
@@ -157,7 +163,7 @@ export default function Home() {
         </div>
         <div className="hero-media">
           <img src="./hero-devices.webp" alt="Três smartphones premium em acabamento grafite e titânio" />
-          <div className="hero-price-card"><span>iPhone 17 · 256 GB</span><strong>{money(6210)}</strong><small>valor de venda atualizado</small></div>
+          <div className="hero-price-card"><span>iPhone 17 · 256 GB</span><strong>{money(roundUpTo90(6210))}</strong><small>valor de venda atualizado</small></div>
         </div>
       </div></section>
 
@@ -168,7 +174,7 @@ export default function Home() {
         <div className="filter-row" role="group" aria-label="Filtrar ofertas">{["Todos", "Lacrado", "CPO"].map((item) => <button key={item} type="button" className={filter === item ? "active" : ""} onClick={() => setFilter(item)}>{item}</button>)}</div>
         <div className="product-grid">{filtered.map((product) => <article className="product-card" key={`${product.name}-${product.storage}-${product.category}`}>
           <div className={`product-top ${product.image === "./products/iphone-16-pro-max.webp" || product.image === "./products/iphone-18-pro.webp" ? "dark-photo" : ""}`} style={{ "--accent": product.accent } as React.CSSProperties}><div className="product-labels"><span>{product.category}</span>{product.badge && <b>{product.badge}</b>}</div><img className="product-image" src={product.image} alt={`${product.name} ${product.storage}`} loading="lazy" /></div>
-          <div className="product-body"><p className="product-name">{product.name}</p><h3>{product.storage}</h3><p className="colors">{product.colors}</p><div className="price-block"><small>nosso preço</small><strong>{money(product.price)}</strong><div className="market-comparison"><a href={marketLink(product)} target="_blank" rel="noreferrer">{product.marketSource} hoje <s>{money(product.marketPrice)}</s></a><b>Economize {money(product.marketPrice - product.price)} · {savingPercent(product)}%</b></div><span>Parcelamento em até 12x no cartão</span></div><a href={productLink(product)} target="_blank" rel="noreferrer">Consultar disponibilidade <ArrowIcon /></a></div>
+          <div className="product-body"><p className="product-name">{product.name}</p><h3>{product.storage}</h3><p className="colors">{product.colors}</p><div className="price-block"><small>nosso preço</small><strong>{money(productSalePrice(product))}</strong>{product.marketPrice > productSalePrice(product) && <div className="market-comparison"><a href={marketLink(product)} target="_blank" rel="noreferrer">{product.marketSource} hoje <s>{money(product.marketPrice)}</s></a><b>Economize {money(product.marketPrice - productSalePrice(product))} · {savingPercent(product)}%</b></div>}<span>Parcelamento em até 12x no cartão</span></div><a href={productLink(product)} target="_blank" rel="noreferrer">Consultar disponibilidade <ArrowIcon /></a></div>
         </article>)}</div>
         <p className="comparison-note">* Referências consultadas na <a href="https://www.amazon.com.br/" target="_blank" rel="noreferrer">Amazon</a> e no <a href="https://www.mercadolivre.com.br/" target="_blank" rel="noreferrer">Mercado Livre</a> em 06/10/2026, considerando anúncios comparáveis e valores parcelados quando disponíveis. Preços variam por cor, condição, vendedor, estoque e forma de pagamento.</p>
         <div className="catalog-footer"><p><strong>Procurando outro modelo?</strong> A loja completa inclui drones, Garmin, iPads, MacBooks, Apple Watch, AirPods, Xiaomi e seminovos.</p><a className="button button-dark" href="#loja">Abrir loja completa</a></div>
@@ -196,7 +202,7 @@ export default function Home() {
           })}</div>
           {catalogLimit < catalogFiltered.length && <div className="catalog-more"><button className="button button-dark" type="button" onClick={() => setCatalogLimit((limit) => limit + 12)}>Mostrar mais produtos</button><span>Exibindo {Math.min(catalogLimit, catalogFiltered.length)} de {catalogFiltered.length}</span></div>}
         </> : <div className="catalog-empty"><strong>Nenhum produto encontrado.</strong><p>Tente outro nome ou escolha uma categoria diferente.</p><button type="button" onClick={() => { setCatalogSearch(""); setCatalogCategory("Todos"); }}>Limpar filtros</button></div>}
-        <div className="marketplace-note"><span>Valores da loja</span><p>Os valores anunciados incluem 1% de nota fiscal, R$ 50 de frete e margem bruta-alvo de 15% sobre a venda. Quando necessário, a margem é reduzida para manter nossa oferta abaixo da referência consultada. Tabela de fornecedores atualizada em 26/10/2026. Referências de mercado consultadas em 08/10/2026. Estoque, cor e condição de pagamento devem ser confirmados antes da compra.</p></div>
+        <div className="marketplace-note"><span>Valores da loja</span><p>Os valores anunciados incluem 1% de nota fiscal, R$ 50 de frete e margem bruta-alvo de 15% sobre a venda. Todos os preços são arredondados para cima até o próximo valor terminado em 90. Quando necessário, a margem é reduzida para manter nossa oferta competitiva. Tabela de fornecedores atualizada em 26/10/2026. Referências de mercado consultadas em 08/10/2026. Estoque, cor e condição de pagamento devem ser confirmados antes da compra.</p></div>
       </div></section>
 
       <section className="experience section" id="experiencia"><div className="shell experience-card"><div className="experience-copy"><p className="kicker kicker-light">Compra acompanhada</p><h2>Tecnologia é simples.<br />A compra também deve ser.</h2><p>Você fala diretamente com a Alesson Imports para comparar modelos, avaliar seu iPhone usado e confirmar todas as condições antes de decidir.</p><a className="button button-light" href={contactLink("Oi! Pode me ajudar a escolher um iPhone dentro do meu orçamento?")} target="_blank" rel="noreferrer">Receber uma recomendação</a></div><ol className="experience-steps"><li><span>1</span><div><strong>Conte o que você busca</strong><p>Modelo, orçamento, memória e cor preferida.</p></div></li><li><span>2</span><div><strong>Avalie seu usado</strong><p>Seu iPhone pode entrar como parte do pagamento.</p></div></li><li><span>3</span><div><strong>Confirme com segurança</strong><p>Preço, garantia, estoque e prazo explicados antes do pagamento.</p></div></li></ol></div></section>
