@@ -45,10 +45,10 @@ export default function LacradosPage() {
           <div className="sealed-grid">
             {visibleProducts.map((product) => {
               const price = iphoneSalePrice(product);
-              const message = encodeURIComponent(`Oi! Tenho interesse no ${product.name} ${product.specs} por ${money(price)}. Tem disponível?`);
+              const message = encodeURIComponent(`Oi! Tenho interesse no ${product.name} ${product.specs} ${product.from ? "a partir de" : "por"} ${money(price)}. Tem disponível?`);
               return <article className="sealed-card" key={product.id}>
                 <div className="sealed-image"><span>{product.badge === "Anatel" ? "Anatel" : "Lacrado"}</span><img src={`../${product.image.replace("./", "")}`} alt={`${product.name} ${product.specs}`} /></div>
-                <div className="sealed-body"><div className="sealed-title"><h3>{product.name}</h3><p>{product.specs}</p></div><p className="sealed-colors">Cores: {product.options}</p><div className="sealed-price"><small>À vista</small><strong>{money(price)}</strong><span>Parcelamento sob consulta</span></div><a href={`https://wa.me/${whatsapp}?text=${message}`} target="_blank" rel="noreferrer">Consultar disponibilidade <span>→</span></a></div>
+                <div className="sealed-body"><div className="sealed-title"><h3>{product.name}</h3><p>{product.specs}</p></div><p className="sealed-colors">Cores: {product.options}</p><div className="sealed-price"><small>{product.from ? "A partir de" : "À vista"}</small><strong>{money(price)}</strong><span>Parcelamento sob consulta</span></div><a href={`https://wa.me/${whatsapp}?text=${message}`} target="_blank" rel="noreferrer">Consultar disponibilidade <span>→</span></a></div>
               </article>;
             })}
           </div>

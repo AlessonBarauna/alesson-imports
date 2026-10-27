@@ -17,14 +17,9 @@ const priceKey = (product: CatalogProduct) => `${product.category}|${product.nam
 const overrides: Record<string, number> = {
   // por id do card (quando o mesmo modelo tem cards diferentes por cor)
   "iphone-17-pro-256-gb-esim-172": 7690,
-  "iphone-17-pro-256-gb-esim-211": 7890,
   "iphone-17-pro-max-256-gb-esim-174": 8090,
-  "iphone-17-pro-max-256-gb-esim-212": 8390,
   "iphone-16-128-gb-chip-fisico-esim-168": 4690,
-  "iphone-18-pro-max-2-tb-esim-218": 20990,
   "iphone-17-pro-max-512-gb-anatel-176": 9490,
-  "iphone-18-pro-max-256-gb-esim-214": 10290,
-  "iphone-16-128-gb-chip-fisico-esim-207": 4890,
   "iphone-17e-256-gb-chip-fisico-esim-170": 4290,
   "iphone-16-pro-max-256-gb-esim-169": 7290,
   // por categoria|modelo|especificação
