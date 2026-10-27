@@ -4,6 +4,7 @@
 
 import { useMemo, useState } from "react";
 import { catalogCategories, catalogProducts, type CatalogProduct } from "./catalog";
+import { iphoneSalePrice, isIphoneCategory } from "./pricing";
 
 const whatsapp = "https://wa.me/5511964421841";
 const instagram = "https://www.instagram.com/alessonimports.oficial/";
@@ -49,20 +50,10 @@ const roundUpTo90 = (value: number) => {
   const remainder = whole % 100;
   return remainder <= 90 ? whole - remainder + 90 : whole - remainder + 190;
 };
-const roundDownTo90 = (value: number) => {
-  const whole = Math.floor(value);
-  const candidate = Math.floor(whole / 100) * 100 + 90;
-  return candidate > whole ? candidate - 100 : candidate;
-};
 const productSalePrice = (product: Product) => roundUpTo90(product.price);
 const savingPercent = (product: Product) => Math.round((1 - productSalePrice(product) / product.marketPrice) * 100);
 const catalogKey = (name: string, specs: string) => `${name}|${specs}`;
 const targetMargin = 0.15;
-const sealedIphoneOverrides: Record<string, number> = {
-  [catalogKey("iPhone 15", "128 GB · chip físico + eSIM")]: 4490,
-  [catalogKey("iPhone 15 Plus", "256 GB")]: 5090,
-  [catalogKey("iPhone 16 Pro Max", "256 GB · eSIM")]: 7690,
-};
 type CatalogComparison = { price: number; source: string; url: string };
 const catalogComparisons: Record<string, CatalogComparison> = {
   [catalogKey("iPhone 15", "128 GB · chip físico + eSIM")]: { price: 4777, source: "Amazon", url: "https://www.amazon.com.br/s?k=iphone+15+128gb" },
@@ -102,16 +93,7 @@ const catalogComparisons: Record<string, CatalogComparison> = {
   [catalogKey("POCO X8 Pro", "12 GB / 512 GB · 5G")]: { price: 3229, source: "Mercado Livre", url: "https://www.mercadolivre.com.br/xiaomi-poco-x8-pro-dual-sim-512-gb-amarillo-12-gb-ram-659-amoled-dimensity-8500-ultra-50mp-con-ois-6500mah-100w-hypercharge/p/MLB73842644" },
 };
 const catalogSalePrice = (product: CatalogProduct) => {
-  if (product.category === "iPhones lacrados") {
-    const key = catalogKey(product.name, product.specs);
-    if (sealedIphoneOverrides[key]) return sealedIphoneOverrides[key];
-
-    const maximumProfit = product.name === "iPhone 18 Pro Max" && product.specs.startsWith("2 TB") ? 1500 : 1000;
-    const targetPrice = roundUpTo90(product.price / 0.89);
-    const minimumPrice = roundUpTo90(product.price + 300);
-    const maximumPrice = roundDownTo90(product.price + maximumProfit);
-    return Math.min(Math.max(targetPrice, minimumPrice), maximumPrice);
-  }
+  if (isIphoneCategory(product)) return iphoneSalePrice(product);
 
   const targetPrice = Math.ceil(product.price / (1 - targetMargin));
   const comparison = catalogComparisons[catalogKey(product.name, product.specs)];

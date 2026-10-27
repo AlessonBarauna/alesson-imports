@@ -3,34 +3,12 @@
 /* eslint-disable @next/next/no-img-element */
 
 import { useMemo, useState } from "react";
-import { catalogProducts, type CatalogProduct } from "../catalog";
+import { catalogProducts } from "../catalog";
+import { iphoneSalePrice } from "../pricing";
 
 const whatsapp = "5511964421841";
 const money = (value: number) => value.toLocaleString("pt-BR", { style: "currency", currency: "BRL", maximumFractionDigits: 0 });
 const normalize = (value: string) => value.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase();
-const key = (product: CatalogProduct) => `${product.name}|${product.specs}`;
-const overrides: Record<string, number> = {
-  "iPhone 15|128 GB · chip físico + eSIM": 4490,
-  "iPhone 15 Plus|256 GB": 5090,
-  "iPhone 16 Pro Max|256 GB · eSIM": 7690,
-};
-
-const roundUpTo90 = (value: number) => {
-  const whole = Math.ceil(value);
-  const remainder = whole % 100;
-  return remainder <= 90 ? whole - remainder + 90 : whole - remainder + 190;
-};
-const roundDownTo90 = (value: number) => {
-  const whole = Math.floor(value);
-  const candidate = Math.floor(whole / 100) * 100 + 90;
-  return candidate > whole ? candidate - 100 : candidate;
-};
-const salePrice = (product: CatalogProduct) => {
-  if (overrides[key(product)]) return overrides[key(product)];
-  const maximumProfit = product.name === "iPhone 18 Pro Max" && product.specs.startsWith("2 TB") ? 1500 : 1000;
-  const targetPrice = roundUpTo90(product.price / 0.89);
-  return Math.min(Math.max(targetPrice, roundUpTo90(product.price + 300)), roundDownTo90(product.price + maximumProfit));
-};
 const products = catalogProducts.filter((product) => product.category === "iPhones lacrados" && product.badge !== "CPO");
 
 export default function LacradosPage() {
@@ -66,7 +44,7 @@ export default function LacradosPage() {
           <p className="sealed-count">{visibleProducts.length} {visibleProducts.length === 1 ? "modelo encontrado" : "modelos encontrados"}</p>
           <div className="sealed-grid">
             {visibleProducts.map((product) => {
-              const price = salePrice(product);
+              const price = iphoneSalePrice(product);
               const message = encodeURIComponent(`Oi! Tenho interesse no ${product.name} ${product.specs} por ${money(price)}. Tem disponível?`);
               return <article className="sealed-card" key={product.id}>
                 <div className="sealed-image"><span>{product.badge === "Anatel" ? "Anatel" : "Lacrado"}</span><img src={`../${product.image.replace("./", "")}`} alt={`${product.name} ${product.specs}`} /></div>
