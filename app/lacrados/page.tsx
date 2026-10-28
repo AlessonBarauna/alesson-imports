@@ -5,7 +5,9 @@
 import { useMemo, useRef, useState } from "react";
 import { catalogProducts } from "../catalog";
 import { iphoneSalePrice } from "../pricing";
+import { PriceUpdate } from "../PriceUpdate";
 
+const pricesUpdatedAt = "2026-10-28T11:19:00-03:00";
 const whatsapp = "5511964421841";
 const money = (value: number) => value.toLocaleString("pt-BR", { style: "currency", currency: "BRL", maximumFractionDigits: 0 });
 const normalize = (value: string) => value.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase();
@@ -39,7 +41,7 @@ export default function LacradosPage() {
 
   return (
     <main className="sealed-page">
-      <div className="sealed-alert">Lista atualizada em 26/10/2026 · Valores sujeitos à disponibilidade</div>
+      <div className="sealed-alert">Valores sujeitos à disponibilidade</div>
       <header className="sealed-header">
         <div className="sealed-shell sealed-nav">
           <a className="brand" href="../"><span className="brand-symbol">AI</span>Alesson Imports</a>
@@ -57,7 +59,7 @@ export default function LacradosPage() {
       <section className="sealed-catalog">
         <div className="sealed-shell">
           <div className="sealed-toolbar">
-            <div><p className="sealed-kicker">Escolha o seu</p><h2>Preços atualizados</h2></div>
+            <div><p className="sealed-kicker">Escolha o seu</p><h2>Preços atualizados</h2><PriceUpdate updatedAt={pricesUpdatedAt} whatsappLink={`https://wa.me/${whatsapp}?text=${encodeURIComponent("Oi! Quero confirmar o valor atual de um iPhone lacrado.")}`} /></div>
             <label className="sealed-search"><span>⌕</span><input value={search} onChange={(event) => setSearch(event.target.value)} placeholder="Buscar modelo, memória ou cor" />{search && <button type="button" onClick={() => setSearch("")} aria-label="Limpar busca">×</button>}</label>
           </div>
           <p className="sealed-count">{visibleProducts.length} {visibleProducts.length === 1 ? "modelo encontrado" : "modelos encontrados"}</p>
