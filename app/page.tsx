@@ -4,7 +4,7 @@
 
 import { useMemo, useState } from "react";
 import { catalogCategories, catalogProducts, type CatalogProduct } from "./catalog";
-import { iphoneSalePrice, isIphoneCategory } from "./pricing";
+import { iphoneSalePrice, ipadSalePrice, isIphoneCategory, isIpad } from "./pricing";
 
 const whatsapp = "https://wa.me/5511964421841";
 const instagram = "https://www.instagram.com/alessonimports.oficial/";
@@ -94,6 +94,7 @@ const catalogComparisons: Record<string, CatalogComparison> = {
 };
 const catalogSalePrice = (product: CatalogProduct) => {
   if (isIphoneCategory(product)) return iphoneSalePrice(product);
+  if (isIpad(product)) return ipadSalePrice(product);
 
   const targetPrice = Math.ceil(product.price / (1 - targetMargin));
   const comparison = catalogComparisons[catalogKey(product.name, product.specs)];

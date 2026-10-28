@@ -38,3 +38,15 @@ export const iphoneSalePrice = (product: CatalogProduct) => {
   const profit = Math.min(Math.max(product.price * marginRate, minimumProfit), maximumProfit);
   return roundUpTo90(product.price + profit);
 };
+
+// iPads: custo já inclui 1% de nota fiscal e R$ 50 de frete; margem bruta-alvo de 15% sobre a venda.
+const ipadMargin = 0.15;
+const ipadOverrides: Record<string, number> = {
+  // mantido abaixo da oferta recorrente da Amazon (R$ 3.243)
+  "ipad-a16-128-gb-wi-fi-63": 3190,
+};
+
+export const isIpad = (product: CatalogProduct) => product.category === "iPad";
+
+export const ipadSalePrice = (product: CatalogProduct) =>
+  ipadOverrides[product.id] ?? roundUpTo90(Math.ceil(product.price / (1 - ipadMargin)));

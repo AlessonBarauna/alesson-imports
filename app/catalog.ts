@@ -776,12 +776,12 @@ export const catalogProducts: CatalogProduct[] = [
     "category": "iPad",
     "name": "iPad A16",
     "specs": "128 GB · Wi‑Fi",
-    "price": 2979,
+    "price": 2828,
     "from": true,
     "options": "Azul · Rosa · Prateado",
     "image": "./catalog/ipad.webp",
-    "details": "",
-    "badge": ""
+    "details": "Novo e lacrado",
+    "badge": "Lacrado"
   },
   {
     "id": "ipad-a16-256-gb-wi-fi-64",
@@ -789,11 +789,11 @@ export const catalogProducts: CatalogProduct[] = [
     "name": "iPad A16",
     "specs": "256 GB · Wi‑Fi",
     "price": 4040,
-    "from": true,
-    "options": "Prateado · Azul · Rosa",
+    "from": false,
+    "options": "Prateado · Azul",
     "image": "./catalog/ipad.webp",
-    "details": "",
-    "badge": ""
+    "details": "Novo e lacrado",
+    "badge": "Lacrado"
   },
   {
     "id": "ipad-mini-a17-128-gb-wi-fi-65",
@@ -824,48 +824,48 @@ export const catalogProducts: CatalogProduct[] = [
     "category": "iPad",
     "name": "iPad Air M3",
     "specs": "128 GB · 13 polegadas · Wi‑Fi",
-    "price": 5252,
+    "price": 5050,
     "from": false,
     "options": "Cinza-espacial",
     "image": "./catalog/ipad.webp",
-    "details": "",
-    "badge": ""
+    "details": "Novo e lacrado",
+    "badge": "Lacrado"
   },
   {
     "id": "ipad-air-m4-128-gb-11-polegadas-wi-fi-68",
     "category": "iPad",
     "name": "iPad Air M4",
     "specs": "128 GB · 11 polegadas · Wi‑Fi",
-    "price": 4848,
-    "from": true,
-    "options": "Azul · Roxo · Cinza · Starlight",
+    "price": 4949,
+    "from": false,
+    "options": "Azul · Roxo · Cinza-espacial",
     "image": "./catalog/ipad.webp",
-    "details": "",
-    "badge": ""
+    "details": "Novo e lacrado",
+    "badge": "Lacrado"
   },
   {
     "id": "ipad-air-m4-256-gb-11-polegadas-wi-fi-69",
     "category": "iPad",
     "name": "iPad Air M4",
     "specs": "256 GB · 11 polegadas · Wi‑Fi",
-    "price": 5857,
+    "price": 5705,
     "from": true,
-    "options": "Azul · Starlight · Roxo",
+    "options": "Cinza-espacial · Starlight · Azul · Roxo",
     "image": "./catalog/ipad.webp",
-    "details": "",
-    "badge": ""
+    "details": "Novo e lacrado",
+    "badge": "Lacrado"
   },
   {
     "id": "ipad-air-m4-128-gb-13-polegadas-wi-fi-70",
     "category": "iPad",
     "name": "iPad Air M4",
     "specs": "128 GB · 13 polegadas · Wi‑Fi",
-    "price": 5959,
+    "price": 6161,
     "from": false,
-    "options": "Cinza-espacial · Azul",
+    "options": "Starlight · Cinza-espacial",
     "image": "./catalog/ipad.webp",
-    "details": "",
-    "badge": ""
+    "details": "Novo e lacrado",
+    "badge": "Lacrado"
   },
   {
     "id": "ipad-air-m4-128-gb-13-polegadas-wi-fi-cellular-71",
@@ -896,11 +896,11 @@ export const catalogProducts: CatalogProduct[] = [
     "category": "iPad",
     "name": "iPad Pro M5",
     "specs": "256 GB · 11 polegadas · Wi‑Fi",
-    "price": 7424,
+    "price": 7474,
     "from": false,
     "options": "Prateado · Space Black",
     "image": "./catalog/ipad.webp",
-    "details": "Chip M5",
+    "details": "Novo e lacrado",
     "badge": "M5"
   },
   {
@@ -920,11 +920,11 @@ export const catalogProducts: CatalogProduct[] = [
     "category": "iPad",
     "name": "iPad Pro M5",
     "specs": "512 GB · 13 polegadas · Wi‑Fi",
-    "price": 9645,
+    "price": 9644,
     "from": false,
-    "options": "Space Black · Prateado",
+    "options": "Prateado",
     "image": "./catalog/ipad.webp",
-    "details": "Chip M5",
+    "details": "Novo e lacrado",
     "badge": "M5"
   },
   {
@@ -932,11 +932,11 @@ export const catalogProducts: CatalogProduct[] = [
     "category": "iPad",
     "name": "iPad Pro M5",
     "specs": "1 TB · 13 polegadas · Wi‑Fi",
-    "price": 11615,
+    "price": 11261,
     "from": false,
     "options": "Prateado",
     "image": "./catalog/ipad.webp",
-    "details": "Chip M5",
+    "details": "Novo e lacrado",
     "badge": "M5"
   },
   {
@@ -968,11 +968,11 @@ export const catalogProducts: CatalogProduct[] = [
     "category": "iPad",
     "name": "iPad Pro M5 Nano-texture",
     "specs": "1 TB · 13 polegadas · Wi‑Fi + Cellular",
-    "price": 12625,
+    "price": 12372,
     "from": false,
     "options": "Prateado",
     "image": "./catalog/ipad.webp",
-    "details": "Vidro nano-texture",
+    "details": "Novo e lacrado",
     "badge": "M5"
   },
   {
@@ -980,11 +980,11 @@ export const catalogProducts: CatalogProduct[] = [
     "category": "iPad",
     "name": "iPad Pro M5",
     "specs": "2 TB · 13 polegadas · Wi‑Fi + Cellular",
-    "price": 13079,
+    "price": 12675,
     "from": false,
     "options": "Prateado",
     "image": "./catalog/ipad.webp",
-    "details": "Chip M5",
+    "details": "Novo e lacrado",
     "badge": "M5"
   },
   {
