@@ -2,7 +2,7 @@
 
 /* eslint-disable @next/next/no-img-element */
 
-import { useMemo, useState } from "react";
+import { useMemo, useRef, useState } from "react";
 import { catalogProducts } from "../catalog";
 import { iphoneSalePrice } from "../pricing";
 
@@ -10,6 +10,25 @@ const whatsapp = "5511964421841";
 const money = (value: number) => value.toLocaleString("pt-BR", { style: "currency", currency: "BRL", maximumFractionDigits: 0 });
 const normalize = (value: string) => value.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase();
 const products = catalogProducts.filter((product) => product.category === "iPhones lacrados" && product.badge !== "CPO");
+
+function ProductImages({ product }: { product: (typeof products)[number] }) {
+  const gallery = product.images && product.images.length > 1 ? product.images : null;
+  const track = useRef<HTMLDivElement>(null);
+  const [current, setCurrent] = useState(0);
+  const alt = `${product.name} ${product.specs}`;
+  if (!gallery) return <img src={`../${product.image.replace("./", "")}`} alt={alt} />;
+  const go = (index: number) => track.current?.scrollTo({ left: index * track.current.clientWidth, behavior: "smooth" });
+  return (
+    <div className="sealed-gallery">
+      <div className="sealed-track" ref={track} onScroll={(event) => setCurrent(Math.round(event.currentTarget.scrollLeft / event.currentTarget.clientWidth))}>
+        {gallery.map((src, index) => <img key={src} src={`../${src.replace("./", "")}`} alt={`${alt} — foto ${index + 1} de ${gallery.length}`} loading={index ? "lazy" : undefined} />)}
+      </div>
+      <button type="button" className="sealed-arrow sealed-arrow-prev" onClick={() => go(Math.max(current - 1, 0))} disabled={current === 0} aria-label="Foto anterior">‹</button>
+      <button type="button" className="sealed-arrow sealed-arrow-next" onClick={() => go(Math.min(current + 1, gallery.length - 1))} disabled={current === gallery.length - 1} aria-label="Próxima foto">›</button>
+      <div className="sealed-dots">{gallery.map((src, index) => <button type="button" key={src} className={index === current ? "on" : ""} onClick={() => go(index)} aria-label={`Ver foto ${index + 1}`} />)}</div>
+    </div>
+  );
+}
 
 export default function LacradosPage() {
   const [search, setSearch] = useState("");
@@ -47,7 +66,7 @@ export default function LacradosPage() {
               const price = iphoneSalePrice(product);
               const message = encodeURIComponent(`Oi! Tenho interesse no ${product.name} ${product.specs} ${product.from ? "a partir de" : "por"} ${money(price)}. Tem disponível?`);
               return <article className="sealed-card" key={product.id}>
-                <div className="sealed-image"><span>{product.badge === "Anatel" ? "Anatel" : "Lacrado"}</span><img src={`../${product.image.replace("./", "")}`} alt={`${product.name} ${product.specs}`} /></div>
+                <div className="sealed-image"><span>{product.badge === "Anatel" ? "Anatel" : "Lacrado"}</span><ProductImages product={product} /></div>
                 <div className="sealed-body"><div className="sealed-title"><h3>{product.name}</h3><p>{product.specs}</p></div><p className="sealed-colors">Cores: {product.options}</p><div className="sealed-price"><small>{product.from ? "A partir de" : "À vista"}</small><strong>{money(price)}</strong><span>Parcelamento sob consulta</span></div><a href={`https://wa.me/${whatsapp}?text=${message}`} target="_blank" rel="noreferrer">Consultar disponibilidade <span>→</span></a></div>
               </article>;
             })}

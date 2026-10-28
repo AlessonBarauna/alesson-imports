@@ -7,6 +7,7 @@ export type CatalogProduct = {
   from: boolean;
   options: string;
   image: string;
+  images?: string[];
   details: string;
   badge: string;
 };
@@ -2399,6 +2400,13 @@ export const catalogProducts: CatalogProduct[] = [
     "from": false,
     "options": "Branco · Preto",
     "image": "./products/iphone-duo.webp",
+    "images": [
+      "./products/iphone-duo.webp",
+      "./products/iphone-duo-2.webp",
+      "./products/iphone-duo-3.webp",
+      "./products/iphone-duo-4.webp",
+      "./products/iphone-duo-5.webp"
+    ],
     "details": "Novo e lacrado",
     "badge": "Lacrado"
   }
