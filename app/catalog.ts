@@ -2389,5 +2389,17 @@ export const catalogProducts: CatalogProduct[] = [
     "image": "./products/iphone-16-pro-max.webp",
     "details": "CPO · consulte a garantia disponível",
     "badge": "CPO"
+  },
+  {
+    "id": "iphone-duo-256-gb-esim-400",
+    "category": "iPhones lacrados",
+    "name": "iPhone Duo",
+    "specs": "256 GB · eSIM",
+    "price": 19744,
+    "from": false,
+    "options": "Branco · Preto",
+    "image": "./products/iphone-duo.webp",
+    "details": "Novo e lacrado",
+    "badge": "Lacrado"
   }
 ];
