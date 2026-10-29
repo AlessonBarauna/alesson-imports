@@ -592,6 +592,18 @@ export const catalogProducts: CatalogProduct[] = [
     "badge": ""
   },
   {
+    "id": "magic-keyboard-para-ipad-air-m3-e-m4-11-polegadas-607",
+    "category": "Acessórios",
+    "name": "Magic Keyboard para iPad Air",
+    "specs": "M3 e M4 · 11 polegadas",
+    "price": 2574,
+    "from": false,
+    "options": "Preto",
+    "image": "./catalog/mac.webp",
+    "details": "",
+    "badge": ""
+  },
+  {
     "id": "cabo-usb-c-para-lightning-1-metro-original-48",
     "category": "Acessórios",
     "name": "Cabo USB-C para Lightning",
@@ -1036,6 +1048,18 @@ export const catalogProducts: CatalogProduct[] = [
     "badge": ""
   },
   {
+    "id": "mac-mini-m6-16-gb-512-gb-605",
+    "category": "Mac",
+    "name": "Mac mini M6",
+    "specs": "16 GB / 512 GB",
+    "price": 8028,
+    "from": false,
+    "options": "Prateado",
+    "image": "./catalog/mac.webp",
+    "details": "",
+    "badge": ""
+  },
+  {
     "id": "macbook-neo-8-gb-256-gb-13-polegadas-85",
     "category": "Mac",
     "name": "MacBook Neo",
@@ -1102,6 +1126,18 @@ export const catalogProducts: CatalogProduct[] = [
     "specs": "16 GB / 1 TB · 14 polegadas",
     "price": 12625,
     "from": true,
+    "options": "Space Black · Prateado",
+    "image": "./catalog/mac.webp",
+    "details": "Chip M5",
+    "badge": "M5"
+  },
+  {
+    "id": "macbook-pro-m5-32-gb-1-tb-14-polegadas-606",
+    "category": "Mac",
+    "name": "MacBook Pro M5",
+    "specs": "32 GB / 1 TB · 14 polegadas",
+    "price": 17219,
+    "from": false,
     "options": "Space Black · Prateado",
     "image": "./catalog/mac.webp",
     "details": "Chip M5",
@@ -1463,6 +1499,54 @@ export const catalogProducts: CatalogProduct[] = [
     "price": 2525,
     "from": false,
     "options": "Preto",
+    "image": "./catalog/xiaomi.webp",
+    "details": "",
+    "badge": ""
+  },
+  {
+    "id": "redmi-note-17-4-gb-128-gb-4g-601",
+    "category": "Xiaomi",
+    "name": "Redmi Note 17",
+    "specs": "4 GB / 128 GB · 4G",
+    "price": 1302,
+    "from": false,
+    "options": "Preto",
+    "image": "./catalog/xiaomi.webp",
+    "details": "",
+    "badge": ""
+  },
+  {
+    "id": "redmi-note-17-8-gb-256-gb-4g-602",
+    "category": "Xiaomi",
+    "name": "Redmi Note 17",
+    "specs": "8 GB / 256 GB · 4G",
+    "price": 1564,
+    "from": false,
+    "options": "Preto · Roxo",
+    "image": "./catalog/xiaomi.webp",
+    "details": "",
+    "badge": ""
+  },
+  {
+    "id": "redmi-note-17-pro-8-gb-256-gb-5g-603",
+    "category": "Xiaomi",
+    "name": "Redmi Note 17 Pro",
+    "specs": "8 GB / 256 GB · 5G",
+    "price": 2121,
+    "from": false,
+    "options": "Preto · Roxo · Laranja",
+    "image": "./catalog/xiaomi.webp",
+    "details": "",
+    "badge": ""
+  },
+  {
+    "id": "redmi-note-17-pro-max-8-gb-256-gb-5g-604",
+    "category": "Xiaomi",
+    "name": "Redmi Note 17 Pro Max",
+    "specs": "8 GB / 256 GB · 5G",
+    "price": 2514,
+    "from": false,
+    "options": "Preto · Roxo · Verde",
     "image": "./catalog/xiaomi.webp",
     "details": "",
     "badge": ""
