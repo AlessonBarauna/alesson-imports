@@ -6,15 +6,15 @@ import { ipadSalePrice } from "../pricing";
 import { PriceUpdate } from "../PriceUpdate";
 import { ProductImages } from "../ProductImages";
 
-const pricesUpdatedAt = "2026-10-28T17:45:00-03:00";
+const pricesUpdatedAt = "2026-10-29T09:18:00-03:00";
 const whatsapp = "5511964421841";
 const money = (value: number) => value.toLocaleString("pt-BR", { style: "currency", currency: "BRL", maximumFractionDigits: 0 });
 const normalize = (value: string) => value.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase();
-// Só entram os iPads que aparecem nas listas atuais dos fornecedores (A: 28/10, B: 27/10).
+// Só entram os iPads que aparecem nas listas atuais dos fornecedores (A: 29/10, B: 27/10).
 const available = new Set([
   "ipad-a16-128-gb-wi-fi-63", "ipad-a16-256-gb-wi-fi-64", "ipad-air-m3-128-gb-13-polegadas-wi-fi-67",
   "ipad-air-m4-128-gb-11-polegadas-wi-fi-68", "ipad-air-m4-256-gb-11-polegadas-wi-fi-69", "ipad-air-m4-128-gb-13-polegadas-wi-fi-70",
-  "ipad-pro-m5-256-gb-11-polegadas-wi-fi-73", "ipad-pro-m5-512-gb-13-polegadas-wi-fi-75", "ipad-pro-m5-1-tb-13-polegadas-wi-fi-76",
+  "ipad-pro-m5-256-gb-11-polegadas-wi-fi-73", "ipad-pro-m5-256-gb-13-polegadas-wi-fi-74", "ipad-pro-m5-512-gb-13-polegadas-wi-fi-75", "ipad-pro-m5-1-tb-13-polegadas-wi-fi-76",
   "ipad-pro-m5-nano-texture-1-tb-13-polegadas-wi-fi-cellular-79", "ipad-pro-m5-2-tb-13-polegadas-wi-fi-cellular-80",
 ]);
 const products = catalogProducts.filter((product) => available.has(product.id));

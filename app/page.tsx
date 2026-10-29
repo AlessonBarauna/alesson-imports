@@ -50,7 +50,13 @@ const roundUpTo90 = (value: number) => {
   const remainder = whole % 100;
   return remainder <= 90 ? whole - remainder + 90 : whole - remainder + 190;
 };
-const productSalePrice = (product: Product) => roundUpTo90(product.price);
+// Os cards em destaque usam o mesmo preço do catálogo (lacrados/CPO); sem correspondência, vale o valor fixo do card.
+const featuredCatalogMatch = (product: Product) =>
+  catalogProducts.find((item) => item.category === "iPhones lacrados" && item.name === product.name && (item.badge === "CPO") === (product.category === "CPO") && item.specs.startsWith(product.storage));
+const productSalePrice = (product: Product) => {
+  const match = featuredCatalogMatch(product);
+  return match ? iphoneSalePrice(match) : roundUpTo90(product.price);
+};
 const savingPercent = (product: Product) => Math.round((1 - productSalePrice(product) / product.marketPrice) * 100);
 const catalogKey = (name: string, specs: string) => `${name}|${specs}`;
 const targetMargin = 0.15;
