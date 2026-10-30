@@ -7,6 +7,9 @@ const dayOf = (date: Date) => new Intl.DateTimeFormat("sv-SE", { timeZone }).for
 
 const subscribe = () => () => {};
 
+// Alerta de câmbio: mude para false quando os preços forem atualizados.
+const dollarAlert = true;
+
 // Quando os preços da página foram atualizados pela última vez.
 // Ao mudar qualquer preço, atualize a data/hora da página correspondente.
 export function PriceUpdate({ updatedAt, whatsappLink }: { updatedAt: string; whatsappLink: string }) {
@@ -20,6 +23,7 @@ export function PriceUpdate({ updatedAt, whatsappLink }: { updatedAt: string; wh
 
   return (
     <div className={`price-update${stale ? " is-stale" : ""}`}>
+      {dollarAlert && <p className="price-update-dollar" role="alert"><strong>🚨 DÓLAR SUBINDO 🚨</strong> Valores não são mais válidos! <a href={whatsappLink} target="_blank" rel="noreferrer">Consultar valor atual no WhatsApp</a></p>}
       <p className="price-update-stamp"><span aria-hidden="true" />Preços atualizados em {date} às {time}</p>
       {stale && <p className="price-update-warning" role="alert">Estes preços não foram atualizados hoje e podem ter mudado. Confirme o valor atual antes de comprar. <a href={whatsappLink} target="_blank" rel="noreferrer">Consultar valor atual no WhatsApp</a></p>}
     </div>
