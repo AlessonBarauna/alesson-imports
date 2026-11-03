@@ -7,7 +7,7 @@ import { catalogProducts, type CatalogProduct } from "../catalog";
 import { iphoneSalePrice } from "../pricing";
 import { PriceUpdate } from "../PriceUpdate";
 
-const pricesUpdatedAt = "2026-10-31T10:59:00-03:00";
+const pricesUpdatedAt = "2026-11-03T09:56:00-03:00";
 const whatsapp = "5511964421841";
 const money = (value: number) => value.toLocaleString("pt-BR", { style: "currency", currency: "BRL", maximumFractionDigits: 0 });
 const normalize = (value: string) => value.normalize("NFD").replace(/[̀-ͯ]/g, "").toLowerCase();
