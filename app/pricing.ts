@@ -1,6 +1,7 @@
 import type { CatalogProduct } from "./catalog";
 
-// Margem sobre o custo do fornecedor: 7%, no mínimo R$ 250 e no máximo R$ 800 de lucro.
+// iPhones: o catálogo guarda o preço da lista do fornecedor; o custo real soma 1% de nota fiscal e R$ 50 de frete.
+// Margem sobre esse custo: 7%, no mínimo R$ 250 e no máximo R$ 800 de lucro.
 const marginRate = 0.07;
 const minimumProfit = 250;
 const maximumProfit = 800;
@@ -25,7 +26,7 @@ const overrides: Record<string, number> = {
   // por categoria|modelo|especificação
   "iPhones lacrados|iPhone 15|128 GB · chip físico + eSIM": 4490,
   "iPhones lacrados|iPhone 15 Plus|256 GB": 5090,
-  "iPhones seminovos|iPhone 13|128 GB · versão EUA": 1990,
+  "iPhones seminovos|iPhone 13|128 GB · versão EUA": 2090,
   "iPhones seminovos|iPhone 14|128 GB · versão EUA": 2290,
 };
 
@@ -35,8 +36,9 @@ export const isIphoneCategory = (product: CatalogProduct) =>
 export const iphoneSalePrice = (product: CatalogProduct) => {
   const manual = overrides[product.id] ?? overrides[priceKey(product)];
   if (manual) return manual;
-  const profit = Math.min(Math.max(product.price * marginRate, minimumProfit), maximumProfit);
-  return roundUpTo90(product.price + profit);
+  const cost = product.price * 1.01 + 50;
+  const profit = Math.min(Math.max(cost * marginRate, minimumProfit), maximumProfit);
+  return roundUpTo90(cost + profit);
 };
 
 // iPads: custo já inclui 1% de nota fiscal e R$ 50 de frete; margem bruta-alvo de 15% sobre a venda.
