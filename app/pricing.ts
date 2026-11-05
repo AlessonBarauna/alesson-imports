@@ -1,10 +1,12 @@
 import type { CatalogProduct } from "./catalog";
 
 // iPhones: o catálogo guarda o preço da lista do fornecedor; o custo real soma 1% de nota fiscal e R$ 50 de frete.
-// Margem sobre esse custo: 7%, no mínimo R$ 250 e no máximo R$ 800 de lucro.
+// Margem sobre esse custo: 7%, no mínimo R$ 250 e no máximo R$ 800 de lucro (R$ 1.200 quando o custo passa de R$ 15.000).
 const marginRate = 0.07;
 const minimumProfit = 250;
 const maximumProfit = 800;
+const highTicketCost = 15000;
+const highTicketMaximumProfit = 1200;
 
 export const roundUpTo90 = (value: number) => {
   const whole = Math.ceil(value);
@@ -18,11 +20,8 @@ const priceKey = (product: CatalogProduct) => `${product.category}|${product.nam
 const overrides: Record<string, number> = {
   // por id do card (quando o mesmo modelo tem cards diferentes por cor)
   "iphone-17-pro-256-gb-esim-172": 7690,
-  "iphone-17-pro-max-256-gb-esim-174": 8090,
   "iphone-16-128-gb-chip-fisico-esim-168": 4790,
-  "iphone-17-pro-max-512-gb-anatel-176": 9490,
   "iphone-17e-256-gb-chip-fisico-esim-170": 4290,
-  "iphone-16-pro-max-256-gb-esim-169": 7290,
   // por categoria|modelo|especificação
   "iPhones lacrados|iPhone 15|128 GB · chip físico + eSIM": 4490,
   "iPhones lacrados|iPhone 15 Plus|256 GB": 5090,
@@ -37,7 +36,7 @@ export const iphoneSalePrice = (product: CatalogProduct) => {
   const manual = overrides[product.id] ?? overrides[priceKey(product)];
   if (manual) return manual;
   const cost = product.price * 1.01 + 50;
-  const profit = Math.min(Math.max(cost * marginRate, minimumProfit), maximumProfit);
+  const profit = Math.min(Math.max(cost * marginRate, minimumProfit), cost > highTicketCost ? highTicketMaximumProfit : maximumProfit);
   return roundUpTo90(cost + profit);
 };
 
