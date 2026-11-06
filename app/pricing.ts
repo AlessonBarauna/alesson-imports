@@ -23,7 +23,6 @@ const overrides: Record<string, number> = {
   "iphone-16-128-gb-chip-fisico-esim-168": 4790,
   "iphone-17e-256-gb-chip-fisico-esim-170": 4290,
   // por categoria|modelo|especificação
-  "iPhones lacrados|iPhone 15|128 GB · chip físico + eSIM": 4490,
   "iPhones lacrados|iPhone 15 Plus|256 GB": 5090,
   "iPhones seminovos|iPhone 13|128 GB · versão EUA": 2090,
   "iPhones seminovos|iPhone 14|128 GB · versão EUA": 2290,
