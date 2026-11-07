@@ -7,7 +7,7 @@ import { catalogProducts, type CatalogProduct } from "../catalog";
 import { iphoneSalePrice } from "../pricing";
 import { PriceUpdate } from "../PriceUpdate";
 
-const pricesUpdatedAt = "2026-11-06T11:16:00-03:00";
+const pricesUpdatedAt = "2026-11-07T11:13:00-03:00";
 const whatsapp = "5511964421841";
 const money = (value: number) => value.toLocaleString("pt-BR", { style: "currency", currency: "BRL", maximumFractionDigits: 0 });
 const normalize = (value: string) => value.normalize("NFD").replace(/[̀-ͯ]/g, "").toLowerCase();
@@ -18,7 +18,7 @@ const displayBadge = (product: CatalogProduct) => {
   if (product.badge === "85–100% bateria") return "Bateria original + 85%";
   return product.badge || "Seminovo";
 };
-const products = catalogProducts.filter((product) => product.category === "iPhones seminovos");
+const products = catalogProducts.filter((product) => product.category === "iPhones seminovos").sort((a, b) => Number(!!a.unavailable) - Number(!!b.unavailable));
 
 export default function SeminovosPage() {
   const [search, setSearch] = useState("");
@@ -40,7 +40,7 @@ export default function SeminovosPage() {
       <section className="sealed-hero">
         <div className="sealed-shell sealed-hero-inner">
           <div><p className="sealed-kicker">Catálogo exclusivo</p><h1>iPhones<br /><span>seminovos.</span></h1><p className="sealed-lead">Aparelhos com bateria e procedência informadas, 30 dias de garantia e atendimento direto para confirmar cores, estoque e pagamento.</p></div>
-          <div className="sealed-hero-card"><strong>{products.length}</strong><span>opções disponíveis</span><p>30 dias de garantia · Até 12x no cartão</p></div>
+          <div className="sealed-hero-card"><strong>{products.filter((product) => !product.unavailable).length}</strong><span>opções disponíveis</span><p>30 dias de garantia · Até 12x no cartão</p></div>
         </div>
       </section>
 
@@ -54,10 +54,10 @@ export default function SeminovosPage() {
           <div className="sealed-grid">
             {visibleProducts.map((product) => {
               const price = iphoneSalePrice(product);
-              const message = encodeURIComponent(`Oi! Tenho interesse no ${product.name} ${displaySpecs(product)} por ${money(price)}. Tem disponível?`);
-              return <article className="sealed-card" key={product.id}>
+              const message = encodeURIComponent(product.unavailable ? `Oi! Vi que o ${product.name} ${product.specs} está em falta. Me avisa quando chegar?` : `Oi! Tenho interesse no ${product.name} ${displaySpecs(product)} por ${money(price)}. Tem disponível?`);
+              return <article className={`sealed-card${product.unavailable ? " is-out-of-stock" : ""}`} key={product.id}>
                 <div className="sealed-image"><span>{displayBadge(product)}</span><img src={`../${product.image.replace("./", "")}`} alt={`${product.name} ${displaySpecs(product)}`} /></div>
-                <div className="sealed-body"><div className="sealed-title"><h3>{product.name}</h3><p>{displaySpecs(product)}</p></div><p className="sealed-colors">Cores: {product.options}</p><div className="sealed-price"><small>À vista</small><strong>{money(price)}</strong><span>Parcelamento sob consulta</span></div><a href={`https://wa.me/${whatsapp}?text=${message}`} target="_blank" rel="noreferrer">Consultar disponibilidade <span>→</span></a></div>
+                <div className="sealed-body"><div className="sealed-title"><h3>{product.name}</h3><p>{displaySpecs(product)}</p></div><p className="sealed-colors">Cores: {product.options}</p>{product.unavailable ? <div className="sealed-price sealed-price-out"><strong>Em falta</strong><span>Sem previsão nas listas de hoje</span></div> : <div className="sealed-price"><small>À vista</small><strong>{money(price)}</strong><span>Parcelamento sob consulta</span></div>}<a href={`https://wa.me/${whatsapp}?text=${message}`} target="_blank" rel="noreferrer">{product.unavailable ? "Avise-me quando chegar" : "Consultar disponibilidade"} <span>→</span></a></div>
               </article>;
             })}
           </div>

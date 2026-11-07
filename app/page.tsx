@@ -139,11 +139,12 @@ export default function Home() {
   const filtered = useMemo(() => products.filter((product) => filter === "Todos" || product.category === filter), [filter]);
   const catalogFiltered = useMemo(() => {
     const query = normalizeText(catalogSearch.trim());
+    // Produtos em falta vão para o fim da lista (a ordem original é mantida dentro de cada grupo).
     return catalogProducts.filter((product) => {
       const categoryMatch = catalogFilter === "Todos" || product.category === catalogFilter;
       const searchMatch = !query || normalizeText(`${product.name} ${product.specs} ${product.options} ${product.category}`).includes(query);
       return categoryMatch && searchMatch;
-    });
+    }).sort((a, b) => Number(!!a.unavailable) - Number(!!b.unavailable));
   }, [catalogFilter, catalogSearch]);
   const contactLink = (message: string) => `${whatsapp}?text=${encodeURIComponent(message)}`;
   const productLink = (product: Product) => contactLink(`Oi! Tenho interesse no ${product.name} ${product.storage} de ${money(productSalePrice(product))}. Ainda tem disponível?`);
@@ -151,7 +152,9 @@ export default function Home() {
     const query = encodeURIComponent(`${product.name} ${product.storage.split(" · ")[0]}`);
     return product.marketSource === "Amazon" ? `https://www.amazon.com.br/s?k=${query}` : `https://lista.mercadolivre.com.br/${query}`;
   };
-  const catalogProductLink = (product: CatalogProduct) => contactLink(`Oi! Vi o ${product.name} ${product.specs} por ${money(catalogSalePrice(product))}. Ainda tem disponível?`);
+  const catalogProductLink = (product: CatalogProduct) => product.unavailable
+    ? contactLink(`Oi! Vi que o ${product.name} ${product.specs} está em falta. Me avisa quando chegar?`)
+    : contactLink(`Oi! Vi o ${product.name} ${product.specs} por ${money(catalogSalePrice(product))}. Ainda tem disponível?`);
   const setCatalogCategory = (category: string) => {
     setCatalogFilter(category);
     setCatalogLimit(12);
@@ -196,7 +199,7 @@ export default function Home() {
       </div></section>
 
       <section className="marketplace section" id="loja"><div className="shell">
-        <div className="marketplace-head"><div><p className="kicker">Alesson Marketplace</p><h2>Tecnologia para<br />cada momento.</h2></div><div className="marketplace-summary"><strong>{catalogProducts.length} opções</strong><p>Drones, Apple, Garmin e Xiaomi em uma loja só. Pesquise, compare e consulte o estoque pelo WhatsApp.</p></div></div>
+        <div className="marketplace-head"><div><p className="kicker">Alesson Marketplace</p><h2>Tecnologia para<br />cada momento.</h2></div><div className="marketplace-summary"><strong>{catalogProducts.filter((product) => !product.unavailable).length} opções</strong><p>Drones, Apple, Garmin e Xiaomi em uma loja só. Pesquise, compare e consulte o estoque pelo WhatsApp.</p></div></div>
         <div className="marketplace-toolbar">
           <label className="catalog-search"><span aria-hidden="true">⌕</span><input value={catalogSearch} onChange={(event) => { setCatalogSearch(event.target.value); setCatalogLimit(12); }} placeholder="Buscar por produto, memória ou cor" aria-label="Buscar no catálogo" />{catalogSearch && <button type="button" onClick={() => setCatalogSearch("")} aria-label="Limpar busca">×</button>}</label>
           <div className="catalog-result"><strong>{catalogFiltered.length}</strong><span>{catalogFiltered.length === 1 ? "produto encontrado" : "produtos encontrados"}</span></div>
@@ -207,11 +210,11 @@ export default function Home() {
             const comparison = catalogComparisons[catalogKey(product.name, product.specs)];
             const salePrice = catalogSalePrice(product);
             const showComparison = comparison && comparison.price > salePrice;
-            return <article className="market-card" key={product.id}>
-              <div className="market-image"><img src={catalogImage(product)} alt={`${product.name} ${product.specs}`} loading="lazy" /><span className="market-category">{product.category}</span>{product.badge && <span className="market-badge">{product.badge}</span>}</div>
+            return <article className={`market-card${product.unavailable ? " is-out-of-stock" : ""}`} key={product.id}>
+              <div className="market-image"><img src={catalogImage(product)} alt={`${product.name} ${product.specs}`} loading="lazy" /><span className="market-category">{product.category}</span>{product.unavailable ? <span className="market-badge market-badge-out">Em falta</span> : product.badge && <span className="market-badge">{product.badge}</span>}</div>
               <div className="market-body"><div className="market-title"><p>{product.name}</p><h3>{product.specs}</h3></div><p className="market-options">{product.options}</p>{product.details && <p className="market-details">{product.details}</p>}
-                <div className="market-price"><small>{product.from ? "a partir de" : "por"}</small><strong>{money(salePrice)}</strong>{showComparison && <div className="catalog-comparison"><a href={comparison.url} target="_blank" rel="noreferrer">{comparison.source} <s>{money(comparison.price)}</s></a><b>Economize {money(comparison.price - salePrice)} · {Math.round((1 - salePrice / comparison.price) * 100)}%</b></div>}<span>Consulte parcelamento e disponibilidade</span></div>
-                <a href={catalogProductLink(product)} target="_blank" rel="noreferrer">Tenho interesse <ArrowIcon /></a>
+                {product.unavailable ? <div className="market-price market-price-out"><strong>Em falta</strong><small>sem previsão nas listas de hoje</small></div> : <div className="market-price"><small>{product.from ? "a partir de" : "por"}</small><strong>{money(salePrice)}</strong>{showComparison && <div className="catalog-comparison"><a href={comparison.url} target="_blank" rel="noreferrer">{comparison.source} <s>{money(comparison.price)}</s></a><b>Economize {money(comparison.price - salePrice)} · {Math.round((1 - salePrice / comparison.price) * 100)}%</b></div>}<span>Consulte parcelamento e disponibilidade</span></div>}
+                <a href={catalogProductLink(product)} target="_blank" rel="noreferrer">{product.unavailable ? "Avise-me quando chegar" : "Tenho interesse"} <ArrowIcon /></a>
               </div>
             </article>;
           })}</div>

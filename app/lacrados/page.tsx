@@ -6,11 +6,11 @@ import { iphoneSalePrice } from "../pricing";
 import { PriceUpdate } from "../PriceUpdate";
 import { ProductImages } from "../ProductImages";
 
-const pricesUpdatedAt = "2026-11-06T11:16:00-03:00";
+const pricesUpdatedAt = "2026-11-07T11:13:00-03:00";
 const whatsapp = "5511964421841";
 const money = (value: number) => value.toLocaleString("pt-BR", { style: "currency", currency: "BRL", maximumFractionDigits: 0 });
 const normalize = (value: string) => value.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase();
-const products = catalogProducts.filter((product) => product.category === "iPhones lacrados" && product.badge !== "CPO");
+const products = catalogProducts.filter((product) => product.category === "iPhones lacrados" && product.badge !== "CPO").sort((a, b) => Number(!!a.unavailable) - Number(!!b.unavailable));
 
 export default function LacradosPage() {
   const [search, setSearch] = useState("");
@@ -32,7 +32,7 @@ export default function LacradosPage() {
       <section className="sealed-hero">
         <div className="sealed-shell sealed-hero-inner">
           <div><p className="sealed-kicker">Catálogo exclusivo</p><h1>iPhones<br /><span>lacrados.</span></h1><p className="sealed-lead">Modelos novos, com procedência informada e atendimento direto para confirmar cores, estoque e pagamento.</p></div>
-          <div className="sealed-hero-card"><strong>{products.length}</strong><span>opções disponíveis</span><p>Nota fiscal · Frete · Até 12x no cartão</p></div>
+          <div className="sealed-hero-card"><strong>{products.filter((product) => !product.unavailable).length}</strong><span>opções disponíveis</span><p>Nota fiscal · Frete · Até 12x no cartão</p></div>
         </div>
       </section>
 
@@ -46,10 +46,10 @@ export default function LacradosPage() {
           <div className="sealed-grid">
             {visibleProducts.map((product) => {
               const price = iphoneSalePrice(product);
-              const message = encodeURIComponent(`Oi! Tenho interesse no ${product.name} ${product.specs} ${product.from ? "a partir de" : "por"} ${money(price)}. Tem disponível?`);
-              return <article className="sealed-card" key={product.id}>
+              const message = encodeURIComponent(product.unavailable ? `Oi! Vi que o ${product.name} ${product.specs} está em falta. Me avisa quando chegar?` : `Oi! Tenho interesse no ${product.name} ${product.specs} ${product.from ? "a partir de" : "por"} ${money(price)}. Tem disponível?`);
+              return <article className={`sealed-card${product.unavailable ? " is-out-of-stock" : ""}`} key={product.id}>
                 <div className="sealed-image"><span>{product.badge === "Anatel" ? "Anatel" : "Lacrado"}</span><ProductImages product={product} /></div>
-                <div className="sealed-body"><div className="sealed-title"><h3>{product.name}</h3><p>{product.specs}</p></div><p className="sealed-colors">Cores: {product.options}</p><div className="sealed-price"><small>{product.from ? "A partir de" : "À vista"}</small><strong>{money(price)}</strong><span>Parcelamento sob consulta</span></div><a href={`https://wa.me/${whatsapp}?text=${message}`} target="_blank" rel="noreferrer">Consultar disponibilidade <span>→</span></a></div>
+                <div className="sealed-body"><div className="sealed-title"><h3>{product.name}</h3><p>{product.specs}</p></div><p className="sealed-colors">Cores: {product.options}</p>{product.unavailable ? <div className="sealed-price sealed-price-out"><strong>Em falta</strong><span>Sem previsão nas listas de hoje</span></div> : <div className="sealed-price"><small>{product.from ? "A partir de" : "À vista"}</small><strong>{money(price)}</strong><span>Parcelamento sob consulta</span></div>}<a href={`https://wa.me/${whatsapp}?text=${message}`} target="_blank" rel="noreferrer">{product.unavailable ? "Avise-me quando chegar" : "Consultar disponibilidade"} <span>→</span></a></div>
               </article>;
             })}
           </div>
