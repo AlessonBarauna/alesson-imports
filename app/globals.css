@@ -35,3 +35,4 @@
 .market-price-out small,.sealed-price-out span{color:#6b7280}
 
 .installment{display:flex!important;flex-direction:column;gap:2px;margin-top:6px;color:#4b4f56!important;font-size:.72rem!important;line-height:1.35!important}.installment b{color:#101114;font-size:.82rem}.installment em{color:#989ba1;font-size:.58rem;font-style:normal}
+.installment details{margin-top:2px}.installment summary{cursor:pointer;color:#0672e3;font-size:.62rem;list-style:none}.installment summary::-webkit-details-marker{display:none}.installment ul{margin:6px 0 2px;padding:6px 8px;list-style:none;border:1px solid #e3e5e8;border-radius:8px;background:#fafafb}.installment li{display:flex;justify-content:space-between;gap:12px;font-size:.62rem;line-height:1.7;color:#4b4f56}.installment li b{font-size:.62rem;color:#101114}
