@@ -21,7 +21,6 @@ const overrides: Record<string, number> = {
   // por id do card (quando o mesmo modelo tem cards diferentes por cor)
   "iphone-17-pro-256-gb-esim-172": 7690,
   "iphone-16-128-gb-chip-fisico-esim-168": 4790,
-  "iphone-17e-256-gb-chip-fisico-esim-170": 4290,
   // por categoria|modelo|especificação
   "iPhones lacrados|iPhone 15 Plus|256 GB": 5090,
   "iPhones seminovos|iPhone 13|128 GB · versão EUA": 2090,
