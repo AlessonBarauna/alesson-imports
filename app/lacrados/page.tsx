@@ -5,6 +5,7 @@ import { catalogProducts } from "../catalog";
 import { iphoneSalePrice } from "../pricing";
 import { PriceUpdate } from "../PriceUpdate";
 import { ProductImages } from "../ProductImages";
+import { Installment } from "../Installment";
 
 const pricesUpdatedAt = "2026-11-11T11:05:00-03:00";
 const whatsapp = "5511964421841";
@@ -49,7 +50,7 @@ export default function LacradosPage() {
               const message = encodeURIComponent(product.unavailable ? `Oi! Vi que o ${product.name} ${product.specs} está em falta. Me avisa quando chegar?` : `Oi! Tenho interesse no ${product.name} ${product.specs} ${product.from ? "a partir de" : "por"} ${money(price)}. Tem disponível?`);
               return <article className={`sealed-card${product.unavailable ? " is-out-of-stock" : ""}`} key={product.id}>
                 <div className="sealed-image"><span>{product.badge === "Anatel" ? "Anatel" : "Lacrado"}</span><ProductImages product={product} /></div>
-                <div className="sealed-body"><div className="sealed-title"><h3>{product.name}</h3><p>{product.specs}</p></div><p className="sealed-colors">Cores: {product.options}</p>{product.unavailable ? <div className="sealed-price sealed-price-out"><strong>Em falta</strong><span>Sem previsão nas listas de hoje</span></div> : <div className="sealed-price"><small>{product.from ? "A partir de" : "À vista"}</small><strong>{money(price)}</strong><span>Parcelamento sob consulta</span></div>}<a href={`https://wa.me/${whatsapp}?text=${message}`} target="_blank" rel="noreferrer">{product.unavailable ? "Avise-me quando chegar" : "Consultar disponibilidade"} <span>→</span></a></div>
+                <div className="sealed-body"><div className="sealed-title"><h3>{product.name}</h3><p>{product.specs}</p></div><p className="sealed-colors">Cores: {product.options}</p>{product.unavailable ? <div className="sealed-price sealed-price-out"><strong>Em falta</strong><span>Sem previsão nas listas de hoje</span></div> : <div className="sealed-price"><small>{product.from ? "A partir de" : "À vista"}</small><strong>{money(price)}</strong><Installment price={price} /></div>}<a href={`https://wa.me/${whatsapp}?text=${message}`} target="_blank" rel="noreferrer">{product.unavailable ? "Avise-me quando chegar" : "Consultar disponibilidade"} <span>→</span></a></div>
               </article>;
             })}
           </div>

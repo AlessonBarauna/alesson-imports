@@ -49,3 +49,9 @@ export const isIpad = (product: CatalogProduct) => product.category === "iPad";
 
 export const ipadSalePrice = (product: CatalogProduct) =>
   ipadOverrides[product.id] ?? roundUpTo90(Math.ceil(product.price / (1 - ipadMargin)));
+
+// Crédito em 12x na InfinityPay: a taxa de 16,66% é cobrada sobre o total parcelado,
+// então o cliente paga preço ÷ (1 − 16,66%) dividido em 12 (ex.: R$ 2.090 → 12x de R$ 208,98).
+export const creditFeeRate = 0.1666;
+export const creditInstallments = 12;
+export const creditInstallment = (price: number) => Math.round((price / (1 - creditFeeRate) / creditInstallments) * 100) / 100;

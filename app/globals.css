@@ -33,3 +33,5 @@
 .market-badge.market-badge-out{background:#b42318;color:#fff}
 .market-price-out strong,.sealed-price-out strong{color:#b42318;font-size:1.15rem}
 .market-price-out small,.sealed-price-out span{color:#6b7280}
+
+.installment{display:flex!important;flex-direction:column;gap:2px;margin-top:6px;color:#4b4f56!important;font-size:.72rem!important;line-height:1.35!important}.installment b{color:#101114;font-size:.82rem}.installment em{color:#989ba1;font-size:.58rem;font-style:normal}
