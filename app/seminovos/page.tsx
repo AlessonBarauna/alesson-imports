@@ -8,7 +8,7 @@ import { iphoneSalePrice } from "../pricing";
 import { PriceUpdate } from "../PriceUpdate";
 import { Installment } from "../Installment";
 
-const pricesUpdatedAt = "2026-11-11T11:05:00-03:00";
+const pricesUpdatedAt = "2026-11-12T11:22:00-03:00";
 const whatsapp = "5511964421841";
 const money = (value: number) => value.toLocaleString("pt-BR", { style: "currency", currency: "BRL", maximumFractionDigits: 0 });
 const normalize = (value: string) => value.normalize("NFD").replace(/[̀-ͯ]/g, "").toLowerCase();
