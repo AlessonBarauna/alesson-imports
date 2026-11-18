@@ -1,12 +1,13 @@
 import type { CatalogProduct } from "./catalog";
 
-// iPhones: o catálogo guarda o preço da lista do fornecedor; o custo real soma 1% de nota fiscal e R$ 50 de frete.
-// Margem sobre esse custo: 7%, no mínimo R$ 250 e no máximo R$ 800 de lucro (R$ 1.200 quando o custo passa de R$ 15.000).
-const marginRate = 0.07;
+// Regra única para todos os produtos:
+//   custo = preço do fornecedor + 1% de nota fiscal + R$ 50 de frete
+//   venda = custo + lucro (8% do custo, mínimo de R$ 250, sem teto), arredondado para cima até terminar em 90.
+// No catálogo, iPhones guardam o preço da lista do fornecedor; os demais produtos já guardam o custo (NF + frete somados).
+const nfRate = 0.01;
+const freight = 50;
+const profitRate = 0.08;
 const minimumProfit = 250;
-const maximumProfit = 800;
-const highTicketCost = 15000;
-const highTicketMaximumProfit = 1200;
 
 export const roundUpTo90 = (value: number) => {
   const whole = Math.ceil(value);
@@ -14,41 +15,21 @@ export const roundUpTo90 = (value: number) => {
   return remainder <= 90 ? whole - remainder + 90 : whole - remainder + 190;
 };
 
-const priceKey = (product: CatalogProduct) => `${product.category}|${product.name}|${product.specs}`;
-
-// Preços definidos manualmente: têm prioridade sobre o cálculo.
-const overrides: Record<string, number> = {
-  // por id do card (quando o mesmo modelo tem cards diferentes por cor)
-  "iphone-17-pro-256-gb-esim-172": 7690,
-  "iphone-16-128-gb-chip-fisico-esim-168": 4790,
-  // por categoria|modelo|especificação
-  "iPhones lacrados|iPhone 15 Plus|256 GB": 5090,
-  "iPhones seminovos|iPhone 13|128 GB · versão EUA": 2090,
-  "iPhones seminovos|iPhone 14|128 GB · versão EUA": 2290,
-};
-
 export const isIphoneCategory = (product: CatalogProduct) =>
   product.category === "iPhones lacrados" || product.category === "iPhones seminovos";
 
-export const iphoneSalePrice = (product: CatalogProduct) => {
-  const manual = overrides[product.id] ?? overrides[priceKey(product)];
-  if (manual) return manual;
-  const cost = product.price * 1.01 + 50;
-  const profit = Math.min(Math.max(cost * marginRate, minimumProfit), cost > highTicketCost ? highTicketMaximumProfit : maximumProfit);
-  return roundUpTo90(cost + profit);
-};
-
-// iPads: custo já inclui 1% de nota fiscal e R$ 50 de frete; margem bruta-alvo de 15% sobre a venda.
-const ipadMargin = 0.15;
-const ipadOverrides: Record<string, number> = {
-  // mantido abaixo da oferta recorrente da Amazon (R$ 3.243)
-  "ipad-a16-128-gb-wi-fi-63": 3190,
-};
-
 export const isIpad = (product: CatalogProduct) => product.category === "iPad";
 
-export const ipadSalePrice = (product: CatalogProduct) =>
-  ipadOverrides[product.id] ?? roundUpTo90(Math.ceil(product.price / (1 - ipadMargin)));
+export const productCost = (product: CatalogProduct) =>
+  isIphoneCategory(product) ? product.price * (1 + nfRate) + freight : product.price;
+
+export const salePrice = (product: CatalogProduct) => {
+  const cost = productCost(product);
+  return roundUpTo90(cost + Math.max(cost * profitRate, minimumProfit));
+};
+
+export const iphoneSalePrice = salePrice;
+export const ipadSalePrice = salePrice;
 
 // Crédito na InfinityPay: a taxa de cada plano é cobrada sobre o total parcelado,
 // então o cliente paga preço ÷ (1 − taxa) dividido em N (ex.: R$ 2.090 em 12x → 12x de R$ 208,98).

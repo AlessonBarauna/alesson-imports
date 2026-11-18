@@ -4,7 +4,7 @@
 
 import { useMemo, useState } from "react";
 import { catalogCategories, catalogProducts, type CatalogProduct } from "./catalog";
-import { iphoneSalePrice, ipadSalePrice, isIphoneCategory, isIpad } from "./pricing";
+import { iphoneSalePrice, salePrice } from "./pricing";
 import { Installment } from "./Installment";
 
 
@@ -61,7 +61,6 @@ const productSalePrice = (product: Product) => {
 };
 const savingPercent = (product: Product) => Math.round((1 - productSalePrice(product) / product.marketPrice) * 100);
 const catalogKey = (name: string, specs: string) => `${name}|${specs}`;
-const targetMargin = 0.15;
 type CatalogComparison = { price: number; source: string; url: string };
 const catalogComparisons: Record<string, CatalogComparison> = {
   [catalogKey("iPhone 15", "128 GB · chip físico + eSIM")]: { price: 4777, source: "Amazon", url: "https://www.amazon.com.br/s?k=iphone+15+128gb" },
@@ -100,15 +99,7 @@ const catalogComparisons: Record<string, CatalogComparison> = {
   [catalogKey("Redmi Note 15 Pro", "8 GB / 256 GB · 5G")]: { price: 2213, source: "Mercado Livre", url: "https://www.mercadolivre.com.br/celular-xiaomi-redmi-note-15-pro-5g-8gb-256gb-versao-global/up/MLBU4112568728" },
   [catalogKey("POCO X8 Pro", "12 GB / 512 GB · 5G")]: { price: 3229, source: "Mercado Livre", url: "https://www.mercadolivre.com.br/xiaomi-poco-x8-pro-dual-sim-512-gb-amarillo-12-gb-ram-659-amoled-dimensity-8500-ultra-50mp-con-ois-6500mah-100w-hypercharge/p/MLB73842644" },
 };
-const catalogSalePrice = (product: CatalogProduct) => {
-  if (isIphoneCategory(product)) return iphoneSalePrice(product);
-  if (isIpad(product)) return ipadSalePrice(product);
-
-  const targetPrice = Math.ceil(product.price / (1 - targetMargin));
-  const comparison = catalogComparisons[catalogKey(product.name, product.specs)];
-  const competitivePrice = !comparison || comparison.price <= product.price ? targetPrice : Math.min(targetPrice, comparison.price - 10);
-  return roundUpTo90(competitivePrice);
-};
+const catalogSalePrice = (product: CatalogProduct) => salePrice(product);
 const catalogImage = (product: CatalogProduct) => {
   if (product.name === "AntiGravity A1 Explorer Bundle") return "./catalog/products/antigravity-a1.webp";
   if (product.name === "AirPods 5" || product.name === "AirPods 5 Wireless") return "./catalog/products/airpods-5.webp";
