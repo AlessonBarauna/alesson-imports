@@ -6,8 +6,11 @@ import { useMemo, useState } from "react";
 import { catalogCategories, catalogProducts, type CatalogProduct } from "./catalog";
 import { iphoneSalePrice, salePrice } from "./pricing";
 import { Installment } from "./Installment";
+import { PriceUpdate } from "./PriceUpdate";
 
 
+// Quando os preços da loja foram atualizados pela última vez (atualizar junto com as páginas de lacrados, seminovos e iPads).
+const pricesUpdatedAt = "2026-11-23T11:18:00-03:00";
 const whatsapp = "https://wa.me/5511964421841";
 const instagram = "https://www.instagram.com/alessonimports.oficial/";
 
@@ -155,7 +158,7 @@ export default function Home() {
 
   return (
     <main>
-      <div className="announcement"><span>Tabela atualizada em 05/10/2026</span><a href="#duvidas">Veja as condições</a></div>
+      <div className="announcement"><span>🚨 Dólar tá subindo pessoal 🚨 Pode haver alteração nos valores</span><a href="#duvidas">Veja as condições</a></div>
       <header className="site-header">
         <nav className="shell nav" aria-label="Navegação principal">
           <a className="brand" href="#inicio" aria-label="Alesson Imports — início"><span className="brand-symbol">A</span><span>Alesson Imports</span></a>
@@ -193,6 +196,7 @@ export default function Home() {
 
       <section className="marketplace section" id="loja"><div className="shell">
         <div className="marketplace-head"><div><p className="kicker">Alesson Marketplace</p><h2>Tecnologia para<br />cada momento.</h2></div><div className="marketplace-summary"><strong>{catalogProducts.filter((product) => !product.unavailable).length} opções</strong><p>Drones, Apple, Garmin e Xiaomi em uma loja só. Pesquise, compare e consulte o estoque pelo WhatsApp.</p></div></div>
+        <PriceUpdate updatedAt={pricesUpdatedAt} whatsappLink={contactLink("Oi! Quero confirmar o valor atual de um produto.")} />
         <div className="marketplace-toolbar">
           <label className="catalog-search"><span aria-hidden="true">⌕</span><input value={catalogSearch} onChange={(event) => { setCatalogSearch(event.target.value); setCatalogLimit(12); }} placeholder="Buscar por produto, memória ou cor" aria-label="Buscar no catálogo" />{catalogSearch && <button type="button" onClick={() => setCatalogSearch("")} aria-label="Limpar busca">×</button>}</label>
           <div className="catalog-result"><strong>{catalogFiltered.length}</strong><span>{catalogFiltered.length === 1 ? "produto encontrado" : "produtos encontrados"}</span></div>

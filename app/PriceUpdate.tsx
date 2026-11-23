@@ -21,6 +21,7 @@ export function PriceUpdate({ updatedAt, whatsappLink }: { updatedAt: string; wh
   return (
     <div className={`price-update${stale ? " is-stale" : ""}`}>
       <p className="price-update-stamp"><span aria-hidden="true" />Preços atualizados em {date} às {time}</p>
+      <p className="price-update-dollar" role="note"><strong>🚨 Dólar tá subindo pessoal 🚨</strong><span>Pode haver alteração nos valores</span></p>
       {stale && <p className="price-update-warning" role="alert">Estes preços não foram atualizados hoje e podem ter mudado. Confirme o valor atual antes de comprar. <a href={whatsappLink} target="_blank" rel="noreferrer">Consultar valor atual no WhatsApp</a></p>}
     </div>
   );
