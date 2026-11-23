@@ -426,7 +426,7 @@ export const catalogProducts: CatalogProduct[] = [
     "category": "Áudio",
     "name": "AirPods 4 ANC",
     "specs": "Cancelamento ativo de ruído",
-    "price": 1181,
+    "price": 1060,
     "from": false,
     "options": "Branco",
     "image": "./catalog/airpods.webp",
@@ -450,7 +450,7 @@ export const catalogProducts: CatalogProduct[] = [
     "category": "Áudio",
     "name": "AirPods 5",
     "specs": "Estojo padrão",
-    "price": 1242,
+    "price": 1111,
     "from": false,
     "options": "Branco",
     "image": "./catalog/airpods.webp",
@@ -474,13 +474,12 @@ export const catalogProducts: CatalogProduct[] = [
     "category": "Áudio",
     "name": "AirPods Max USB-C",
     "specs": "Headphone over-ear",
-    "price": 3383,
+    "price": 3434,
     "from": true,
-    "options": "Azul · Roxo · Laranja · Starlight · Midnight",
+    "options": "Laranja · Starlight · Midnight",
     "image": "./catalog/airpods.webp",
     "details": "",
-    "badge": "",
-    "unavailable": true
+    "badge": ""
   },
   {
     "id": "airpods-max-usb-c-2-edicao-2026-38",
@@ -488,8 +487,8 @@ export const catalogProducts: CatalogProduct[] = [
     "name": "AirPods Max USB-C 2",
     "specs": "Edição 2026",
     "price": 3131,
-    "from": false,
-    "options": "Laranja · Roxo",
+    "from": true,
+    "options": "Laranja · Roxo · Azul · Starlight",
     "image": "./catalog/airpods.webp",
     "details": "Consulte a cor disponível",
     "badge": "2026"
@@ -697,7 +696,7 @@ export const catalogProducts: CatalogProduct[] = [
     "specs": "40 mm · GPS",
     "price": 1868,
     "from": false,
-    "options": "Midnight",
+    "options": "Midnight · Starlight",
     "image": "./catalog/watch.webp",
     "details": "",
     "badge": ""
@@ -744,8 +743,8 @@ export const catalogProducts: CatalogProduct[] = [
     "category": "Apple Watch",
     "name": "Apple Watch Series 12",
     "specs": "42 mm · GPS",
-    "price": 3030,
-    "from": false,
+    "price": 2878,
+    "from": true,
     "options": "Jet Black · Cinza · Light Gold · Dark Bronze",
     "image": "./catalog/watch.webp",
     "details": "",
@@ -756,7 +755,7 @@ export const catalogProducts: CatalogProduct[] = [
     "category": "Apple Watch",
     "name": "Apple Watch Series 12",
     "specs": "46 mm · GPS",
-    "price": 3232,
+    "price": 3181,
     "from": true,
     "options": "Jet Black · Dark Bronze · Light Gold · Cinza",
     "image": "./catalog/watch.webp",
@@ -769,8 +768,8 @@ export const catalogProducts: CatalogProduct[] = [
     "name": "Apple Watch Ultra 4",
     "specs": "GPS + Cellular",
     "price": 5503,
-    "from": false,
-    "options": "Preto",
+    "from": true,
+    "options": "Preto · Natural",
     "image": "./catalog/watch.webp",
     "details": "Caixa Ultra",
     "badge": "Ultra"
@@ -807,7 +806,7 @@ export const catalogProducts: CatalogProduct[] = [
     "specs": "128 GB · Wi‑Fi",
     "price": 3181,
     "from": true,
-    "options": "Azul · Rosa · Prateado",
+    "options": "Azul · Rosa · Prateado · Amarelo",
     "image": "./catalog/ipad.webp",
     "details": "Novo e lacrado",
     "badge": "Lacrado"
@@ -870,7 +869,7 @@ export const catalogProducts: CatalogProduct[] = [
     "specs": "128 GB · 11 polegadas · Wi‑Fi",
     "price": 5181,
     "from": true,
-    "options": "Cinza-espacial · Roxo · Azul",
+    "options": "Cinza-espacial · Roxo · Azul · Starlight",
     "image": "./catalog/ipad.webp",
     "details": "Novo e lacrado",
     "badge": "Lacrado"
@@ -1048,7 +1047,7 @@ export const catalogProducts: CatalogProduct[] = [
     "name": "Mac mini M4",
     "specs": "16 GB / 512 GB",
     "price": 6615,
-    "from": false,
+    "from": true,
     "options": "Prateado",
     "image": "./catalog/mac.webp",
     "details": "",
@@ -1073,7 +1072,7 @@ export const catalogProducts: CatalogProduct[] = [
     "name": "Mac mini M6",
     "specs": "16 GB / 256 GB",
     "price": 6715,
-    "from": false,
+    "from": true,
     "options": "Prateado",
     "image": "./catalog/mac.webp",
     "details": "",
@@ -1084,20 +1083,19 @@ export const catalogProducts: CatalogProduct[] = [
     "category": "Mac",
     "name": "Mac mini M6",
     "specs": "16 GB / 512 GB",
-    "price": 8433,
+    "price": 8787,
     "from": false,
     "options": "Prateado",
     "image": "./catalog/mac.webp",
     "details": "",
-    "badge": "",
-    "unavailable": true
+    "badge": ""
   },
   {
     "id": "macbook-neo-8-gb-256-gb-13-polegadas-85",
     "category": "Mac",
     "name": "MacBook Neo",
     "specs": "8 GB / 256 GB · 13 polegadas",
-    "price": 5504,
+    "price": 5443,
     "from": true,
     "options": "Amarelo · Rosa · Azul · Prateado",
     "image": "./catalog/mac.webp",
@@ -1182,9 +1180,9 @@ export const catalogProducts: CatalogProduct[] = [
     "category": "Mac",
     "name": "MacBook Pro M5 Pro",
     "specs": "24 GB / 1 TB · 14 polegadas",
-    "price": 18634,
+    "price": 18432,
     "from": false,
-    "options": "Prateado",
+    "options": "Prateado · Space Black",
     "image": "./catalog/mac.webp",
     "details": "Chip M5 Pro",
     "badge": "M5 Pro"
@@ -1342,13 +1340,12 @@ export const catalogProducts: CatalogProduct[] = [
     "category": "Mac",
     "name": "Mac mini M4",
     "specs": "16 GB / 256 GB · 10C/10C",
-    "price": 6060,
+    "price": 6312,
     "from": false,
     "options": "Prateado",
     "image": "./catalog/mac.webp",
     "details": "Modelo A3238",
-    "badge": "M4",
-    "unavailable": true
+    "badge": "M4"
   },
   {
     "id": "mac-mini-m4-pro-24-gb-512-gb-12c-16c-105",
@@ -2188,9 +2185,9 @@ export const catalogProducts: CatalogProduct[] = [
     "category": "iPhones lacrados",
     "name": "iPhone 15",
     "specs": "128 GB · chip físico + eSIM",
-    "price": 4090,
-    "from": false,
-    "options": "Preto · Azul",
+    "price": 4000,
+    "from": true,
+    "options": "Preto · Azul · Rosa",
     "image": "./products/iphone-15.webp",
     "details": "Novo e lacrado",
     "badge": "Lacrado"
@@ -2213,9 +2210,9 @@ export const catalogProducts: CatalogProduct[] = [
     "category": "iPhones lacrados",
     "name": "iPhone 16",
     "specs": "128 GB · chip físico + eSIM",
-    "price": 4700,
+    "price": 4600,
     "from": true,
-    "options": "Verde · Azul · Preto · Branco",
+    "options": "Verde · Azul · Preto · Branco · Rosa",
     "image": "./products/iphone-16.webp",
     "details": "Novo e lacrado",
     "badge": "Lacrado"
@@ -2262,7 +2259,7 @@ export const catalogProducts: CatalogProduct[] = [
     "category": "iPhones lacrados",
     "name": "iPhone 17",
     "specs": "256 GB · eSIM",
-    "price": 5650,
+    "price": 5550,
     "from": true,
     "options": "Verde · Branco · Preto · Roxo · Azul",
     "image": "./products/iphone-17.webp",
@@ -2275,8 +2272,8 @@ export const catalogProducts: CatalogProduct[] = [
     "name": "iPhone 17 Air",
     "specs": "256 GB · eSIM",
     "price": 5599,
-    "from": false,
-    "options": "Preto · Dourado",
+    "from": true,
+    "options": "Preto · Dourado · Azul · Branco",
     "image": "./products/iphone-17-air.webp",
     "details": "Novo e lacrado",
     "badge": "Lacrado"
@@ -2310,7 +2307,7 @@ export const catalogProducts: CatalogProduct[] = [
     "category": "iPhones lacrados",
     "name": "iPhone 17 Pro Max",
     "specs": "256 GB · eSIM",
-    "price": 7650,
+    "price": 7600,
     "from": true,
     "options": "Azul · Laranja · Prateado",
     "image": "./products/iphone-17-pro-max.webp",
@@ -2998,7 +2995,7 @@ export const catalogProducts: CatalogProduct[] = [
     "category": "iPhones lacrados",
     "name": "iPhone 17 Pro Max",
     "specs": "512 GB · eSIM",
-    "price": 8999,
+    "price": 8750,
     "from": true,
     "options": "Laranja · Azul · Prateado",
     "image": "./products/iphone-17-pro-max.webp",
@@ -3282,13 +3279,12 @@ export const catalogProducts: CatalogProduct[] = [
     "category": "Apple Watch",
     "name": "Apple Watch SE 2",
     "specs": "44 mm · GPS",
-    "price": 1666,
+    "price": 1717,
     "from": false,
     "options": "Midnight",
     "image": "./catalog/watch.webp",
     "details": "",
-    "badge": "",
-    "unavailable": true
+    "badge": ""
   },
   {
     "id": "apple-watch-se-2-44-mm-gps-cellular-789",
@@ -3360,13 +3356,12 @@ export const catalogProducts: CatalogProduct[] = [
     "category": "Acessórios",
     "name": "Apple Pencil 2",
     "specs": "Caneta para iPad",
-    "price": 606,
+    "price": 656,
     "from": false,
     "options": "Branco",
     "image": "./catalog/mac.webp",
     "details": "",
-    "badge": "",
-    "unavailable": true
+    "badge": ""
   },
   {
     "id": "magic-keyboard-para-ipad-pro-m4-e-m5-13-polegadas-795",
@@ -3414,11 +3409,10 @@ export const catalogProducts: CatalogProduct[] = [
     "specs": "iPad 9 · Air 3 · Pro 3ª geração",
     "price": 808,
     "from": false,
-    "options": "Preto",
+    "options": "Cinza-espacial",
     "image": "./catalog/mac.webp",
     "details": "",
-    "badge": "",
-    "unavailable": true
+    "badge": ""
   },
   {
     "id": "apple-tv-128-gb-799",
@@ -3451,13 +3445,12 @@ export const catalogProducts: CatalogProduct[] = [
     "category": "Acessórios",
     "name": "Magic Mouse",
     "specs": "Lightning",
-    "price": 606,
-    "from": false,
-    "options": "Branco",
+    "price": 656,
+    "from": true,
+    "options": "Branco · Preto",
     "image": "./catalog/mac.webp",
     "details": "",
-    "badge": "",
-    "unavailable": true
+    "badge": ""
   },
   {
     "id": "fonte-usb-c-primeira-linha-802",
@@ -3525,52 +3518,48 @@ export const catalogProducts: CatalogProduct[] = [
     "category": "Mac",
     "name": "MacBook Air M1",
     "specs": "8 GB / 256 GB · 13 polegadas",
-    "price": 5605,
+    "price": 5807,
     "from": false,
     "options": "Cinza-espacial",
     "image": "./catalog/mac.webp",
     "details": "",
-    "badge": "",
-    "unavailable": true
+    "badge": ""
   },
   {
     "id": "macbook-air-m1-8-gb-256-gb-13-polegadas-ativado-812",
     "category": "Mac",
     "name": "MacBook Air M1",
     "specs": "8 GB / 256 GB · 13 polegadas · ativado",
-    "price": 5201,
+    "price": 5403,
     "from": false,
     "options": "Cinza-espacial",
     "image": "./catalog/mac.webp",
     "details": "Aparelho ativado",
-    "badge": "Ativado",
-    "unavailable": true
+    "badge": "Ativado"
   },
   {
     "id": "macbook-air-m1-8-gb-256-gb-13-polegadas-seminovo-813",
     "category": "Mac",
     "name": "MacBook Air M1",
     "specs": "8 GB / 256 GB · 13 polegadas · seminovo",
-    "price": 4999,
+    "price": 5201,
     "from": false,
     "options": "Cinza-espacial",
     "image": "./catalog/mac.webp",
     "details": "",
-    "badge": "Seminovo",
-    "unavailable": true
+    "badge": "Seminovo"
   },
   {
     "id": "magic-keyboard-a1644-sem-numerico-sem-touch-id-814",
     "category": "Acessórios",
     "name": "Magic Keyboard",
     "specs": "Sem teclado numérico · sem Touch ID (A1644)",
-    "price": 959,
+    "price": 1010,
     "from": false,
     "options": "Branco",
     "image": "./catalog/mac.webp",
     "details": "",
-    "badge": "",
-    "unavailable": true
+    "badge": ""
   },
   {
     "id": "magic-keyboard-folio-para-ipad-11-815",
@@ -3582,8 +3571,7 @@ export const catalogProducts: CatalogProduct[] = [
     "options": "Branco",
     "image": "./catalog/mac.webp",
     "details": "",
-    "badge": "",
-    "unavailable": true
+    "badge": ""
   },
   {
     "id": "magic-keyboard-folio-para-ipad-10-816",
@@ -3595,8 +3583,7 @@ export const catalogProducts: CatalogProduct[] = [
     "options": "Branco",
     "image": "./catalog/mac.webp",
     "details": "",
-    "badge": "",
-    "unavailable": true
+    "badge": ""
   },
   {
     "id": "cabo-carregador-apple-watch-original-817",
@@ -3608,8 +3595,7 @@ export const catalogProducts: CatalogProduct[] = [
     "options": "Branco",
     "image": "./catalog/mac.webp",
     "details": "",
-    "badge": "",
-    "unavailable": true
+    "badge": ""
   },
   {
     "id": "iphone-17-pro-max-512-gb-chip-fisico-820",
@@ -3950,5 +3936,53 @@ export const catalogProducts: CatalogProduct[] = [
     "image": "./catalog/games.webp",
     "details": "",
     "badge": "Controle"
+  },
+  {
+    "id": "iphone-16e-256-gb-851",
+    "category": "iPhones lacrados",
+    "name": "iPhone 16e",
+    "specs": "256 GB",
+    "price": 3700,
+    "from": true,
+    "options": "Preto · Branco",
+    "image": "./products/iphone-16.webp",
+    "details": "Novo e lacrado",
+    "badge": "Lacrado"
+  },
+  {
+    "id": "mac-studio-m4-max-36-gb-512-gb-852",
+    "category": "Mac",
+    "name": "Mac Studio M4 Max",
+    "specs": "36 GB / 512 GB",
+    "price": 20452,
+    "from": false,
+    "options": "Prateado",
+    "image": "./catalog/mac.webp",
+    "details": "Chip M4 Max",
+    "badge": "M4 Max"
+  },
+  {
+    "id": "airpods-pro-2-geracao-anterior-853",
+    "category": "Áudio",
+    "name": "AirPods Pro 2",
+    "specs": "Geração anterior",
+    "price": 1464,
+    "from": false,
+    "options": "*",
+    "image": "./catalog/airpods.webp",
+    "details": "",
+    "badge": ""
+  },
+  {
+    "id": "airpods-pro-1-geracao-854",
+    "category": "Áudio",
+    "name": "AirPods Pro",
+    "specs": "1ª geração",
+    "price": 1121,
+    "from": false,
+    "options": "*",
+    "image": "./catalog/airpods.webp",
+    "details": "",
+    "badge": ""
   }
 ];
