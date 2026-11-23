@@ -1,58 +1,39 @@
 "use client";
 
 import { useMemo, useState } from "react";
+import { catalogProducts } from "../catalog";
+import { salePrice } from "../pricing";
+import { PriceUpdate } from "../PriceUpdate";
+import { pricesUpdatedAt } from "../pricesUpdatedAt";
 
 type Item = { generation: string; name: string; price: number; condition: "Lacrado" | "CPO"; unavailable?: boolean; isNew?: boolean };
 const whatsapp = "5511964421841";
 const money = (value: number) => value.toLocaleString("pt-BR", { style: "currency", currency: "BRL", maximumFractionDigits: 0 });
 const normalize = (value: string) => value.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase();
 
-const items: Item[] = [
-  { generation: "iPhone 13", name: "iPhone 13 Pro 128GB", price: 3490, condition: "CPO", isNew: true },
-  { generation: "iPhone 13", name: "iPhone 13 Pro 256GB", price: 3990, condition: "CPO", isNew: true },
-  { generation: "iPhone 13", name: "iPhone 13 Pro Max 128GB", price: 3990, condition: "CPO" },
-  { generation: "iPhone 14", name: "iPhone 14 Plus 128GB", price: 3790, condition: "CPO", isNew: true },
-  { generation: "iPhone 14", name: "iPhone 14 512GB", price: 4190, condition: "CPO", isNew: true },
-  { generation: "iPhone 14", name: "iPhone 14 Pro 128GB", price: 3990, condition: "CPO" },
-  { generation: "iPhone 14", name: "iPhone 14 Pro 256GB", price: 4190, condition: "CPO", unavailable: true },
-  { generation: "iPhone 14", name: "iPhone 14 Pro Max 128GB", price: 4390, condition: "CPO" },
-  { generation: "iPhone 15", name: "iPhone 15 128GB · Nano-SIM + eSIM", price: 4090, condition: "Lacrado" },
-  { generation: "iPhone 15", name: "iPhone 15 256GB · chip físico + eSIM", price: 4790, condition: "Lacrado", isNew: true },
-  { generation: "iPhone 15", name: "iPhone 15 256GB", price: 4290, condition: "CPO" },
-  { generation: "iPhone 15", name: "iPhone 15 Pro 128GB", price: 4300, condition: "CPO", unavailable: true },
-  { generation: "iPhone 15", name: "iPhone 15 Pro 256GB", price: 4790, condition: "CPO", unavailable: true },
-  { generation: "iPhone 15", name: "iPhone 15 Pro Max 256GB", price: 5490, condition: "CPO" },
-  { generation: "iPhone 15", name: "iPhone 15 Pro Max 512GB", price: 5790, condition: "CPO", isNew: true },
-  { generation: "iPhone 16", name: "iPhone 16e 128GB Americano eSIM", price: 3390, condition: "CPO", isNew: true },
-  { generation: "iPhone 16", name: "iPhone 16 128GB · Nano-SIM + eSIM", price: 4590, condition: "Lacrado" },
-  { generation: "iPhone 16", name: "iPhone 16 256GB · Nano-SIM", price: 4790, condition: "CPO", unavailable: true },
-  { generation: "iPhone 16", name: "iPhone 16 256GB Americano eSIM", price: 4790, condition: "CPO", isNew: true },
-  { generation: "iPhone 16", name: "iPhone 16 Plus 128GB", price: 5490, condition: "Lacrado", isNew: true },
-  { generation: "iPhone 16", name: "iPhone 16 Plus 256GB", price: 5990, condition: "Lacrado", isNew: true },
-  { generation: "iPhone 16", name: "iPhone 16 Pro 256GB", price: 5990, condition: "CPO", unavailable: true },
-  { generation: "iPhone 16", name: "iPhone 16 Pro 512GB", price: 6290, condition: "CPO", isNew: true },
-  { generation: "iPhone 16", name: "iPhone 16 Pro Max 256GB", price: 6490, condition: "CPO", isNew: true },
-  { generation: "iPhone 16", name: "iPhone 16 Pro Max 256GB Americano eSIM", price: 7690, condition: "Lacrado", isNew: true },
-  { generation: "iPhone 16", name: "iPhone 16 Pro Max 512GB Anatel", price: 7790, condition: "Lacrado" },
-  { generation: "iPhone 17", name: "iPhone 17 256GB", price: 5490, condition: "Lacrado" },
-  { generation: "iPhone 17", name: "iPhone 17e 256GB", price: 4590, condition: "Lacrado" },
-  { generation: "iPhone 17", name: "iPhone 17 Air 256GB", price: 5790, condition: "Lacrado", isNew: true },
-  { generation: "iPhone 17", name: "iPhone 17 Pro 256GB", price: 7290, condition: "Lacrado" },
-  { generation: "iPhone 17", name: "iPhone 17 Pro 512GB", price: 8290, condition: "Lacrado", unavailable: true },
-  { generation: "iPhone 17", name: "iPhone 17 Pro Max 256GB", price: 7790, condition: "Lacrado" },
-  { generation: "iPhone 17", name: "iPhone 17 Pro Max 512GB", price: 8690, condition: "Lacrado", unavailable: true },
-  { generation: "iPhone 17", name: "iPhone 17 Pro Max 1TB", price: 9890, condition: "Lacrado" },
-];
+// A tabela lê direto do catálogo (iPhones lacrados e CPO): preço, "Em falta" e produtos novos acompanham toda atualização.
+const generationOf = (name: string) => (name.startsWith("iPhone Duo") ? "iPhone Duo" : `iPhone ${name.match(/^iPhone (\d+)/)?.[1] ?? ""}`.trim());
+const items: Item[] = catalogProducts
+  .filter((product) => product.category === "iPhones lacrados")
+  .map((product) => ({
+    generation: generationOf(product.name),
+    name: `${product.name} ${product.specs}`,
+    price: salePrice(product),
+    condition: product.badge === "CPO" ? "CPO" as const : "Lacrado" as const,
+    unavailable: product.unavailable,
+    isNew: product.badge === "Novo",
+  }));
+const groups = [...new Set(items.map((item) => item.generation))].sort((a, b) => Number(a.replace(/\D/g, "") || 99) - Number(b.replace(/\D/g, "") || 99));
 
 export default function TabelaIphonesPage() {
   const [search, setSearch] = useState("");
   const filtered = useMemo(() => items.filter((item) => normalize(`${item.name} ${item.condition}`).includes(normalize(search))), [search]);
-  const groups = ["iPhone 13", "iPhone 14", "iPhone 15", "iPhone 16", "iPhone 17"];
   return <main className="quote-page">
     <div className="quote-top">Alesson Imports · Tabela compartilhável</div>
     <header className="quote-header"><div className="quote-shell quote-nav"><a className="brand" href="../"><span className="brand-symbol">AI</span>Alesson Imports</a><a href="../lacrados/">Ver somente lacrados</a></div></header>
     <section className="quote-hero"><div className="quote-shell"><p>Catálogo Apple</p><h1>iPhones lacrados<br /><span>& CPO.</span></h1><div className="quote-chips"><span>✓ Nota fiscal</span><span>✓ Até 12x</span><span>✓ Aceitamos seu usado</span></div></div></section>
     <section className="quote-content"><div className="quote-shell">
+      <PriceUpdate updatedAt={pricesUpdatedAt} whatsappLink={`https://wa.me/${whatsapp}?text=${encodeURIComponent("Oi! Quero confirmar o valor atual de um iPhone.")}`} />
       <div className="quote-toolbar"><div><small>Preços e disponibilidade</small><h2>Escolha seu iPhone</h2></div><label><span>⌕</span><input value={search} onChange={(event) => setSearch(event.target.value)} placeholder="Buscar modelo ou condição" />{search && <button onClick={() => setSearch("")} type="button">×</button>}</label></div>
       {groups.map((group) => {
         const groupItems = filtered.filter((item) => item.generation === group);

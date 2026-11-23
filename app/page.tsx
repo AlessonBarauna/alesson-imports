@@ -7,10 +7,9 @@ import { catalogCategories, catalogProducts, type CatalogProduct } from "./catal
 import { iphoneSalePrice, salePrice } from "./pricing";
 import { Installment } from "./Installment";
 import { PriceUpdate } from "./PriceUpdate";
+import { pricesUpdatedAt } from "./pricesUpdatedAt";
 
 
-// Quando os preços da loja foram atualizados pela última vez (atualizar junto com as páginas de lacrados, seminovos e iPads).
-const pricesUpdatedAt = "2026-11-23T11:18:00-03:00";
 const whatsapp = "https://wa.me/5511964421841";
 const instagram = "https://www.instagram.com/alessonimports.oficial/";
 
@@ -191,7 +190,7 @@ export default function Home() {
           <div className="product-body"><p className="product-name">{product.name}</p><h3>{product.storage}</h3><p className="colors">{product.colors}</p><div className="price-block"><small>nosso preço</small><strong>{money(productSalePrice(product))}</strong>{product.marketPrice > productSalePrice(product) && <div className="market-comparison"><a href={marketLink(product)} target="_blank" rel="noreferrer">{product.marketSource} hoje <s>{money(product.marketPrice)}</s></a><b>Economize {money(product.marketPrice - productSalePrice(product))} · {savingPercent(product)}%</b></div>}<Installment price={productSalePrice(product)} /></div><a href={productLink(product)} target="_blank" rel="noreferrer">Consultar disponibilidade <ArrowIcon /></a></div>
         </article>)}</div>
         <p className="comparison-note">* Referências consultadas na <a href="https://www.amazon.com.br/" target="_blank" rel="noreferrer">Amazon</a> e no <a href="https://www.mercadolivre.com.br/" target="_blank" rel="noreferrer">Mercado Livre</a> em 06/10/2026, considerando anúncios comparáveis e valores parcelados quando disponíveis. Preços variam por cor, condição, vendedor, estoque e forma de pagamento.</p>
-        <div className="catalog-footer"><p><strong>Procurando outro modelo?</strong> A loja completa inclui drones, Garmin, iPads, MacBooks, Apple Watch, AirPods, Xiaomi e seminovos.</p><a className="button button-dark" href="#loja">Abrir loja completa</a></div>
+        <div className="catalog-footer"><p><strong>Procurando outro modelo?</strong> A loja completa inclui drones, games, Garmin, iPads, MacBooks, Apple Watch, AirPods, Xiaomi e seminovos.</p><a className="button button-dark" href="#loja">Abrir loja completa</a></div>
       </div></section>
 
       <section className="marketplace section" id="loja"><div className="shell">
