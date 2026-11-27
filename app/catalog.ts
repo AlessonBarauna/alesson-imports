@@ -39,7 +39,8 @@ export const catalogProducts: CatalogProduct[] = [
     "options": "Combo completo",
     "image": "./catalog/drone.webp",
     "details": "",
-    "badge": ""
+    "badge": "",
+    "unavailable": true
   },
   {
     "id": "dji-neo-motion-combo-controle-3-baterias-2",
@@ -51,7 +52,8 @@ export const catalogProducts: CatalogProduct[] = [
     "options": "Motion Combo",
     "image": "./catalog/drone.webp",
     "details": "",
-    "badge": ""
+    "badge": "",
+    "unavailable": true
   },
   {
     "id": "dji-neo-2-somente-drone-1-bateria-3",
@@ -63,7 +65,8 @@ export const catalogProducts: CatalogProduct[] = [
     "options": "1 bateria",
     "image": "./catalog/drone.webp",
     "details": "",
-    "badge": ""
+    "badge": "",
+    "unavailable": true
   },
   {
     "id": "dji-neo-2-combo-controle-3-baterias-4",
@@ -75,7 +78,8 @@ export const catalogProducts: CatalogProduct[] = [
     "options": "Combo",
     "image": "./catalog/drone.webp",
     "details": "",
-    "badge": ""
+    "badge": "",
+    "unavailable": true
   },
   {
     "id": "dji-neo-2-motion-combo-controle-3-baterias-5",
@@ -87,7 +91,8 @@ export const catalogProducts: CatalogProduct[] = [
     "options": "Motion Combo",
     "image": "./catalog/drone.webp",
     "details": "",
-    "badge": ""
+    "badge": "",
+    "unavailable": true
   },
   {
     "id": "dji-lito-1-controle-1-bateria-6",
@@ -99,7 +104,8 @@ export const catalogProducts: CatalogProduct[] = [
     "options": "1 bateria",
     "image": "./catalog/drone.webp",
     "details": "",
-    "badge": ""
+    "badge": "",
+    "unavailable": true
   },
   {
     "id": "dji-lito-1-combo-controle-3-baterias-7",
@@ -111,7 +117,8 @@ export const catalogProducts: CatalogProduct[] = [
     "options": "Combo",
     "image": "./catalog/drone.webp",
     "details": "",
-    "badge": ""
+    "badge": "",
+    "unavailable": true
   },
   {
     "id": "dji-lito-x1-controle-1-bateria-8",
@@ -136,7 +143,8 @@ export const catalogProducts: CatalogProduct[] = [
     "options": "Combo",
     "image": "./catalog/drone.webp",
     "details": "",
-    "badge": ""
+    "badge": "",
+    "unavailable": true
   },
   {
     "id": "dji-felipe-controle-com-tela-1-bateria-10",
@@ -148,7 +156,8 @@ export const catalogProducts: CatalogProduct[] = [
     "options": "1 bateria",
     "image": "./catalog/drone.webp",
     "details": "",
-    "badge": ""
+    "badge": "",
+    "unavailable": true
   },
   {
     "id": "dji-felipe-combo-controle-com-tela-3-baterias-11",
@@ -173,7 +182,8 @@ export const catalogProducts: CatalogProduct[] = [
     "options": "1 bateria",
     "image": "./catalog/drone.webp",
     "details": "",
-    "badge": ""
+    "badge": "",
+    "unavailable": true
   },
   {
     "id": "dji-mini-5-pro-combo-controle-3-baterias-13",
@@ -185,7 +195,8 @@ export const catalogProducts: CatalogProduct[] = [
     "options": "Combo",
     "image": "./catalog/drone.webp",
     "details": "",
-    "badge": ""
+    "badge": "",
+    "unavailable": true
   },
   {
     "id": "dji-mini-5-pro-combo-plus-rc2-com-tela-3-baterias-de-36-min-14",
@@ -197,7 +208,8 @@ export const catalogProducts: CatalogProduct[] = [
     "options": "36 minutos",
     "image": "./catalog/drone.webp",
     "details": "",
-    "badge": ""
+    "badge": "",
+    "unavailable": true
   },
   {
     "id": "dji-mini-5-pro-combo-plus-rc2-com-tela-3-baterias-de-52-min-15",
@@ -209,7 +221,8 @@ export const catalogProducts: CatalogProduct[] = [
     "options": "52 minutos",
     "image": "./catalog/drone.webp",
     "details": "",
-    "badge": ""
+    "badge": "",
+    "unavailable": true
   },
   {
     "id": "antigravity-a1-explorer-bundle-8k-360-controle-com-oculos-3-baterias-16",
@@ -414,7 +427,7 @@ export const catalogProducts: CatalogProduct[] = [
     "category": "Áudio",
     "name": "AirPods 4",
     "specs": "Estojo USB-C",
-    "price": 939,
+    "price": 909,
     "from": false,
     "options": "Branco",
     "image": "./catalog/airpods.webp",
@@ -426,7 +439,7 @@ export const catalogProducts: CatalogProduct[] = [
     "category": "Áudio",
     "name": "AirPods 4 ANC",
     "specs": "Cancelamento ativo de ruído",
-    "price": 1060,
+    "price": 1111,
     "from": false,
     "options": "Branco",
     "image": "./catalog/airpods.webp",
@@ -443,7 +456,8 @@ export const catalogProducts: CatalogProduct[] = [
     "options": "Branco",
     "image": "./catalog/airpods.webp",
     "details": "Modelo Pro",
-    "badge": ""
+    "badge": "",
+    "unavailable": true
   },
   {
     "id": "airpods-5-estojo-padrao-35",
@@ -462,7 +476,7 @@ export const catalogProducts: CatalogProduct[] = [
     "category": "Áudio",
     "name": "AirPods 5 Wireless",
     "specs": "Estojo com recarga sem fio",
-    "price": 1212,
+    "price": 1261,
     "from": false,
     "options": "Branco",
     "image": "./catalog/airpods.webp",
@@ -479,16 +493,17 @@ export const catalogProducts: CatalogProduct[] = [
     "options": "Laranja · Starlight · Midnight",
     "image": "./catalog/airpods.webp",
     "details": "",
-    "badge": ""
+    "badge": "",
+    "unavailable": true
   },
   {
     "id": "airpods-max-usb-c-2-edicao-2026-38",
     "category": "Áudio",
     "name": "AirPods Max USB-C 2",
     "specs": "Edição 2026",
-    "price": 3131,
-    "from": true,
-    "options": "Laranja · Roxo · Azul · Starlight",
+    "price": 3180,
+    "from": false,
+    "options": "Laranja",
     "image": "./catalog/airpods.webp",
     "details": "Consulte a cor disponível",
     "badge": "2026"
@@ -498,7 +513,7 @@ export const catalogProducts: CatalogProduct[] = [
     "category": "Acessórios",
     "name": "Apple Pencil USB-C",
     "specs": "Caneta para iPad",
-    "price": 707,
+    "price": 696,
     "from": false,
     "options": "Branco",
     "image": "./catalog/mac.webp",
@@ -510,7 +525,7 @@ export const catalogProducts: CatalogProduct[] = [
     "category": "Acessórios",
     "name": "Apple Pencil Pro",
     "specs": "Caneta profissional para iPad",
-    "price": 909,
+    "price": 898,
     "from": false,
     "options": "Branco",
     "image": "./catalog/mac.webp",
@@ -558,7 +573,7 @@ export const catalogProducts: CatalogProduct[] = [
     "category": "Acessórios",
     "name": "Magic Mouse 3 USB-C",
     "specs": "Mouse Apple",
-    "price": 707,
+    "price": 676,
     "from": true,
     "options": "Branco · Preto",
     "image": "./catalog/mac.webp",
@@ -627,7 +642,8 @@ export const catalogProducts: CatalogProduct[] = [
     "options": "Branco",
     "image": "./catalog/mac.webp",
     "details": "",
-    "badge": ""
+    "badge": "",
+    "unavailable": true
   },
   {
     "id": "cabo-usb-c-para-lightning-2-metros-original-49",
@@ -639,7 +655,8 @@ export const catalogProducts: CatalogProduct[] = [
     "options": "Branco",
     "image": "./catalog/mac.webp",
     "details": "",
-    "badge": ""
+    "badge": "",
+    "unavailable": true
   },
   {
     "id": "cabo-usb-c-1-metro-original-50",
@@ -651,7 +668,8 @@ export const catalogProducts: CatalogProduct[] = [
     "options": "Branco",
     "image": "./catalog/mac.webp",
     "details": "",
-    "badge": ""
+    "badge": "",
+    "unavailable": true
   },
   {
     "id": "cabo-usb-c-2-metros-original-51",
@@ -663,7 +681,8 @@ export const catalogProducts: CatalogProduct[] = [
     "options": "Branco",
     "image": "./catalog/mac.webp",
     "details": "",
-    "badge": ""
+    "badge": "",
+    "unavailable": true
   },
   {
     "id": "fonte-usb-c-original-genuina-52",
@@ -675,7 +694,8 @@ export const catalogProducts: CatalogProduct[] = [
     "options": "Branco",
     "image": "./catalog/mac.webp",
     "details": "",
-    "badge": ""
+    "badge": "",
+    "unavailable": true
   },
   {
     "id": "carregador-para-apple-watch-usb-c-similar-com-garantia-53",
@@ -687,15 +707,16 @@ export const catalogProducts: CatalogProduct[] = [
     "options": "Branco",
     "image": "./catalog/mac.webp",
     "details": "",
-    "badge": ""
+    "badge": "",
+    "unavailable": true
   },
   {
     "id": "apple-watch-se-3-40-mm-gps-54",
     "category": "Apple Watch",
     "name": "Apple Watch SE 3",
     "specs": "40 mm · GPS",
-    "price": 1868,
-    "from": false,
+    "price": 1717,
+    "from": true,
     "options": "Midnight · Starlight",
     "image": "./catalog/watch.webp",
     "details": "",
@@ -706,7 +727,7 @@ export const catalogProducts: CatalogProduct[] = [
     "category": "Apple Watch",
     "name": "Apple Watch SE 3",
     "specs": "44 mm · GPS",
-    "price": 2020,
+    "price": 1949,
     "from": false,
     "options": "Midnight · Starlight",
     "image": "./catalog/watch.webp",
@@ -731,9 +752,9 @@ export const catalogProducts: CatalogProduct[] = [
     "category": "Apple Watch",
     "name": "Apple Watch Series 11",
     "specs": "46 mm · GPS",
-    "price": 2574,
-    "from": true,
-    "options": "Jet Black · Rosa",
+    "price": 2525,
+    "from": false,
+    "options": "Light Gold",
     "image": "./catalog/watch.webp",
     "details": "",
     "badge": ""
@@ -743,8 +764,8 @@ export const catalogProducts: CatalogProduct[] = [
     "category": "Apple Watch",
     "name": "Apple Watch Series 12",
     "specs": "42 mm · GPS",
-    "price": 2878,
-    "from": true,
+    "price": 2727,
+    "from": false,
     "options": "Jet Black · Cinza · Light Gold · Dark Bronze",
     "image": "./catalog/watch.webp",
     "details": "",
@@ -755,9 +776,9 @@ export const catalogProducts: CatalogProduct[] = [
     "category": "Apple Watch",
     "name": "Apple Watch Series 12",
     "specs": "46 mm · GPS",
-    "price": 3181,
+    "price": 3180,
     "from": true,
-    "options": "Jet Black · Dark Bronze · Light Gold · Cinza",
+    "options": "Jet Black · Dark Bronze · Light Gold",
     "image": "./catalog/watch.webp",
     "details": "",
     "badge": ""
@@ -767,9 +788,9 @@ export const catalogProducts: CatalogProduct[] = [
     "category": "Apple Watch",
     "name": "Apple Watch Ultra 4",
     "specs": "GPS + Cellular",
-    "price": 5503,
-    "from": true,
-    "options": "Preto · Natural",
+    "price": 5301,
+    "from": false,
+    "options": "Preto",
     "image": "./catalog/watch.webp",
     "details": "Caixa Ultra",
     "badge": "Ultra"
@@ -784,7 +805,8 @@ export const catalogProducts: CatalogProduct[] = [
     "options": "Caixa natural · Ocean Band azul",
     "image": "./catalog/watch.webp",
     "details": "Pulseira Ocean",
-    "badge": "Ultra"
+    "badge": "Ultra",
+    "unavailable": true
   },
   {
     "id": "apple-watch-ultra-3-49-mm-pulseira-milanesa-62",
@@ -804,7 +826,7 @@ export const catalogProducts: CatalogProduct[] = [
     "category": "iPad",
     "name": "iPad A16",
     "specs": "128 GB · Wi‑Fi",
-    "price": 3181,
+    "price": 3100,
     "from": true,
     "options": "Azul · Rosa · Prateado · Amarelo",
     "image": "./catalog/ipad.webp",
@@ -817,8 +839,8 @@ export const catalogProducts: CatalogProduct[] = [
     "name": "iPad A16",
     "specs": "256 GB · Wi‑Fi",
     "price": 4040,
-    "from": true,
-    "options": "Azul · Prateado · Rosa",
+    "from": false,
+    "options": "Prateado",
     "image": "./catalog/ipad.webp",
     "details": "Novo e lacrado",
     "badge": "Lacrado"
@@ -867,9 +889,9 @@ export const catalogProducts: CatalogProduct[] = [
     "category": "iPad",
     "name": "iPad Air M4",
     "specs": "128 GB · 11 polegadas · Wi‑Fi",
-    "price": 5181,
-    "from": true,
-    "options": "Cinza-espacial · Roxo · Azul · Starlight",
+    "price": 5403,
+    "from": false,
+    "options": "Roxo · Azul",
     "image": "./catalog/ipad.webp",
     "details": "Novo e lacrado",
     "badge": "Lacrado"
@@ -892,13 +914,12 @@ export const catalogProducts: CatalogProduct[] = [
     "category": "iPad",
     "name": "iPad Air M4",
     "specs": "128 GB · 13 polegadas · Wi‑Fi",
-    "price": 6666,
+    "price": 6565,
     "from": false,
-    "options": "Azul",
+    "options": "Cinza-espacial",
     "image": "./catalog/ipad.webp",
     "details": "Novo e lacrado",
-    "badge": "Lacrado",
-    "unavailable": true
+    "badge": "Lacrado"
   },
   {
     "id": "ipad-air-m4-128-gb-13-polegadas-wi-fi-cellular-71",
@@ -931,7 +952,7 @@ export const catalogProducts: CatalogProduct[] = [
     "category": "iPad",
     "name": "iPad Pro M5",
     "specs": "256 GB · 11 polegadas · Wi‑Fi",
-    "price": 7523,
+    "price": 7725,
     "from": false,
     "options": "Prateado · Space Black",
     "image": "./catalog/ipad.webp",
@@ -943,13 +964,12 @@ export const catalogProducts: CatalogProduct[] = [
     "category": "iPad",
     "name": "iPad Pro M5",
     "specs": "256 GB · 13 polegadas · Wi‑Fi",
-    "price": 9240,
+    "price": 9038,
     "from": false,
     "options": "Space Black",
     "image": "./catalog/ipad.webp",
     "details": "Chip M5",
-    "badge": "M5",
-    "unavailable": true
+    "badge": "M5"
   },
   {
     "id": "ipad-pro-m5-512-gb-13-polegadas-wi-fi-75",
@@ -974,7 +994,8 @@ export const catalogProducts: CatalogProduct[] = [
     "options": "Space Black",
     "image": "./catalog/ipad.webp",
     "details": "Novo e lacrado",
-    "badge": "M5"
+    "badge": "M5",
+    "unavailable": true
   },
   {
     "id": "ipad-pro-m5-256-gb-13-polegadas-wi-fi-cellular-77",
@@ -1047,7 +1068,7 @@ export const catalogProducts: CatalogProduct[] = [
     "name": "Mac mini M4",
     "specs": "16 GB / 512 GB",
     "price": 6615,
-    "from": true,
+    "from": false,
     "options": "Prateado",
     "image": "./catalog/mac.webp",
     "details": "",
@@ -1071,8 +1092,8 @@ export const catalogProducts: CatalogProduct[] = [
     "category": "Mac",
     "name": "Mac mini M6",
     "specs": "16 GB / 256 GB",
-    "price": 6715,
-    "from": true,
+    "price": 6513,
+    "from": false,
     "options": "Prateado",
     "image": "./catalog/mac.webp",
     "details": "",
@@ -1088,14 +1109,15 @@ export const catalogProducts: CatalogProduct[] = [
     "options": "Prateado",
     "image": "./catalog/mac.webp",
     "details": "",
-    "badge": ""
+    "badge": "",
+    "unavailable": true
   },
   {
     "id": "macbook-neo-8-gb-256-gb-13-polegadas-85",
     "category": "Mac",
     "name": "MacBook Neo",
     "specs": "8 GB / 256 GB · 13 polegadas",
-    "price": 5443,
+    "price": 5252,
     "from": true,
     "options": "Amarelo · Rosa · Azul · Prateado",
     "image": "./catalog/mac.webp",
@@ -1107,7 +1129,7 @@ export const catalogProducts: CatalogProduct[] = [
     "category": "Mac",
     "name": "MacBook Neo",
     "specs": "8 GB / 512 GB · 13 polegadas",
-    "price": 6110,
+    "price": 5705,
     "from": true,
     "options": "Amarelo · Rosa · Azul · Prateado",
     "image": "./catalog/mac.webp",
@@ -1119,7 +1141,7 @@ export const catalogProducts: CatalogProduct[] = [
     "category": "Mac",
     "name": "MacBook Air M5",
     "specs": "16 GB / 512 GB · 13 polegadas",
-    "price": 8635,
+    "price": 8129,
     "from": true,
     "options": "Prateado · Midnight · Sky Blue · Starlight",
     "image": "./catalog/mac.webp",
@@ -1131,9 +1153,9 @@ export const catalogProducts: CatalogProduct[] = [
     "category": "Mac",
     "name": "MacBook Air M5",
     "specs": "24 GB / 1 TB · 13 polegadas",
-    "price": 13078,
-    "from": true,
-    "options": "Prateado · Starlight · Midnight · Sky Blue",
+    "price": 13179,
+    "from": false,
+    "options": "Prateado · Starlight · Sky Blue",
     "image": "./catalog/mac.webp",
     "details": "Chip M5",
     "badge": "M5"
@@ -1156,9 +1178,9 @@ export const catalogProducts: CatalogProduct[] = [
     "category": "Mac",
     "name": "MacBook Pro M5",
     "specs": "16 GB / 1 TB · 14 polegadas",
-    "price": 14140,
-    "from": true,
-    "options": "Prateado · Space Black",
+    "price": 14189,
+    "from": false,
+    "options": "Space Black",
     "image": "./catalog/mac.webp",
     "details": "Chip M5",
     "badge": "M5"
@@ -1173,14 +1195,15 @@ export const catalogProducts: CatalogProduct[] = [
     "options": "Space Black · Prateado",
     "image": "./catalog/mac.webp",
     "details": "Chip M5",
-    "badge": "M5"
+    "badge": "M5",
+    "unavailable": true
   },
   {
     "id": "macbook-pro-m5-pro-24-gb-1-tb-14-polegadas-91",
     "category": "Mac",
     "name": "MacBook Pro M5 Pro",
     "specs": "24 GB / 1 TB · 14 polegadas",
-    "price": 18432,
+    "price": 18229,
     "from": false,
     "options": "Prateado · Space Black",
     "image": "./catalog/mac.webp",
@@ -1192,9 +1215,9 @@ export const catalogProducts: CatalogProduct[] = [
     "category": "Mac",
     "name": "MacBook Pro M5 Pro",
     "specs": "24 GB / 1 TB · 16 polegadas",
-    "price": 19998,
-    "from": true,
-    "options": "Space Black · Prateado",
+    "price": 20350,
+    "from": false,
+    "options": "Prateado",
     "image": "./catalog/mac.webp",
     "details": "Chip M5 Pro",
     "badge": "M5 Pro"
@@ -1204,9 +1227,9 @@ export const catalogProducts: CatalogProduct[] = [
     "category": "Mac",
     "name": "MacBook Pro M5 Pro",
     "specs": "48 GB / 1 TB · 16 polegadas",
-    "price": 27219,
+    "price": 26915,
     "from": false,
-    "options": "Prateado · Space Black",
+    "options": "Space Black",
     "image": "./catalog/mac.webp",
     "details": "Chip M5 Pro",
     "badge": "M5 Pro"
@@ -1229,7 +1252,7 @@ export const catalogProducts: CatalogProduct[] = [
     "category": "Mac",
     "name": "MacBook Pro M5 Max",
     "specs": "36 GB / 2 TB · 16 polegadas",
-    "price": 28430,
+    "price": 28935,
     "from": false,
     "options": "Space Black · Prateado",
     "image": "./catalog/mac.webp",
@@ -1267,9 +1290,9 @@ export const catalogProducts: CatalogProduct[] = [
     "category": "Mac",
     "name": "MacBook Air M5",
     "specs": "16 GB / 1 TB · 13 polegadas",
-    "price": 11362,
+    "price": 11110,
     "from": true,
-    "options": "Midnight · Sky Blue · Starlight",
+    "options": "Sky Blue · Starlight",
     "image": "./catalog/mac.webp",
     "details": "Chip M5",
     "badge": "M5"
@@ -1279,7 +1302,7 @@ export const catalogProducts: CatalogProduct[] = [
     "category": "Mac",
     "name": "MacBook Air M5",
     "specs": "16 GB / 512 GB · 15 polegadas",
-    "price": 10250,
+    "price": 10201,
     "from": true,
     "options": "Prateado · Sky Blue · Midnight · Starlight",
     "image": "./catalog/mac.webp",
@@ -1309,7 +1332,8 @@ export const catalogProducts: CatalogProduct[] = [
     "options": "Midnight",
     "image": "./catalog/mac.webp",
     "details": "Chip M5",
-    "badge": "M5"
+    "badge": "M5",
+    "unavailable": true
   },
   {
     "id": "imac-m4-16-gb-256-gb-24-polegadas-8c-8c-102",
@@ -1321,7 +1345,8 @@ export const catalogProducts: CatalogProduct[] = [
     "options": "Prateado · Azul · Verde",
     "image": "./catalog/mac.webp",
     "details": "Duas portas",
-    "badge": "M4"
+    "badge": "M4",
+    "unavailable": true
   },
   {
     "id": "imac-m4-24-gb-512-gb-24-polegadas-10c-10c-103",
@@ -1333,7 +1358,8 @@ export const catalogProducts: CatalogProduct[] = [
     "options": "Prateado · Verde · Azul",
     "image": "./catalog/mac.webp",
     "details": "Quatro portas",
-    "badge": "M4"
+    "badge": "M4",
+    "unavailable": true
   },
   {
     "id": "mac-mini-m4-16-gb-256-gb-10c-10c-104",
@@ -1345,7 +1371,8 @@ export const catalogProducts: CatalogProduct[] = [
     "options": "Prateado",
     "image": "./catalog/mac.webp",
     "details": "Modelo A3238",
-    "badge": "M4"
+    "badge": "M4",
+    "unavailable": true
   },
   {
     "id": "mac-mini-m4-pro-24-gb-512-gb-12c-16c-105",
@@ -1357,7 +1384,8 @@ export const catalogProducts: CatalogProduct[] = [
     "options": "Prateado",
     "image": "./catalog/mac.webp",
     "details": "Modelo A3239",
-    "badge": "M4 Pro"
+    "badge": "M4 Pro",
+    "unavailable": true
   },
   {
     "id": "redmi-pad-2-4-gb-128-gb-106",
@@ -1377,8 +1405,8 @@ export const catalogProducts: CatalogProduct[] = [
     "name": "Redmi Pad 2",
     "specs": "8 GB / 256 GB",
     "price": 1585,
-    "from": false,
-    "options": "Roxo · Cinza",
+    "from": true,
+    "options": "Roxo · Cinza · Preto · Verde",
     "image": "./catalog/xiaomi.webp",
     "details": "",
     "badge": ""
@@ -1432,14 +1460,15 @@ export const catalogProducts: CatalogProduct[] = [
     "options": "Verde",
     "image": "./catalog/xiaomi.webp",
     "details": "",
-    "badge": ""
+    "badge": "",
+    "unavailable": true
   },
   {
     "id": "redmi-15c-nfc-4-gb-128-gb-112",
     "category": "Xiaomi",
     "name": "Redmi 15C NFC",
     "specs": "4 GB / 128 GB",
-    "price": 1059,
+    "price": 1121,
     "from": false,
     "options": "Preto · Verde",
     "image": "./catalog/xiaomi.webp",
@@ -1469,14 +1498,15 @@ export const catalogProducts: CatalogProduct[] = [
     "options": "Preto · Azul · Verde",
     "image": "./catalog/xiaomi.webp",
     "details": "",
-    "badge": ""
+    "badge": "",
+    "unavailable": true
   },
   {
     "id": "redmi-note-15-8-gb-256-gb-4g-115",
     "category": "Xiaomi",
     "name": "Redmi Note 15",
     "specs": "8 GB / 256 GB · 4G",
-    "price": 1454,
+    "price": 1515,
     "from": false,
     "options": "Preto",
     "image": "./catalog/xiaomi.webp",
@@ -1488,7 +1518,7 @@ export const catalogProducts: CatalogProduct[] = [
     "category": "Xiaomi",
     "name": "Redmi Note 15 Pro",
     "specs": "8 GB / 256 GB · 4G",
-    "price": 1838,
+    "price": 1858,
     "from": false,
     "options": "Azul · Preto",
     "image": "./catalog/xiaomi.webp",
@@ -1500,7 +1530,7 @@ export const catalogProducts: CatalogProduct[] = [
     "category": "Xiaomi",
     "name": "Redmi Note 15 Pro",
     "specs": "12 GB / 512 GB · 4G",
-    "price": 2090,
+    "price": 2121,
     "from": false,
     "options": "Preto · Azul",
     "image": "./catalog/xiaomi.webp",
@@ -1512,7 +1542,7 @@ export const catalogProducts: CatalogProduct[] = [
     "category": "Xiaomi",
     "name": "Redmi Note 15 Pro",
     "specs": "8 GB / 256 GB · 5G",
-    "price": 2080,
+    "price": 2110,
     "from": false,
     "options": "Preto · Azul · Roxo",
     "image": "./catalog/xiaomi.webp",
@@ -1524,7 +1554,7 @@ export const catalogProducts: CatalogProduct[] = [
     "category": "Xiaomi",
     "name": "Redmi Note 15 Pro",
     "specs": "8 GB / 512 GB · 5G",
-    "price": 2282,
+    "price": 2323,
     "from": false,
     "options": "Preto",
     "image": "./catalog/xiaomi.webp",
@@ -1536,13 +1566,12 @@ export const catalogProducts: CatalogProduct[] = [
     "category": "Xiaomi",
     "name": "Redmi Note 15 Pro+",
     "specs": "12 GB / 512 GB · 5G",
-    "price": 2535,
+    "price": 2878,
     "from": false,
-    "options": "Preto",
+    "options": "Preto · Azul",
     "image": "./catalog/xiaomi.webp",
     "details": "",
-    "badge": "",
-    "unavailable": true
+    "badge": ""
   },
   {
     "id": "redmi-note-17-4-gb-128-gb-4g-601",
@@ -1562,8 +1591,8 @@ export const catalogProducts: CatalogProduct[] = [
     "name": "Redmi Note 17",
     "specs": "8 GB / 256 GB · 4G",
     "price": 1626,
-    "from": false,
-    "options": "Preto · Roxo",
+    "from": true,
+    "options": "Preto · Roxo · Verde",
     "image": "./catalog/xiaomi.webp",
     "details": "",
     "badge": ""
@@ -1573,13 +1602,12 @@ export const catalogProducts: CatalogProduct[] = [
     "category": "Xiaomi",
     "name": "Redmi Note 17 Pro",
     "specs": "8 GB / 256 GB · 5G",
-    "price": 2121,
+    "price": 2383,
     "from": false,
-    "options": "Preto · Roxo · Laranja",
+    "options": "Preto · Roxo · Laranja · Azul",
     "image": "./catalog/xiaomi.webp",
     "details": "",
-    "badge": "",
-    "unavailable": true
+    "badge": ""
   },
   {
     "id": "redmi-note-17-pro-max-8-gb-256-gb-5g-604",
@@ -1587,8 +1615,8 @@ export const catalogProducts: CatalogProduct[] = [
     "name": "Redmi Note 17 Pro Max",
     "specs": "8 GB / 256 GB · 5G",
     "price": 2675,
-    "from": false,
-    "options": "Preto · Roxo · Verde",
+    "from": true,
+    "options": "Preto · Roxo · Verde · Branco",
     "image": "./catalog/xiaomi.webp",
     "details": "",
     "badge": ""
@@ -1599,8 +1627,8 @@ export const catalogProducts: CatalogProduct[] = [
     "name": "POCO C71",
     "specs": "4 GB / 128 GB",
     "price": 958,
-    "from": false,
-    "options": "Preto",
+    "from": true,
+    "options": "Preto · Azul · Dourado",
     "image": "./catalog/xiaomi.webp",
     "details": "",
     "badge": ""
@@ -1622,13 +1650,12 @@ export const catalogProducts: CatalogProduct[] = [
     "category": "Xiaomi",
     "name": "POCO C85",
     "specs": "6 GB / 128 GB",
-    "price": 949,
-    "from": false,
-    "options": "Verde",
+    "price": 1100,
+    "from": true,
+    "options": "Preto · Roxo",
     "image": "./catalog/xiaomi.webp",
     "details": "",
-    "badge": "",
-    "unavailable": true
+    "badge": ""
   },
   {
     "id": "poco-c85-8-gb-256-gb-124",
@@ -1648,8 +1675,8 @@ export const catalogProducts: CatalogProduct[] = [
     "name": "POCO X8 Pro",
     "specs": "8 GB / 256 GB · 5G",
     "price": 2585,
-    "from": false,
-    "options": "Preto · Verde · Branco",
+    "from": true,
+    "options": "Preto · Verde · Branco · Laranja",
     "image": "./catalog/xiaomi.webp",
     "details": "",
     "badge": ""
@@ -1660,8 +1687,8 @@ export const catalogProducts: CatalogProduct[] = [
     "name": "POCO X8 Pro",
     "specs": "12 GB / 512 GB · 5G",
     "price": 2898,
-    "from": false,
-    "options": "Preto · Verde · Branco",
+    "from": true,
+    "options": "Preto · Verde · Branco · Amarelo",
     "image": "./catalog/xiaomi.webp",
     "details": "",
     "badge": ""
@@ -1671,13 +1698,12 @@ export const catalogProducts: CatalogProduct[] = [
     "category": "Xiaomi",
     "name": "POCO X8 Pro Max",
     "specs": "12 GB / 256 GB · 5G",
-    "price": 3181,
+    "price": 3484,
     "from": false,
-    "options": "Branco · Azul",
+    "options": "Azul",
     "image": "./catalog/xiaomi.webp",
     "details": "",
-    "badge": "",
-    "unavailable": true
+    "badge": ""
   },
   {
     "id": "poco-x8-pro-max-12-gb-512-gb-5g-128",
@@ -1685,8 +1711,8 @@ export const catalogProducts: CatalogProduct[] = [
     "name": "POCO X8 Pro Max",
     "specs": "12 GB / 512 GB · 5G",
     "price": 3595,
-    "from": false,
-    "options": "Azul · Preto · Branco",
+    "from": true,
+    "options": "Azul · Preto · Branco · Laranja",
     "image": "./catalog/xiaomi.webp",
     "details": "",
     "badge": ""
@@ -1747,7 +1773,7 @@ export const catalogProducts: CatalogProduct[] = [
     "category": "iPhones seminovos",
     "name": "iPhone 13",
     "specs": "128 GB · bateria 100%",
-    "price": 1860,
+    "price": 1830,
     "from": false,
     "options": "Branco · Rosa · Azul · Preto",
     "image": "./products/iphone-13-pro.webp",
@@ -1759,8 +1785,8 @@ export const catalogProducts: CatalogProduct[] = [
     "category": "iPhones seminovos",
     "name": "iPhone 13",
     "specs": "128 GB · versão EUA",
-    "price": 1930,
-    "from": false,
+    "price": 1780,
+    "from": true,
     "options": "Preto · Azul · Verde · Rosa · Branco",
     "image": "./products/iphone-13-pro.webp",
     "details": "30 dias de garantia",
@@ -1771,7 +1797,7 @@ export const catalogProducts: CatalogProduct[] = [
     "category": "iPhones seminovos",
     "name": "iPhone 13 Pro",
     "specs": "128 GB · versão EUA",
-    "price": 2550,
+    "price": 2499,
     "from": false,
     "options": "Azul · Preto",
     "image": "./products/iphone-13-pro.webp",
@@ -1783,7 +1809,7 @@ export const catalogProducts: CatalogProduct[] = [
     "category": "iPhones seminovos",
     "name": "iPhone 13 Pro Max",
     "specs": "128 GB · versão EUA",
-    "price": 2750,
+    "price": 2780,
     "from": false,
     "options": "Verde · Azul",
     "image": "./products/iphone-13-pro.webp",
@@ -1795,13 +1821,12 @@ export const catalogProducts: CatalogProduct[] = [
     "category": "iPhones seminovos",
     "name": "iPhone 13 Pro Max",
     "specs": "256 GB · versão EUA",
-    "price": 2750,
+    "price": 2850,
     "from": false,
     "options": "Azul",
     "image": "./products/iphone-13-pro.webp",
     "details": "30 dias de garantia",
-    "badge": "85–100% bateria",
-    "unavailable": true
+    "badge": "85–100% bateria"
   },
   {
     "id": "iphone-14-128-gb-bateria-100-137",
@@ -1813,14 +1838,15 @@ export const catalogProducts: CatalogProduct[] = [
     "options": "Preto · Roxo · Azul · Branco",
     "image": "./products/iphone-14-pro-max.webp",
     "details": "30 dias de garantia",
-    "badge": "100% bateria"
+    "badge": "100% bateria",
+    "unavailable": true
   },
   {
     "id": "iphone-14-128-gb-versao-eua-138",
     "category": "iPhones seminovos",
     "name": "iPhone 14",
     "specs": "128 GB · versão EUA",
-    "price": 2050,
+    "price": 1940,
     "from": false,
     "options": "Preto · Azul · Roxo · Branco",
     "image": "./products/iphone-14-pro-max.webp",
@@ -1832,9 +1858,9 @@ export const catalogProducts: CatalogProduct[] = [
     "category": "iPhones seminovos",
     "name": "iPhone 14 Pro",
     "specs": "128 GB · bateria 100%",
-    "price": 2810,
-    "from": true,
-    "options": "Dourado · Roxo · Branco",
+    "price": 2750,
+    "from": false,
+    "options": "Dourado · Roxo · Branco · Preto",
     "image": "./products/iphone-14-pro-max.webp",
     "details": "30 dias de garantia",
     "badge": "100% bateria"
@@ -1844,7 +1870,7 @@ export const catalogProducts: CatalogProduct[] = [
     "category": "iPhones seminovos",
     "name": "iPhone 14 Pro",
     "specs": "128 GB · versão EUA",
-    "price": 2899,
+    "price": 2850,
     "from": false,
     "options": "Preto · Roxo",
     "image": "./products/iphone-14-pro-max.webp",
@@ -1868,7 +1894,7 @@ export const catalogProducts: CatalogProduct[] = [
     "category": "iPhones seminovos",
     "name": "iPhone 14 Pro Max",
     "specs": "128 GB · bateria 100%",
-    "price": 3250,
+    "price": 3220,
     "from": false,
     "options": "Dourado · Roxo",
     "image": "./products/iphone-14-pro-max.webp",
@@ -1880,7 +1906,7 @@ export const catalogProducts: CatalogProduct[] = [
     "category": "iPhones seminovos",
     "name": "iPhone 14 Pro Max",
     "specs": "128 GB · versão EUA",
-    "price": 3350,
+    "price": 3230,
     "from": false,
     "options": "Roxo · Preto",
     "image": "./products/iphone-14-pro-max.webp",
@@ -1892,8 +1918,8 @@ export const catalogProducts: CatalogProduct[] = [
     "category": "iPhones seminovos",
     "name": "iPhone 15",
     "specs": "128 GB · versão EUA",
-    "price": 2680,
-    "from": true,
+    "price": 2650,
+    "from": false,
     "options": "Verde · Preto · Rosa · Azul",
     "image": "./products/iphone-15.webp",
     "details": "30 dias de garantia",
@@ -1930,7 +1956,7 @@ export const catalogProducts: CatalogProduct[] = [
     "category": "iPhones seminovos",
     "name": "iPhone 15 Pro",
     "specs": "128 GB · versão EUA",
-    "price": 3550,
+    "price": 3399,
     "from": false,
     "options": "Azul · Preto · Natural",
     "image": "./products/iphone-15.webp",
@@ -1968,9 +1994,9 @@ export const catalogProducts: CatalogProduct[] = [
     "category": "iPhones seminovos",
     "name": "iPhone 15 Pro Max",
     "specs": "256 GB · bateria 100%",
-    "price": 4020,
+    "price": 3930,
     "from": false,
-    "options": "Natural",
+    "options": "Natural · Preto",
     "image": "./products/iphone-15.webp",
     "details": "30 dias de garantia",
     "badge": "100% bateria"
@@ -1980,7 +2006,7 @@ export const catalogProducts: CatalogProduct[] = [
     "category": "iPhones seminovos",
     "name": "iPhone 15 Pro Max",
     "specs": "256 GB · versão EUA",
-    "price": 4199,
+    "price": 4050,
     "from": false,
     "options": "Preto · Azul · Natural · Branco",
     "image": "./products/iphone-15.webp",
@@ -1992,7 +2018,7 @@ export const catalogProducts: CatalogProduct[] = [
     "category": "iPhones seminovos",
     "name": "iPhone 16",
     "specs": "128 GB · versão EUA",
-    "price": 3680,
+    "price": 3670,
     "from": false,
     "options": "Preto · Azul · Verde · Rosa · Branco",
     "image": "./products/iphone-16.webp",
@@ -2009,14 +2035,15 @@ export const catalogProducts: CatalogProduct[] = [
     "options": "Preto · Branco",
     "image": "./products/iphone-16.webp",
     "details": "30 dias de garantia",
-    "badge": "85–100% bateria"
+    "badge": "85–100% bateria",
+    "unavailable": true
   },
   {
     "id": "iphone-16-plus-128-gb-versao-eua-157",
     "category": "iPhones seminovos",
     "name": "iPhone 16 Plus",
     "specs": "128 GB · versão EUA",
-    "price": 3699,
+    "price": 3650,
     "from": false,
     "options": "Azul",
     "image": "./products/iphone-16.webp",
@@ -2028,7 +2055,7 @@ export const catalogProducts: CatalogProduct[] = [
     "category": "iPhones seminovos",
     "name": "iPhone 16 Pro",
     "specs": "128 GB · versão EUA",
-    "price": 4150,
+    "price": 4099,
     "from": false,
     "options": "Desert · Branco · Natural · Preto",
     "image": "./products/iphone-16-pro-max.webp",
@@ -2045,14 +2072,15 @@ export const catalogProducts: CatalogProduct[] = [
     "options": "Preto",
     "image": "./products/iphone-16-pro-max.webp",
     "details": "30 dias de garantia",
-    "badge": "85–100% bateria"
+    "badge": "85–100% bateria",
+    "unavailable": true
   },
   {
     "id": "iphone-16-pro-max-256-gb-versao-eua-160",
     "category": "iPhones seminovos",
     "name": "iPhone 16 Pro Max",
     "specs": "256 GB · versão EUA",
-    "price": 4980,
+    "price": 4899,
     "from": false,
     "options": "Preto · Desert · Natural · Branco",
     "image": "./products/iphone-16-pro-max.webp",
@@ -2069,16 +2097,17 @@ export const catalogProducts: CatalogProduct[] = [
     "options": "Desert",
     "image": "./products/iphone-16-pro-max.webp",
     "details": "30 dias de garantia",
-    "badge": "85–100% bateria"
+    "badge": "85–100% bateria",
+    "unavailable": true
   },
   {
     "id": "iphone-16-pro-max-512-gb-versao-eua-500",
     "category": "iPhones seminovos",
     "name": "iPhone 16 Pro Max",
     "specs": "512 GB · versão EUA",
-    "price": 5550,
+    "price": 5530,
     "from": false,
-    "options": "Branco · Preto",
+    "options": "Preto",
     "image": "./products/iphone-16-pro-max.webp",
     "details": "30 dias de garantia",
     "badge": "85–100% bateria"
@@ -2088,7 +2117,7 @@ export const catalogProducts: CatalogProduct[] = [
     "category": "iPhones seminovos",
     "name": "iPhone 17",
     "specs": "256 GB · versão EUA",
-    "price": 4799,
+    "price": 4699,
     "from": true,
     "options": "Lavanda · Azul · Preto · Verde",
     "image": "./products/iphone-17.webp",
@@ -2100,9 +2129,9 @@ export const catalogProducts: CatalogProduct[] = [
     "category": "iPhones seminovos",
     "name": "iPhone 17 Air",
     "specs": "256 GB · versão EUA",
-    "price": 4750,
+    "price": 4650,
     "from": false,
-    "options": "Preto · Dourado",
+    "options": "Preto",
     "image": "./products/iphone-17-air.webp",
     "details": "Novo e lacrado",
     "badge": "85–100% bateria"
@@ -2138,8 +2167,8 @@ export const catalogProducts: CatalogProduct[] = [
     "name": "iPhone 17 Pro Max",
     "specs": "256 GB · versão EUA",
     "price": 6750,
-    "from": true,
-    "options": "Laranja · Azul",
+    "from": false,
+    "options": "Laranja",
     "image": "./products/iphone-17-pro-max.webp",
     "details": "30 dias de garantia",
     "badge": "85–100% bateria"
@@ -2154,14 +2183,15 @@ export const catalogProducts: CatalogProduct[] = [
     "options": "Prateado",
     "image": "./products/iphone-17-pro-max.webp",
     "details": "30 dias de garantia",
-    "badge": "85–100% bateria"
+    "badge": "85–100% bateria",
+    "unavailable": true
   },
   {
     "id": "iphone-17-pro-max-512-gb-versao-eua-165",
     "category": "iPhones seminovos",
     "name": "iPhone 17 Pro Max",
     "specs": "512 GB · versão EUA",
-    "price": 7790,
+    "price": 7390,
     "from": false,
     "options": "Laranja",
     "image": "./products/iphone-17-pro-max.webp",
@@ -2185,9 +2215,9 @@ export const catalogProducts: CatalogProduct[] = [
     "category": "iPhones lacrados",
     "name": "iPhone 15",
     "specs": "128 GB · chip físico + eSIM",
-    "price": 4000,
-    "from": true,
-    "options": "Preto · Azul · Rosa",
+    "price": 3850,
+    "from": false,
+    "options": "Preto · Azul",
     "image": "./products/iphone-15.webp",
     "details": "Novo e lacrado",
     "badge": "Lacrado"
@@ -2210,9 +2240,9 @@ export const catalogProducts: CatalogProduct[] = [
     "category": "iPhones lacrados",
     "name": "iPhone 16",
     "specs": "128 GB · chip físico + eSIM",
-    "price": 4600,
+    "price": 4450,
     "from": true,
-    "options": "Verde · Azul · Preto · Branco · Rosa",
+    "options": "Verde · Azul · Preto · Branco",
     "image": "./products/iphone-16.webp",
     "details": "Novo e lacrado",
     "badge": "Lacrado"
@@ -2227,7 +2257,8 @@ export const catalogProducts: CatalogProduct[] = [
     "options": "Desert · Branco · Natural",
     "image": "./products/iphone-16-pro-max.webp",
     "details": "Novo e lacrado",
-    "badge": "Lacrado"
+    "badge": "Lacrado",
+    "unavailable": true
   },
   {
     "id": "iphone-16-pro-max-512-gb-anatel-209",
@@ -2252,14 +2283,15 @@ export const catalogProducts: CatalogProduct[] = [
     "options": "Branco · Rosa · Preto",
     "image": "./products/iphone-17e.webp",
     "details": "Novo e lacrado",
-    "badge": "Lacrado"
+    "badge": "Lacrado",
+    "unavailable": true
   },
   {
     "id": "iphone-17-256-gb-esim-189",
     "category": "iPhones lacrados",
     "name": "iPhone 17",
     "specs": "256 GB · eSIM",
-    "price": 5550,
+    "price": 5399,
     "from": true,
     "options": "Verde · Branco · Preto · Roxo · Azul",
     "image": "./products/iphone-17.webp",
@@ -2271,9 +2303,9 @@ export const catalogProducts: CatalogProduct[] = [
     "category": "iPhones lacrados",
     "name": "iPhone 17 Air",
     "specs": "256 GB · eSIM",
-    "price": 5599,
+    "price": 5699,
     "from": true,
-    "options": "Preto · Dourado · Azul · Branco",
+    "options": "Preto · Dourado",
     "image": "./products/iphone-17-air.webp",
     "details": "Novo e lacrado",
     "badge": "Lacrado"
@@ -2283,9 +2315,9 @@ export const catalogProducts: CatalogProduct[] = [
     "category": "iPhones lacrados",
     "name": "iPhone 17 Pro",
     "specs": "256 GB · eSIM",
-    "price": 7300,
-    "from": true,
-    "options": "Laranja · Prateado · Azul",
+    "price": 7299,
+    "from": false,
+    "options": "Laranja",
     "image": "./products/iphone-17-pro.webp",
     "details": "Novo e lacrado",
     "badge": "Lacrado"
@@ -2307,7 +2339,7 @@ export const catalogProducts: CatalogProduct[] = [
     "category": "iPhones lacrados",
     "name": "iPhone 17 Pro Max",
     "specs": "256 GB · eSIM",
-    "price": 7600,
+    "price": 7450,
     "from": true,
     "options": "Azul · Laranja · Prateado",
     "image": "./products/iphone-17-pro-max.webp",
@@ -2324,7 +2356,8 @@ export const catalogProducts: CatalogProduct[] = [
     "options": "Laranja · Branco · Azul",
     "image": "./products/iphone-17-pro-max.webp",
     "details": "Novo e lacrado",
-    "badge": "Anatel"
+    "badge": "Anatel",
+    "unavailable": true
   },
   {
     "id": "iphone-17-pro-max-1-tb-esim-188",
@@ -2344,9 +2377,9 @@ export const catalogProducts: CatalogProduct[] = [
     "category": "iPhones lacrados",
     "name": "iPhone 18 Pro",
     "specs": "256 GB · eSIM",
-    "price": 8299,
+    "price": 8150,
     "from": true,
-    "options": "Bordô · Glacial · Preto · Prateado",
+    "options": "Bordô · Glacial · Preto · Branco",
     "image": "./products/iphone-18-pro.webp",
     "details": "Novo e lacrado",
     "badge": "Lacrado"
@@ -2356,9 +2389,9 @@ export const catalogProducts: CatalogProduct[] = [
     "category": "iPhones lacrados",
     "name": "iPhone 18 Pro",
     "specs": "512 GB · eSIM",
-    "price": 9799,
-    "from": false,
-    "options": "Glacial · Bordô · Branco · Preto",
+    "price": 9499,
+    "from": true,
+    "options": "Glacial · Bordô · Branco",
     "image": "./products/iphone-18-pro.webp",
     "details": "Novo e lacrado",
     "badge": "Lacrado"
@@ -2368,7 +2401,7 @@ export const catalogProducts: CatalogProduct[] = [
     "category": "iPhones lacrados",
     "name": "iPhone 18 Pro",
     "specs": "1 TB · eSIM",
-    "price": 12500,
+    "price": 12150,
     "from": false,
     "options": "Glacial · Bordô",
     "image": "./products/iphone-18-pro.webp",
@@ -2380,7 +2413,7 @@ export const catalogProducts: CatalogProduct[] = [
     "category": "iPhones lacrados",
     "name": "iPhone 18 Pro Max",
     "specs": "256 GB · eSIM",
-    "price": 8950,
+    "price": 8550,
     "from": true,
     "options": "Prateado · Bordô · Glacial · Preto",
     "image": "./products/iphone-18-pro-max.webp",
@@ -2392,7 +2425,7 @@ export const catalogProducts: CatalogProduct[] = [
     "category": "iPhones lacrados",
     "name": "iPhone 18 Pro Max",
     "specs": "512 GB · eSIM",
-    "price": 10550,
+    "price": 10450,
     "from": true,
     "options": "Bordô · Glacial · Preto · Prateado",
     "image": "./products/iphone-18-pro-max.webp",
@@ -2404,7 +2437,7 @@ export const catalogProducts: CatalogProduct[] = [
     "category": "iPhones lacrados",
     "name": "iPhone 18 Pro Max",
     "specs": "1 TB · eSIM",
-    "price": 13050,
+    "price": 13299,
     "from": true,
     "options": "Glacial · Preto · Prateado · Bordô",
     "image": "./products/iphone-18-pro-max.webp",
@@ -2460,7 +2493,8 @@ export const catalogProducts: CatalogProduct[] = [
     "options": "Rosa",
     "image": "./products/iphone-16.webp",
     "details": "CPO · consulte a garantia disponível",
-    "badge": "CPO"
+    "badge": "CPO",
+    "unavailable": true
   },
   {
     "id": "iphone-16e-128-gb-esim-300",
@@ -2485,7 +2519,8 @@ export const catalogProducts: CatalogProduct[] = [
     "options": "Preto",
     "image": "./products/iphone-16.webp",
     "details": "CPO · consulte a garantia disponível",
-    "badge": "CPO"
+    "badge": "CPO",
+    "unavailable": true
   },
   {
     "id": "iphone-16-pro-max-512-gb-208",
@@ -2505,7 +2540,7 @@ export const catalogProducts: CatalogProduct[] = [
     "category": "iPhones lacrados",
     "name": "iPhone Duo",
     "specs": "256 GB · eSIM",
-    "price": 15099,
+    "price": 14450,
     "from": false,
     "options": "Night Sky · Branco",
     "image": "./products/iphone-duo.webp",
@@ -2524,7 +2559,7 @@ export const catalogProducts: CatalogProduct[] = [
     "category": "iPhones lacrados",
     "name": "iPhone Duo",
     "specs": "512 GB · eSIM",
-    "price": 16300,
+    "price": 15799,
     "from": false,
     "options": "Night Sky · Branco",
     "image": "./products/iphone-duo.webp",
@@ -2543,7 +2578,7 @@ export const catalogProducts: CatalogProduct[] = [
     "category": "iPhones lacrados",
     "name": "iPhone Duo",
     "specs": "1 TB · eSIM",
-    "price": 21900,
+    "price": 21499,
     "from": true,
     "options": "Night Sky · Branco",
     "image": "./products/iphone-duo.webp",
@@ -2562,7 +2597,7 @@ export const catalogProducts: CatalogProduct[] = [
     "category": "iPhones lacrados",
     "name": "iPhone Duo",
     "specs": "2 TB · eSIM",
-    "price": 26499,
+    "price": 25499,
     "from": false,
     "options": "Branco · Night Sky",
     "image": "./products/iphone-duo.webp",
@@ -2586,7 +2621,8 @@ export const catalogProducts: CatalogProduct[] = [
     "options": "Fly Smart Combo",
     "image": "./catalog/drone.webp",
     "details": "",
-    "badge": ""
+    "badge": "",
+    "unavailable": true
   },
   {
     "id": "dji-mini-3-controle-1-bateria-701",
@@ -2598,7 +2634,8 @@ export const catalogProducts: CatalogProduct[] = [
     "options": "1 bateria",
     "image": "./catalog/drone.webp",
     "details": "",
-    "badge": ""
+    "badge": "",
+    "unavailable": true
   },
   {
     "id": "dji-air-3s-combo-702",
@@ -2610,7 +2647,8 @@ export const catalogProducts: CatalogProduct[] = [
     "options": "Combo",
     "image": "./catalog/drone.webp",
     "details": "",
-    "badge": ""
+    "badge": "",
+    "unavailable": true
   },
   {
     "id": "dji-lito-x1-combo-plus-703",
@@ -2622,7 +2660,8 @@ export const catalogProducts: CatalogProduct[] = [
     "options": "Combo Plus",
     "image": "./catalog/drone.webp",
     "details": "",
-    "badge": ""
+    "badge": "",
+    "unavailable": true
   },
   {
     "id": "mac-studio-m5-max-36-gb-512-gb-710",
@@ -2634,7 +2673,8 @@ export const catalogProducts: CatalogProduct[] = [
     "options": "Prateado",
     "image": "./catalog/mac.webp",
     "details": "Chip M5 Max",
-    "badge": "M5 Max"
+    "badge": "M5 Max",
+    "unavailable": true
   },
   {
     "id": "macbook-pro-m5-max-48-gb-2-tb-16-polegadas-711",
@@ -2667,8 +2707,8 @@ export const catalogProducts: CatalogProduct[] = [
     "category": "Mac",
     "name": "MacBook Pro M5 Pro",
     "specs": "24 GB / 2 TB · 14 polegadas",
-    "price": 20452,
-    "from": false,
+    "price": 19845,
+    "from": true,
     "options": "Space Black · Prateado",
     "image": "./catalog/mac.webp",
     "details": "",
@@ -2696,7 +2736,8 @@ export const catalogProducts: CatalogProduct[] = [
     "options": "Midnight · Starlight",
     "image": "./catalog/mac.webp",
     "details": "Chip M4",
-    "badge": ""
+    "badge": "",
+    "unavailable": true
   },
   {
     "id": "macbook-neo-8-gb-256-gb-certificado-716",
@@ -2727,8 +2768,8 @@ export const catalogProducts: CatalogProduct[] = [
     "category": "Xiaomi",
     "name": "Redmi 17",
     "specs": "4 GB / 128 GB · 4G",
-    "price": 1176,
-    "from": false,
+    "price": 1181,
+    "from": true,
     "options": "Preto · Azul · Roxo",
     "image": "./catalog/xiaomi.webp",
     "details": "",
@@ -2739,7 +2780,7 @@ export const catalogProducts: CatalogProduct[] = [
     "category": "Xiaomi",
     "name": "Redmi 17",
     "specs": "6 GB / 256 GB · 4G",
-    "price": 1454,
+    "price": 1504,
     "from": false,
     "options": "Preto · Azul · Roxo · Verde",
     "image": "./catalog/xiaomi.webp",
@@ -2763,9 +2804,9 @@ export const catalogProducts: CatalogProduct[] = [
     "category": "Xiaomi",
     "name": "POCO C95 Pro",
     "specs": "8 GB / 256 GB",
-    "price": 1525,
-    "from": false,
-    "options": "Preto · Roxo · Azul",
+    "price": 1504,
+    "from": true,
+    "options": "Preto · Roxo · Azul · Verde",
     "image": "./catalog/xiaomi.webp",
     "details": "",
     "badge": ""
@@ -2995,7 +3036,7 @@ export const catalogProducts: CatalogProduct[] = [
     "category": "iPhones lacrados",
     "name": "iPhone 17 Pro Max",
     "specs": "512 GB · eSIM",
-    "price": 8750,
+    "price": 8550,
     "from": true,
     "options": "Laranja · Azul · Prateado",
     "image": "./products/iphone-17-pro-max.webp",
@@ -3259,7 +3300,8 @@ export const catalogProducts: CatalogProduct[] = [
     "options": "Midnight",
     "image": "./catalog/watch.webp",
     "details": "",
-    "badge": ""
+    "badge": "",
+    "unavailable": true
   },
   {
     "id": "apple-watch-se-3-44-mm-gps-cellular-787",
@@ -3284,7 +3326,8 @@ export const catalogProducts: CatalogProduct[] = [
     "options": "Midnight",
     "image": "./catalog/watch.webp",
     "details": "",
-    "badge": ""
+    "badge": "",
+    "unavailable": true
   },
   {
     "id": "apple-watch-se-2-44-mm-gps-cellular-789",
@@ -3361,7 +3404,8 @@ export const catalogProducts: CatalogProduct[] = [
     "options": "Branco",
     "image": "./catalog/mac.webp",
     "details": "",
-    "badge": ""
+    "badge": "",
+    "unavailable": true
   },
   {
     "id": "magic-keyboard-para-ipad-pro-m4-e-m5-13-polegadas-795",
@@ -3412,7 +3456,8 @@ export const catalogProducts: CatalogProduct[] = [
     "options": "Cinza-espacial",
     "image": "./catalog/mac.webp",
     "details": "",
-    "badge": ""
+    "badge": "",
+    "unavailable": true
   },
   {
     "id": "apple-tv-128-gb-799",
@@ -3450,7 +3495,8 @@ export const catalogProducts: CatalogProduct[] = [
     "options": "Branco · Preto",
     "image": "./catalog/mac.webp",
     "details": "",
-    "badge": ""
+    "badge": "",
+    "unavailable": true
   },
   {
     "id": "fonte-usb-c-primeira-linha-802",
@@ -3506,8 +3552,8 @@ export const catalogProducts: CatalogProduct[] = [
     "category": "Xiaomi",
     "name": "Redmi 17",
     "specs": "4 GB / 256 GB · 4G",
-    "price": 1362,
-    "from": false,
+    "price": 1343,
+    "from": true,
     "options": "Preto · Azul · Roxo · Verde",
     "image": "./catalog/xiaomi.webp",
     "details": "",
@@ -3523,7 +3569,8 @@ export const catalogProducts: CatalogProduct[] = [
     "options": "Cinza-espacial",
     "image": "./catalog/mac.webp",
     "details": "",
-    "badge": ""
+    "badge": "",
+    "unavailable": true
   },
   {
     "id": "macbook-air-m1-8-gb-256-gb-13-polegadas-ativado-812",
@@ -3535,7 +3582,8 @@ export const catalogProducts: CatalogProduct[] = [
     "options": "Cinza-espacial",
     "image": "./catalog/mac.webp",
     "details": "Aparelho ativado",
-    "badge": "Ativado"
+    "badge": "Ativado",
+    "unavailable": true
   },
   {
     "id": "macbook-air-m1-8-gb-256-gb-13-polegadas-seminovo-813",
@@ -3547,7 +3595,8 @@ export const catalogProducts: CatalogProduct[] = [
     "options": "Cinza-espacial",
     "image": "./catalog/mac.webp",
     "details": "",
-    "badge": "Seminovo"
+    "badge": "Seminovo",
+    "unavailable": true
   },
   {
     "id": "magic-keyboard-a1644-sem-numerico-sem-touch-id-814",
@@ -3559,7 +3608,8 @@ export const catalogProducts: CatalogProduct[] = [
     "options": "Branco",
     "image": "./catalog/mac.webp",
     "details": "",
-    "badge": ""
+    "badge": "",
+    "unavailable": true
   },
   {
     "id": "magic-keyboard-folio-para-ipad-11-815",
@@ -3571,7 +3621,8 @@ export const catalogProducts: CatalogProduct[] = [
     "options": "Branco",
     "image": "./catalog/mac.webp",
     "details": "",
-    "badge": ""
+    "badge": "",
+    "unavailable": true
   },
   {
     "id": "magic-keyboard-folio-para-ipad-10-816",
@@ -3583,7 +3634,8 @@ export const catalogProducts: CatalogProduct[] = [
     "options": "Branco",
     "image": "./catalog/mac.webp",
     "details": "",
-    "badge": ""
+    "badge": "",
+    "unavailable": true
   },
   {
     "id": "cabo-carregador-apple-watch-original-817",
@@ -3595,7 +3647,8 @@ export const catalogProducts: CatalogProduct[] = [
     "options": "Branco",
     "image": "./catalog/mac.webp",
     "details": "",
-    "badge": ""
+    "badge": "",
+    "unavailable": true
   },
   {
     "id": "iphone-17-pro-max-512-gb-chip-fisico-820",
@@ -3641,7 +3694,7 @@ export const catalogProducts: CatalogProduct[] = [
     "category": "iPhones seminovos",
     "name": "iPhone 14 Pro Max",
     "specs": "256 GB · versão EUA",
-    "price": 3550,
+    "price": 3460,
     "from": false,
     "options": "Roxo · Preto",
     "image": "./products/iphone-14-pro-max.webp",
@@ -3658,7 +3711,8 @@ export const catalogProducts: CatalogProduct[] = [
     "options": "Prateado",
     "image": "./catalog/mac.webp",
     "details": "Chip M5 Pro",
-    "badge": "M5 Pro"
+    "badge": "M5 Pro",
+    "unavailable": true
   },
   {
     "id": "ipad-air-3-geracao-256-gb-wi-fi-cpo-825",
@@ -3678,7 +3732,7 @@ export const catalogProducts: CatalogProduct[] = [
     "category": "Apple Watch",
     "name": "Apple Watch Ultra 3",
     "specs": "49 mm · titânio preto",
-    "price": 4444,
+    "price": 4594,
     "from": false,
     "options": "Preto",
     "image": "./catalog/watch.webp",
@@ -3695,7 +3749,8 @@ export const catalogProducts: CatalogProduct[] = [
     "options": "Space Black",
     "image": "./catalog/mac.webp",
     "details": "Chip M3 Max",
-    "badge": "M3 Max"
+    "badge": "M3 Max",
+    "unavailable": true
   },
   {
     "id": "iphone-17e-256-gb-esim-831",
@@ -3714,9 +3769,9 @@ export const catalogProducts: CatalogProduct[] = [
     "category": "iPhones seminovos",
     "name": "iPhone 14 Pro Max",
     "specs": "256 GB · bateria 100%",
-    "price": 3350,
+    "price": 3280,
     "from": false,
-    "options": "Dourado · Roxo · Preto",
+    "options": "Dourado · Branco",
     "image": "./products/iphone-14-pro-max.webp",
     "details": "30 dias de garantia",
     "badge": "100% bateria"
@@ -3731,7 +3786,8 @@ export const catalogProducts: CatalogProduct[] = [
     "options": "Branco",
     "image": "./catalog/games.webp",
     "details": "",
-    "badge": "Console"
+    "badge": "Console",
+    "unavailable": true
   },
   {
     "id": "playstation-portal-console-remoto-para-ps5-834",
@@ -3743,7 +3799,8 @@ export const catalogProducts: CatalogProduct[] = [
     "options": "Branco",
     "image": "./catalog/games.webp",
     "details": "",
-    "badge": "Portátil"
+    "badge": "Portátil",
+    "unavailable": true
   },
   {
     "id": "disc-drive-playstation-leitor-de-disco-para-ps5-digital-835",
@@ -3755,7 +3812,8 @@ export const catalogProducts: CatalogProduct[] = [
     "options": "Branco",
     "image": "./catalog/games.webp",
     "details": "",
-    "badge": "Acessório"
+    "badge": "Acessório",
+    "unavailable": true
   },
   {
     "id": "xbox-series-x-digital-1-tb-edicao-digital-836",
@@ -3767,7 +3825,8 @@ export const catalogProducts: CatalogProduct[] = [
     "options": "Branco",
     "image": "./catalog/games.webp",
     "details": "",
-    "badge": "Console"
+    "badge": "Console",
+    "unavailable": true
   },
   {
     "id": "xbox-series-s-digital-1-tb-837",
@@ -3779,7 +3838,8 @@ export const catalogProducts: CatalogProduct[] = [
     "options": "Branco",
     "image": "./catalog/games.webp",
     "details": "",
-    "badge": "Console"
+    "badge": "Console",
+    "unavailable": true
   },
   {
     "id": "xbox-series-s-digital-512-gb-838",
@@ -3791,7 +3851,8 @@ export const catalogProducts: CatalogProduct[] = [
     "options": "Branco",
     "image": "./catalog/games.webp",
     "details": "",
-    "badge": "Console"
+    "badge": "Console",
+    "unavailable": true
   },
   {
     "id": "controle-pro-switch-1-e-2-sem-fio-839",
@@ -3803,7 +3864,8 @@ export const catalogProducts: CatalogProduct[] = [
     "options": "Preto",
     "image": "./catalog/games.webp",
     "details": "",
-    "badge": "Controle"
+    "badge": "Controle",
+    "unavailable": true
   },
   {
     "id": "controle-pro-nintendo-switch-2-sem-fio-840",
@@ -3815,7 +3877,8 @@ export const catalogProducts: CatalogProduct[] = [
     "options": "Preto",
     "image": "./catalog/games.webp",
     "details": "",
-    "badge": "Controle"
+    "badge": "Controle",
+    "unavailable": true
   },
   {
     "id": "controle-pro-nintendo-switch-oled-controle-pro-841",
@@ -3827,7 +3890,8 @@ export const catalogProducts: CatalogProduct[] = [
     "options": "Vermelho · Azul",
     "image": "./catalog/games.webp",
     "details": "",
-    "badge": "Controle"
+    "badge": "Controle",
+    "unavailable": true
   },
   {
     "id": "nintendo-switch-2-256-gb-sem-jogo-842",
@@ -3839,7 +3903,8 @@ export const catalogProducts: CatalogProduct[] = [
     "options": "Preto",
     "image": "./catalog/games.webp",
     "details": "",
-    "badge": "Console"
+    "badge": "Console",
+    "unavailable": true
   },
   {
     "id": "nintendo-switch-2-256-gb-mario-kart-world-843",
@@ -3851,7 +3916,8 @@ export const catalogProducts: CatalogProduct[] = [
     "options": "Preto",
     "image": "./catalog/games.webp",
     "details": "",
-    "badge": "Console"
+    "badge": "Console",
+    "unavailable": true
   },
   {
     "id": "nintendo-switch-2-256-gb-importado-3-jogos-1-a-escolha-844",
@@ -3863,7 +3929,8 @@ export const catalogProducts: CatalogProduct[] = [
     "options": "Preto",
     "image": "./catalog/games.webp",
     "details": "",
-    "badge": "Console"
+    "badge": "Console",
+    "unavailable": true
   },
   {
     "id": "nintendo-switch-oled-64-gb-mario-bros-64-845",
@@ -3875,7 +3942,8 @@ export const catalogProducts: CatalogProduct[] = [
     "options": "Branco",
     "image": "./catalog/games.webp",
     "details": "",
-    "badge": "Console"
+    "badge": "Console",
+    "unavailable": true
   },
   {
     "id": "meta-quest-3-512-gb-4k-846",
@@ -3887,7 +3955,8 @@ export const catalogProducts: CatalogProduct[] = [
     "options": "Branco",
     "image": "./catalog/games.webp",
     "details": "",
-    "badge": "Realidade virtual"
+    "badge": "Realidade virtual",
+    "unavailable": true
   },
   {
     "id": "meta-quest-3s-128-gb-847",
@@ -3899,7 +3968,8 @@ export const catalogProducts: CatalogProduct[] = [
     "options": "Branco",
     "image": "./catalog/games.webp",
     "details": "",
-    "badge": "Realidade virtual"
+    "badge": "Realidade virtual",
+    "unavailable": true
   },
   {
     "id": "controle-xbox-one-controle-sem-fio-848",
@@ -3911,7 +3981,8 @@ export const catalogProducts: CatalogProduct[] = [
     "options": "Branco · Preto · Verde · Amarelo · Azul · Rosa",
     "image": "./catalog/games.webp",
     "details": "",
-    "badge": "Controle"
+    "badge": "Controle",
+    "unavailable": true
   },
   {
     "id": "controle-playstation-5-dualsense-849",
@@ -3923,7 +3994,8 @@ export const catalogProducts: CatalogProduct[] = [
     "options": "Branco · Preto · Vinho · Verde · Roxo · Azul bebê · Camuflado · Chroma",
     "image": "./catalog/games.webp",
     "details": "",
-    "badge": "Controle"
+    "badge": "Controle",
+    "unavailable": true
   },
   {
     "id": "controle-playstation-4-original-850",
@@ -3935,7 +4007,8 @@ export const catalogProducts: CatalogProduct[] = [
     "options": "Preto",
     "image": "./catalog/games.webp",
     "details": "",
-    "badge": "Controle"
+    "badge": "Controle",
+    "unavailable": true
   },
   {
     "id": "iphone-16e-256-gb-851",
@@ -3947,7 +4020,8 @@ export const catalogProducts: CatalogProduct[] = [
     "options": "Preto · Branco",
     "image": "./products/iphone-16.webp",
     "details": "Novo e lacrado",
-    "badge": "Lacrado"
+    "badge": "Lacrado",
+    "unavailable": true
   },
   {
     "id": "mac-studio-m4-max-36-gb-512-gb-852",
@@ -3959,7 +4033,8 @@ export const catalogProducts: CatalogProduct[] = [
     "options": "Prateado",
     "image": "./catalog/mac.webp",
     "details": "Chip M4 Max",
-    "badge": "M4 Max"
+    "badge": "M4 Max",
+    "unavailable": true
   },
   {
     "id": "airpods-pro-2-geracao-anterior-853",
@@ -3971,7 +4046,8 @@ export const catalogProducts: CatalogProduct[] = [
     "options": "*",
     "image": "./catalog/airpods.webp",
     "details": "",
-    "badge": ""
+    "badge": "",
+    "unavailable": true
   },
   {
     "id": "airpods-pro-1-geracao-854",
@@ -3983,6 +4059,355 @@ export const catalogProducts: CatalogProduct[] = [
     "options": "*",
     "image": "./catalog/airpods.webp",
     "details": "",
+    "badge": "",
+    "unavailable": true
+  },
+  {
+    "id": "redmi-pad-2-4-gb-256-gb-900",
+    "category": "Xiaomi",
+    "name": "Redmi Pad 2",
+    "specs": "4 GB / 256 GB",
+    "price": 1434,
+    "from": false,
+    "options": "Verde · Cinza",
+    "image": "./catalog/xiaomi.webp",
+    "details": "",
     "badge": ""
+  },
+  {
+    "id": "redmi-pad-2-6-gb-128-gb-901",
+    "category": "Xiaomi",
+    "name": "Redmi Pad 2",
+    "specs": "6 GB / 128 GB",
+    "price": 1464,
+    "from": false,
+    "options": "Roxo · Cinza",
+    "image": "./catalog/xiaomi.webp",
+    "details": "",
+    "badge": ""
+  },
+  {
+    "id": "redmi-pad-2-pro-6-gb-128-gb-902",
+    "category": "Xiaomi",
+    "name": "Redmi Pad 2 Pro",
+    "specs": "6 GB / 128 GB",
+    "price": 1868,
+    "from": false,
+    "options": "Verde · Roxo · Prateado",
+    "image": "./catalog/xiaomi.webp",
+    "details": "",
+    "badge": ""
+  },
+  {
+    "id": "redmi-pad-2-pro-8-gb-256-gb-903",
+    "category": "Xiaomi",
+    "name": "Redmi Pad 2 Pro",
+    "specs": "8 GB / 256 GB",
+    "price": 2131,
+    "from": true,
+    "options": "Roxo · Prateado",
+    "image": "./catalog/xiaomi.webp",
+    "details": "",
+    "badge": ""
+  },
+  {
+    "id": "poco-pad-x1-8-gb-512-gb-904",
+    "category": "Xiaomi",
+    "name": "POCO Pad X1",
+    "specs": "8 GB / 512 GB",
+    "price": 2424,
+    "from": true,
+    "options": "Cinza · Azul",
+    "image": "./catalog/xiaomi.webp",
+    "details": "",
+    "badge": ""
+  },
+  {
+    "id": "poco-pad-m1-8-gb-256-gb-905",
+    "category": "Xiaomi",
+    "name": "POCO Pad M1",
+    "specs": "8 GB / 256 GB",
+    "price": 2131,
+    "from": false,
+    "options": "Cinza · Azul",
+    "image": "./catalog/xiaomi.webp",
+    "details": "",
+    "badge": ""
+  },
+  {
+    "id": "xiaomi-pad-7-8-gb-256-gb-906",
+    "category": "Xiaomi",
+    "name": "Xiaomi Pad 7",
+    "specs": "8 GB / 256 GB",
+    "price": 2403,
+    "from": true,
+    "options": "Cinza · Azul · Verde",
+    "image": "./catalog/xiaomi.webp",
+    "details": "",
+    "badge": ""
+  },
+  {
+    "id": "xiaomi-pad-8-8-gb-256-gb-907",
+    "category": "Xiaomi",
+    "name": "Xiaomi Pad 8",
+    "specs": "8 GB / 256 GB",
+    "price": 3040,
+    "from": false,
+    "options": "Azul · Verde",
+    "image": "./catalog/xiaomi.webp",
+    "details": "",
+    "badge": ""
+  },
+  {
+    "id": "xiaomi-pad-8-pro-8-gb-128-gb-908",
+    "category": "Xiaomi",
+    "name": "Xiaomi Pad 8 Pro",
+    "specs": "8 GB / 128 GB",
+    "price": 3060,
+    "from": false,
+    "options": "Cinza",
+    "image": "./catalog/xiaomi.webp",
+    "details": "",
+    "badge": ""
+  },
+  {
+    "id": "redmi-17-4-gb-128-gb-5g-909",
+    "category": "Xiaomi",
+    "name": "Redmi 17",
+    "specs": "4 GB / 128 GB · 5G",
+    "price": 1373,
+    "from": false,
+    "options": "Preto · Azul",
+    "image": "./catalog/xiaomi.webp",
+    "details": "",
+    "badge": ""
+  },
+  {
+    "id": "xiaomi-15t-pro-12-gb-256-gb-5g-910",
+    "category": "Xiaomi",
+    "name": "Xiaomi 15T Pro",
+    "specs": "12 GB / 256 GB · 5G",
+    "price": 4848,
+    "from": false,
+    "options": "Cinza",
+    "image": "./catalog/xiaomi.webp",
+    "details": "",
+    "badge": ""
+  },
+  {
+    "id": "xiaomi-15-12-gb-512-gb-5g-leica-911",
+    "category": "Xiaomi",
+    "name": "Xiaomi 15",
+    "specs": "12 GB / 512 GB · 5G · Leica",
+    "price": 5252,
+    "from": false,
+    "options": "Verde",
+    "image": "./catalog/xiaomi.webp",
+    "details": "",
+    "badge": ""
+  },
+  {
+    "id": "xiaomi-17t-12-gb-512-gb-5g-leica-912",
+    "category": "Xiaomi",
+    "name": "Xiaomi 17T",
+    "specs": "12 GB / 512 GB · 5G · Leica",
+    "price": 4343,
+    "from": false,
+    "options": "Roxo",
+    "image": "./catalog/xiaomi.webp",
+    "details": "",
+    "badge": ""
+  },
+  {
+    "id": "xiaomi-17-12-gb-512-gb-5g-leica-913",
+    "category": "Xiaomi",
+    "name": "Xiaomi 17",
+    "specs": "12 GB / 512 GB · 5G · Leica",
+    "price": 5959,
+    "from": false,
+    "options": "Azul",
+    "image": "./catalog/xiaomi.webp",
+    "details": "",
+    "badge": ""
+  },
+  {
+    "id": "xiaomi-17-ultra-16-gb-512-gb-914",
+    "category": "Xiaomi",
+    "name": "Xiaomi 17 Ultra",
+    "specs": "16 GB / 512 GB",
+    "price": 7777,
+    "from": false,
+    "options": "Dourado",
+    "image": "./catalog/xiaomi.webp",
+    "details": "",
+    "badge": ""
+  },
+  {
+    "id": "poco-c75-6-gb-128-gb-915",
+    "category": "Xiaomi",
+    "name": "POCO C75",
+    "specs": "6 GB / 128 GB",
+    "price": 979,
+    "from": false,
+    "options": "Verde · Dourado",
+    "image": "./catalog/xiaomi.webp",
+    "details": "",
+    "badge": ""
+  },
+  {
+    "id": "poco-c75-8-gb-256-gb-916",
+    "category": "Xiaomi",
+    "name": "POCO C75",
+    "specs": "8 GB / 256 GB",
+    "price": 1151,
+    "from": false,
+    "options": "Verde · Preto",
+    "image": "./catalog/xiaomi.webp",
+    "details": "",
+    "badge": ""
+  },
+  {
+    "id": "poco-c81-pro-4-gb-256-gb-917",
+    "category": "Xiaomi",
+    "name": "POCO C81 Pro",
+    "specs": "4 GB / 256 GB",
+    "price": 1166,
+    "from": true,
+    "options": "Preto · Verde · Dourado · Azul",
+    "image": "./catalog/xiaomi.webp",
+    "details": "",
+    "badge": ""
+  },
+  {
+    "id": "poco-c95-pro-6-gb-128-gb-918",
+    "category": "Xiaomi",
+    "name": "POCO C95 Pro",
+    "specs": "6 GB / 128 GB",
+    "price": 1363,
+    "from": false,
+    "options": "Preto · Verde",
+    "image": "./catalog/xiaomi.webp",
+    "details": "",
+    "badge": ""
+  },
+  {
+    "id": "poco-x8-8-gb-256-gb-5g-919",
+    "category": "Xiaomi",
+    "name": "POCO X8",
+    "specs": "8 GB / 256 GB · 5G",
+    "price": 2262,
+    "from": false,
+    "options": "Preto · Branco · Laranja",
+    "image": "./catalog/xiaomi.webp",
+    "details": "",
+    "badge": ""
+  },
+  {
+    "id": "poco-x8-12-gb-256-gb-5g-920",
+    "category": "Xiaomi",
+    "name": "POCO X8",
+    "specs": "12 GB / 256 GB · 5G",
+    "price": 2282,
+    "from": false,
+    "options": "Preto · Laranja",
+    "image": "./catalog/xiaomi.webp",
+    "details": "",
+    "badge": ""
+  },
+  {
+    "id": "poco-x8-12-gb-512-gb-5g-921",
+    "category": "Xiaomi",
+    "name": "POCO X8",
+    "specs": "12 GB / 512 GB · 5G",
+    "price": 3383,
+    "from": false,
+    "options": "Preto",
+    "image": "./catalog/xiaomi.webp",
+    "details": "",
+    "badge": ""
+  },
+  {
+    "id": "poco-x8-pro-8-gb-512-gb-5g-922",
+    "category": "Xiaomi",
+    "name": "POCO X8 Pro",
+    "specs": "8 GB / 512 GB · 5G",
+    "price": 3009,
+    "from": false,
+    "options": "Preto",
+    "image": "./catalog/xiaomi.webp",
+    "details": "",
+    "badge": ""
+  },
+  {
+    "id": "poco-f9-ultra-16-gb-1-tb-5g-923",
+    "category": "Xiaomi",
+    "name": "POCO F9 Ultra",
+    "specs": "16 GB / 1 TB · 5G",
+    "price": 7272,
+    "from": false,
+    "options": "Preto",
+    "image": "./catalog/xiaomi.webp",
+    "details": "",
+    "badge": ""
+  },
+  {
+    "id": "redmi-note-15-pro-12-gb-256-gb-5g-924",
+    "category": "Xiaomi",
+    "name": "Redmi Note 15 Pro",
+    "specs": "12 GB / 256 GB · 5G",
+    "price": 2353,
+    "from": false,
+    "options": "Preto · Roxo",
+    "image": "./catalog/xiaomi.webp",
+    "details": "",
+    "badge": ""
+  },
+  {
+    "id": "redmi-note-15-pro-8-gb-256-gb-5g-925",
+    "category": "Xiaomi",
+    "name": "Redmi Note 15 Pro+",
+    "specs": "8 GB / 256 GB · 5G",
+    "price": 2454,
+    "from": false,
+    "options": "Azul · Preto",
+    "image": "./catalog/xiaomi.webp",
+    "details": "",
+    "badge": ""
+  },
+  {
+    "id": "redmi-note-15-pro-12-gb-256-gb-5g-926",
+    "category": "Xiaomi",
+    "name": "Redmi Note 15 Pro+",
+    "specs": "12 GB / 256 GB · 5G",
+    "price": 2555,
+    "from": false,
+    "options": "Preto · Azul",
+    "image": "./catalog/xiaomi.webp",
+    "details": "",
+    "badge": ""
+  },
+  {
+    "id": "redmi-note-17-pro-8-gb-512-gb-5g-927",
+    "category": "Xiaomi",
+    "name": "Redmi Note 17 Pro",
+    "specs": "8 GB / 512 GB · 5G",
+    "price": 2706,
+    "from": false,
+    "options": "Preto · Azul · Roxo · Laranja",
+    "image": "./catalog/xiaomi.webp",
+    "details": "",
+    "badge": ""
+  },
+  {
+    "id": "macbook-neo-8-gb-512-gb-certificado-928",
+    "category": "Xiaomi",
+    "name": "MacBook Neo",
+    "specs": "8 GB / 512 GB · 13 polegadas · certificado Apple",
+    "price": 4999,
+    "from": false,
+    "options": "Amarelo",
+    "image": "./catalog/xiaomi.webp",
+    "details": "Certificado Apple",
+    "badge": "CPO"
   }
 ];
